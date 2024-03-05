@@ -29,27 +29,39 @@ puts "creating ingredients database..."
 
 
 bacon = Ingredient.create!(name: "bacon")
+basil = Ingredient.create!(name: "basil")
 black_pepper = Ingredient.create!(name: "black pepper")
 carrot = Ingredient.create!(name: "carrot")
+cheese_parmesan = Ingredient.create!(name: "parmesan")
+chicken = Ingredient.create!(name: "chicken")
 chilli_flakes = Ingredient.create!(name: "chilli flakes")
 chilli_green = Ingredient.create!(name: "green chilli")
 coriander =  Ingredient.create!(name: "coriander")
 coriander_ground = Ingredient.create!(name: "ground coriander")
+cream = Ingredient.create!(name: "cream")
 cumin_seeds = Ingredient.create!(name: "cumin seeds")
 eggs = Ingredient.create!(name: "eggs")
 garlic = Ingredient.create!(name: "garlic")
 ginger = Ingredient.create!(name: "ginger")
+lemon_juice = Ingredient.create!(name: "lemon juice")
 lentils = Ingredient.create!(name: "lentils")
+mozzarella = Ingredient.create!(name: "mozzarella")
 mustard_seeds = Ingredient.create!(name: "mustard seeds")
 oil_vegetable = Ingredient.create!(name: "vegetable oil")
+oil_olive = Ingredient.create!(name: "olive oil")
 onion = Ingredient.create!(name: "onion")
 onion_red = Ingredient.create!(name: "red onion")
 pasta = Ingredient.create!(name: "pasta")
 potato = Ingredient.create!(name: "potato")
+rice_basmati = Ingredient.create!(name: "basmati rice")
 salt = Ingredient.create!(name: "salt")
 spaghetti = Ingredient.create!(name: "spaghetti")
 stock_vegetable = Ingredient.create!(name: "vegetable stock")
+tomato = Ingredient.create!(name: "tomato")
+tomato_sauce = Ingredient.create!(name: "tomato sauce")
 tumeric = Ingredient.create!(name: "tumeric")
+vinegar_balsamic = Ingredient.create!(name: "balsamic vinegar")
+yoghurt = Ingredient.create!(name: "yoghurt")
 
 
 puts "creating recipes..."
@@ -238,6 +250,178 @@ RecipeIngredient.create!(
 )
 
 recipe_3 = Recipe.create!(
+  title: "Caprese Salad",
+  description: "A simple and refreshing Italian salad featuring tomatoes, fresh mozzarella, and basil.",
+  cuisine: "Italian",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: false,
+  egg_free: true,
+  nut_free: true,
+  prep_time: 10,
+  cook_time: 0,
+  level: "easy",
+  servings: 2,
+  method: "STEP 1\n
+  Slice tomatoes and fresh mozzarella cheese into equal-sized slices.\n
+
+  STEP 2\n
+  Arrange tomato and mozzarella slices on a plate, alternating them.\n
+
+  STEP 3\n
+  Sprinkle fresh basil leaves over the tomatoes and mozzarella.\n
+
+  STEP 4\n
+  Drizzle with extra virgin olive oil and balsamic vinegar.\n
+
+  STEP 5\n
+  Season with salt and black pepper to taste.\n
+
+  STEP 6\n
+  Serve immediately as a side dish or appetizer.",
+  image: "",
+  user_id: user_4
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_3,
+  ingredient_id: tomatoes,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_3,
+  ingredient_id: mozzarella,
+  amount: 125,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_3,
+  ingredient_id: basil,
+  amount: 10,
+  measurement_type: "leaves"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_3,
+  ingredient_id: oil_olive,
+  amount: 1,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_3,
+  ingredient_id: vinegar_balsamic,
+  amount: 1,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_3,
+  ingredient_id: salt,
+  amount: nil,
+  measurement_type: "to taste"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_3,
+  ingredient_id: black_pepper,
+  amount: nil,
+  measurement_type: "to taste"
+)
+
+recipe_4 = Recipe.create!(
+  title: "Chicken Tikka Masala",
+  description: "A popular Indian dish featuring marinated chicken in a creamy tomato sauce.",
+  cuisine: "Indian",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: false,
+  dairy_free: false,
+  egg_free: true,
+  nut_free: true,
+  prep_time: 20,
+  cook_time: 30,
+  level: "moderate",
+  servings: 4,
+  method: "STEP 1\n
+  Marinate chicken pieces in yogurt, lemon juice, and spices for at least 1 hour.\n
+
+  STEP 2\n
+  Grill or broil marinated chicken until cooked through.\n
+
+  STEP 3\n
+  In a separate pan, heat oil and sauté onions until translucent. Add minced garlic and ginger and cook until fragrant.\n
+
+  STEP 4\n
+  Add tomato sauce, cream, and spices to the pan. Simmer for a few minutes.\n
+
+  STEP 5\n
+  Add cooked chicken to the sauce and simmer until flavors meld.\n
+
+  STEP 6\n
+  Garnish with fresh cilantro and serve with rice or naan.",
+  image: "",
+  user_id: user_3
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: chicken,
+  amount: 500,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: yoghurt,
+  amount: 150,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: lemon_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: onion,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: ginger,
+  amount: 2,
+  measurement_type: "cm"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: tomato_sauce,
+  amount: 200,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: cream,
+  amount: 100,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: coriander,
+  amount: 10,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe_id: recipe_4,
+  ingredient_id: rice_basmati,
+  amount: 1,
+  measurement_type: "cup"
+)
+
+recipe_16 = Recipe.create!(
   title: "Spaghetti Carbonara",
   description: "A classic Italian pasta dish with creamy sauce and crispy bacon.",
   cuisine: "Italian",
@@ -275,41 +459,43 @@ recipe_3 = Recipe.create!(
   user_id: user_2
 )
 RecipeIngredient.create!(
-  recipe_id: recipe_2,
+  recipe_id: recipe_16,
   ingredient_id: spaghetti,
   amount: 200,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
-  recipe_id: recipe_2,
+  recipe_id: recipe_16,
   ingredient_id: bacon,
   amount: 100,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
-  recipe_id: recipe_2,
+  recipe_id: recipe_16,
   ingredient_id: garlic,
   amount: 2,
   measurement_type: "cloves"
 )
 RecipeIngredient.create!(
-  recipe_id: recipe_2,
+  recipe_id: recipe_16,
   ingredient_id: eggs,
   amount: 2,
   measurement_type: ""
 )
 RecipeIngredient.create!(
-  recipe_id: recipe_2,
-  ingredient_id: parmesan,
+  recipe_id: recipe_16,
+  ingredient_id: cheese_parmesan,
   amount: 50,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
-  recipe_id: recipe_2.id,
+  recipe_id: recipe_16.id,
   ingredient_id: black_pepper,
   amount: 1,
   measurement_type: "tsp"
 )
+
+
 
 
 
