@@ -11,10 +11,10 @@
 puts "removing old data..."
 Recipe.destroy_all
 # Review.destroy_all
-# User.destroy_all
+User.destroy_all
 
 puts "creating users..."
-user_1 = User.create!(
+user_1 = User.create(
   email: 'tarklemike@outlook.com',
   password: "123456",
   username: "tarklemike",
@@ -69,7 +69,7 @@ puts "creating recipes..."
 recipe_1 = Recipe.create!(
   title: "Dahl",
   description: "A delicious bowl of comfort",
-  cusine: "Indian",
+  cuisine: "Indian",
   vegetarian: true,
   vegan: true,
   gluten_free: true,
@@ -78,7 +78,7 @@ recipe_1 = Recipe.create!(
   nut_free: true,
   prep_time: 20,
   cook_time: 120,
-  level: "moderate",
+  level: "Medium",
   servings: 4,
   method: "STEP 1\n
   Wash the dahl until the water runs clear, then drain and put in a large pan and cover with the cold water.\n
@@ -107,7 +107,7 @@ recipe_1 = Recipe.create!(
   STEP 9\n
   Tip the onions over the dahl, stir in and top with chopped coriander. The dahl will keep warm for about 30 minutes",
   image: "",
-  user_id: user_1
+  user: user_1
 )
 RecipeIngredient.create!(
   recipe_id: recipe_1,
@@ -176,350 +176,351 @@ RecipeIngredient.create!(
   measurement_type: "g"
 )
 
-recipe_2 = Recipe.create!(
-  title: "Carrot & coriander soup",
-  description: "Everyone loves this super healthy soup, perfect for an easy supper",
-  cusine: "British",
-  vegetarian: true,
-  vegan: true,
-  gluten_free: true,
-  dairy_free: true,
-  egg_free: true,
-  nut_free: false,
-  prep_time: 15,
-  cook_time: 25,
-  level: "easy",
-  servings: 4,
-  method: "STEP 1\n
-  Heat 1 tbsp vegetable oil in a large pan, add 1 chopped onion, then fry for 5 mins until softened.\n
+# recipe_2 = Recipe.create!(
+#   title: "Carrot & coriander soup",
+#   description: "Everyone loves this super healthy soup, perfect for an easy supper",
+#   cuisine: "British",
+#   vegetarian: true,
+#   vegan: true,
+#   gluten_free: true,
+#   dairy_free: true,
+#   egg_free: true,
+#   nut_free: false,
+#   prep_time: 15,
+#   cook_time: 25,
+#   level: "Easy",
+#   servings: 4,
+#   method: "STEP 1\n
+#   Heat 1 tbsp vegetable oil in a large pan, add 1 chopped onion, then fry for 5 mins until softened.\n
 
-  STEP 2\n
-  Stir in 1 tsp ground coriander and 1 chopped potato, then cook for 1 min.\n
+#   STEP 2\n
+#   Stir in 1 tsp ground coriander and 1 chopped potato, then cook for 1 min.\n
 
-  STEP 3\n
-  Add the 450g peeled and chopped carrots and 1.2l vegetable or chicken stock, bring to the boil, then reduce the heat.\n
+#   STEP 3\n
+#   Add the 450g peeled and chopped carrots and 1.2l vegetable or chicken stock, bring to the boil, then reduce the heat.\n
 
-  STEP 4\n
-  Cover and cook for 20 mins until the carrots are tender.\n
+#   STEP 4\n
+#   Cover and cook for 20 mins until the carrots are tender.\n
 
-  STEP 5\n
-  Tip into a food processor with a handful of coriander then blitz until smooth (you may need to do this in two batches). Return to pan, taste, add salt if necessary, then reheat to serve.",
-  image:
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_2,
-  ingredient_id: oil_vegetable,
-  amount: 1,
-  measurement_type: "tbsp"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_2,
-  ingredient_id: onion,
-  amount: 1,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_2,
-  ingredient_id: coriander_ground,
-  amount: 1,
-  measurement_type: "tsp"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_2,
-  ingredient_id: potato,
-  amount: 1,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_2,
-  ingredient_id: carrot,
-  amount: 450,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_2,
-  ingredient_id: stock_vegetable,
-  amount: 1.2,
-  measurement_type: "l"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_2,
-  ingredient_id: coriander,
-  amount: 15,
-  measurement_type: "g"
-)
+#   STEP 5\n
+#   Tip into a food processor with a handful of coriander then blitz until smooth (you may need to do this in two batches). Return to pan, taste, add salt if necessary, then reheat to serve.",
+#   image: ,
+#   user_id: user_1
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_2,
+#   ingredient_id: oil_vegetable,
+#   amount: 1,
+#   measurement_type: "tbsp"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_2,
+#   ingredient_id: onion,
+#   amount: 1,
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_2,
+#   ingredient_id: coriander_ground,
+#   amount: 1,
+#   measurement_type: "tsp"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_2,
+#   ingredient_id: potato,
+#   amount: 1,
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_2,
+#   ingredient_id: carrot,
+#   amount: 450,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_2,
+#   ingredient_id: stock_vegetable,
+#   amount: 1.2,
+#   measurement_type: "l"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_2,
+#   ingredient_id: coriander,
+#   amount: 15,
+#   measurement_type: "g"
+# )
 
-recipe_3 = Recipe.create!(
-  title: "Caprese Salad",
-  description: "A simple and refreshing Italian salad featuring tomatoes, fresh mozzarella, and basil.",
-  cuisine: "Italian",
-  vegetarian: true,
-  vegan: false,
-  gluten_free: true,
-  dairy_free: false,
-  egg_free: true,
-  nut_free: true,
-  prep_time: 10,
-  cook_time: 0,
-  level: "easy",
-  servings: 2,
-  method: "STEP 1\n
-  Slice tomatoes and fresh mozzarella cheese into equal-sized slices.\n
+# recipe_3 = Recipe.create!(
+#   title: "Caprese Salad",
+#   description: "A simple and refreshing Italian salad featuring tomatoes, fresh mozzarella, and basil.",
+#   cuisine: "Italian",
+#   vegetarian: true,
+#   vegan: false,
+#   gluten_free: true,
+#   dairy_free: false,
+#   egg_free: true,
+#   nut_free: true,
+#   prep_time: 10,
+#   cook_time: 0,
+#   level: "Easy",
+#   servings: 2,
+#   method: "STEP 1\n
+#   Slice tomatoes and fresh mozzarella cheese into equal-sized slices.\n
 
-  STEP 2\n
-  Arrange tomato and mozzarella slices on a plate, alternating them.\n
+#   STEP 2\n
+#   Arrange tomato and mozzarella slices on a plate, alternating them.\n
 
-  STEP 3\n
-  Sprinkle fresh basil leaves over the tomatoes and mozzarella.\n
+#   STEP 3\n
+#   Sprinkle fresh basil leaves over the tomatoes and mozzarella.\n
 
-  STEP 4\n
-  Drizzle with extra virgin olive oil and balsamic vinegar.\n
+#   STEP 4\n
+#   Drizzle with extra virgin olive oil and balsamic vinegar.\n
 
-  STEP 5\n
-  Season with salt and black pepper to taste.\n
+#   STEP 5\n
+#   Season with salt and black pepper to taste.\n
 
-  STEP 6\n
-  Serve immediately as a side dish or appetizer.",
-  image: "",
-  user_id: user_4
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_3,
-  ingredient_id: tomatoes,
-  amount: 2,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_3,
-  ingredient_id: mozzarella,
-  amount: 125,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_3,
-  ingredient_id: basil,
-  amount: 10,
-  measurement_type: "leaves"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_3,
-  ingredient_id: oil_olive,
-  amount: 1,
-  measurement_type: "tbsp"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_3,
-  ingredient_id: vinegar_balsamic,
-  amount: 1,
-  measurement_type: "tbsp"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_3,
-  ingredient_id: salt,
-  amount: nil,
-  measurement_type: "to taste"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_3,
-  ingredient_id: black_pepper,
-  amount: nil,
-  measurement_type: "to taste"
-)
+#   STEP 6\n
+#   Serve immediately as a side dish or appetizer.",
+#   image: "",
+#   user_id: user_1
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_3,
+#   ingredient_id: tomatoes,
+#   amount: 2,
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_3,
+#   ingredient_id: mozzarella,
+#   amount: 125,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_3,
+#   ingredient_id: basil,
+#   amount: 10,
+#   measurement_type: "leaves"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_3,
+#   ingredient_id: oil_olive,
+#   amount: 1,
+#   measurement_type: "tbsp"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_3,
+#   ingredient_id: vinegar_balsamic,
+#   amount: 1,
+#   measurement_type: "tbsp"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_3,
+#   ingredient_id: salt,
+#   amount: nil,
+#   measurement_type: "to taste"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_3,
+#   ingredient_id: black_pepper,
+#   amount: nil,
+#   measurement_type: "to taste"
+# )
 
-recipe_4 = Recipe.create!(
-  title: "Chicken Tikka Masala",
-  description: "A popular Indian dish featuring marinated chicken in a creamy tomato sauce.",
-  cuisine: "Indian",
-  vegetarian: false,
-  vegan: false,
-  gluten_free: false,
-  dairy_free: false,
-  egg_free: true,
-  nut_free: true,
-  prep_time: 20,
-  cook_time: 30,
-  level: "moderate",
-  servings: 4,
-  method: "STEP 1\n
-  Marinate chicken pieces in yogurt, lemon juice, and spices for at least 1 hour.\n
+# recipe_4 = Recipe.create!(
+#   title: "Chicken Tikka Masala",
+#   description: "A popular Indian dish featuring marinated chicken in a creamy tomato sauce.",
+#   cuisine: "Indian",
+#   vegetarian: false,
+#   vegan: false,
+#   gluten_free: false,
+#   dairy_free: false,
+#   egg_free: true,
+#   nut_free: true,
+#   prep_time: 20,
+#   cook_time: 30,
+#   level: "Medium",
+#   servings: 4,
+#   method: "STEP 1\n
+#   Marinate chicken pieces in yogurt, lemon juice, and spices for at least 1 hour.\n
 
-  STEP 2\n
-  Grill or broil marinated chicken until cooked through.\n
+#   STEP 2\n
+#   Grill or broil marinated chicken until cooked through.\n
 
-  STEP 3\n
-  In a separate pan, heat oil and sauté onions until translucent. Add minced garlic and ginger and cook until fragrant.\n
+#   STEP 3\n
+#   In a separate pan, heat oil and sauté onions until translucent. Add minced garlic and ginger and cook until fragrant.\n
 
-  STEP 4\n
-  Add tomato sauce, cream, and spices to the pan. Simmer for a few minutes.\n
+#   STEP 4\n
+#   Add tomato sauce, cream, and spices to the pan. Simmer for a few minutes.\n
 
-  STEP 5\n
-  Add cooked chicken to the sauce and simmer until flavors meld.\n
+#   STEP 5\n
+#   Add cooked chicken to the sauce and simmer until flavors meld.\n
 
-  STEP 6\n
-  Garnish with fresh cilantro and serve with rice or naan.",
-  image: "",
-  user_id: user_3
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: chicken,
-  amount: 500,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: yoghurt,
-  amount: 150,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: lemon_juice,
-  amount: 2,
-  measurement_type: "tbsp"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: onion,
-  amount: 1,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: garlic,
-  amount: 2,
-  measurement_type: "cloves"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: ginger,
-  amount: 2,
-  measurement_type: "cm"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: tomato_sauce,
-  amount: 200,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: cream,
-  amount: 100,
-  measurement_type: "ml"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: coriander,
-  amount: 10,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_4,
-  ingredient_id: rice_basmati,
-  amount: 1,
-  measurement_type: "cup"
-)
+#   STEP 6\n
+#   Garnish with fresh cilantro and serve with rice or naan.",
+#   image: "",
+#   user_id: user_1
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: chicken,
+#   amount: 500,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: yoghurt,
+#   amount: 150,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: lemon_juice,
+#   amount: 2,
+#   measurement_type: "tbsp"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: onion,
+#   amount: 1,
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: garlic,
+#   amount: 2,
+#   measurement_type: "cloves"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: ginger,
+#   amount: 2,
+#   measurement_type: "cm"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: tomato_sauce,
+#   amount: 200,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: cream,
+#   amount: 100,
+#   measurement_type: "ml"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: coriander,
+#   amount: 10,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_4,
+#   ingredient_id: rice_basmati,
+#   amount: 1,
+#   measurement_type: "cup"
+# )
 
-recipe_16 = Recipe.create!(
-  title: "Spaghetti Carbonara",
-  description: "A classic Italian pasta dish with creamy sauce and crispy bacon.",
-  cuisine: "Italian",
-  vegetarian: false,
-  vegan: false,
-  gluten_free: false,
-  dairy_free: false,
-  egg_free: false,
-  nut_free: true,
-  prep_time: 10,
-  cook_time: 15,
-  level: "easy",
-  servings: 2,
-  method: "STEP 1\n
-  Cook spaghetti according to package instructions until al dente. Reserve 1/2 cup of pasta water before draining.\n
+# recipe_16 = Recipe.create!(
+#   title: "Spaghetti Carbonara",
+#   description: "A classic Italian pasta dish with creamy sauce and crispy bacon.",
+#   cuisine: "Italian",
+#   vegetarian: false,
+#   vegan: false,
+#   gluten_free: false,
+#   dairy_free: false,
+#   egg_free: false,
+#   nut_free: true,
+#   prep_time: 10,
+#   cook_time: 15,
+#   level: "Easy",
+#   servings: 2,
+#   method: "STEP 1\n
+#   Cook spaghetti according to package instructions until al dente. Reserve 1/2 cup of pasta water before draining.\n
 
-  STEP 2\n
-  In a pan, cook bacon until crispy. Remove bacon from pan and set aside. Discard excess bacon grease, leaving about 1 tablespoon in the pan.\n
+#   STEP 2\n
+#   In a pan, cook bacon until crispy. Remove bacon from pan and set aside. Discard excess bacon grease, leaving about 1 tablespoon in the pan.\n
 
-  STEP 3\n
-  In the same pan, add minced garlic and cook until fragrant.\n
+#   STEP 3\n
+#   In the same pan, add minced garlic and cook until fragrant.\n
 
-  STEP 4\n
-  Add cooked spaghetti to the pan with garlic. Toss to combine.\n
+#   STEP 4\n
+#   Add cooked spaghetti to the pan with garlic. Toss to combine.\n
 
-  STEP 5\n
-  In a small bowl, whisk together eggs, grated Parmesan cheese, and black pepper.\n
+#   STEP 5\n
+#   In a small bowl, whisk together eggs, grated Parmesan cheese, and black pepper.\n
 
-  STEP 6\n
-  Pour egg mixture over the spaghetti and quickly toss until the eggs thicken and coat the pasta. If the sauce is too thick, add reserved pasta water gradually.\n
+#   STEP 6\n
+#   Pour egg mixture over the spaghetti and quickly toss until the eggs thicken and coat the pasta. If the sauce is too thick, add reserved pasta water gradually.\n
 
-  STEP 7\n
-  Crumble the cooked bacon and sprinkle over the spaghetti. Serve hot with extra Parmesan cheese if desired.",
-  image: "",
-  user_id: user_2
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_16,
-  ingredient_id: spaghetti,
-  amount: 200,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_16,
-  ingredient_id: bacon,
-  amount: 100,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_16,
-  ingredient_id: garlic,
-  amount: 2,
-  measurement_type: "cloves"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_16,
-  ingredient_id: eggs,
-  amount: 2,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_16,
-  ingredient_id: cheese_parmesan,
-  amount: 50,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe_id: recipe_16.id,
-  ingredient_id: black_pepper,
-  amount: 1,
-  measurement_type: "tsp"
-)
-
-
-
+#   STEP 7\n
+#   Crumble the cooked bacon and sprinkle over the spaghetti. Serve hot with extra Parmesan cheese if desired.",
+#   image: "",
+#   user_id: user_1
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_16,
+#   ingredient_id: spaghetti,
+#   amount: 200,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_16,
+#   ingredient_id: bacon,
+#   amount: 100,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_16,
+#   ingredient_id: garlic,
+#   amount: 2,
+#   measurement_type: "cloves"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_16,
+#   ingredient_id: eggs,
+#   amount: 2,
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_16,
+#   ingredient_id: cheese_parmesan,
+#   amount: 50,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe_id: recipe_16.id,
+#   ingredient_id: black_pepper,
+#   amount: 1,
+#   measurement_type: "tsp"
+# )
 
 
 
 
-recipe = Recipe.create!(
-  title: ,
-  description: ,
-  cusine: ,
-  vegetarian: true,
-  vegan: true,
-  gluten_free: true,
-  dairy_free: true,
-  egg_free: true,
-  nut_free: true,
-  prep_time: ,
-  cook_time: ,
-  level: ,
-  servings: ,
-  method: ,
-  image:
-)
-recipe_ingredient = RecipeIngredient.create!(
-  recipe_id: ,
-  ingredient_id: ,
-  amount:
-)
+
+
+
+# recipe = Recipe.create!(
+#   title: ,
+#   description: ,
+#   cuisine: ,
+#   vegetarian: true,
+#   vegan: true,
+#   gluten_free: true,
+#   dairy_free: true,
+#   egg_free: true,
+#   nut_free: true,
+#   prep_time: ,
+#   cook_time: ,
+#   level: ,
+#   servings: ,
+#   method: ,
+#   image:
+# )
+# recipe_ingredient = RecipeIngredient.create!(
+#   recipe_id: ,
+#   ingredient_id: ,
+#   amount:
+# )
