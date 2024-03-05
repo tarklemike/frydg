@@ -6,6 +6,7 @@
 <p><%= @recipe.prep_time %></p>
 <p><%= @recipe.cook_time %></p>
 
+
 <div class="reviewsection">
   <h5 class="containergrace"><strong>Review</strong></h5>
   <ul class="list-group">
@@ -13,9 +14,15 @@
     <li class="list-group-item"><%= review.comment %></li>
     <% end %>
   </ul>
+
     <%= simple_form_for [@recipe, @review] do |f| %>
     <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
     <%= f.input :rating, collection: 1..5%>
     <%= f.submit "Submit", class: "btn btn-primary"%>
     <% end %>
 </div>
+
+<div><%= link_to "Delete",
+  recipe_path(@recipe),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%></div>
