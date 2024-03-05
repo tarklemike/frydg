@@ -38,39 +38,64 @@ user_2 = User.create(
 puts "creating ingredients database..."
 
 bacon = Ingredient.create!(name: "bacon")
+bamboo_shoots = Ingredient.create!(name: "bamboo shoots")
 basil = Ingredient.create!(name: "basil")
+bean_sprouts = Ingredient.create!(name: "bean sprouts")
 black_pepper = Ingredient.create!(name: "black pepper")
 carrot = Ingredient.create!(name: "carrot")
 cheese_parmesan = Ingredient.create!(name: "parmesan")
 chicken = Ingredient.create!(name: "chicken")
 chilli_flakes = Ingredient.create!(name: "chilli flakes")
 chilli_green = Ingredient.create!(name: "green chilli")
+coconut_milk =  Ingredient.create!(name: "coconut_milk")
 coriander =  Ingredient.create!(name: "coriander")
 coriander_ground = Ingredient.create!(name: "ground coriander")
 cream = Ingredient.create!(name: "cream")
 cumin_seeds = Ingredient.create!(name: "cumin seeds")
-eggs = Ingredient.create!(name: "eggs")
+egg = Ingredient.create!(name: "egg")
 garlic = Ingredient.create!(name: "garlic")
 ginger = Ingredient.create!(name: "ginger")
+green_curry_paste = Ingredient.create!(name: "green curry paste")
 lemon_juice = Ingredient.create!(name: "lemon juice")
+lemon_wedge = Ingredient.create!(name: "lemon wedges")
+lime_juice = Ingredient.create!(name: "lime juice")
+lime_wedge = Ingredient.create!(name: "lime wedges")
 lentils = Ingredient.create!(name: "lentils")
+mirin = Ingredient.create!(name: "mirin")
 mozzarella = Ingredient.create!(name: "mozzarella")
+mussels = Ingredient.create!(name: "mussels")
 mustard_seeds = Ingredient.create!(name: "mustard seeds")
+noodles_rice = Ingredient.create!(name: "rice noodles")
 oil_vegetable = Ingredient.create!(name: "vegetable oil")
 oil_olive = Ingredient.create!(name: "olive oil")
 onion = Ingredient.create!(name: "onion")
 onion_red = Ingredient.create!(name: "red onion")
+pad_thai_sauce = Ingredient.create!(name: "pad Thai sauce")
+parsley = Ingredient.create!(name: "parsley")
 pasta = Ingredient.create!(name: "pasta")
+peanuts = Ingredient.create!(name: "peanuts")
 potato = Ingredient.create!(name: "potato")
+prawns = Ingredient.create!(name: "prawns")
+red_pepper = Ingredient.create!(name: "red pepper")
 rice_basmati = Ingredient.create!(name: "basmati rice")
+rice_short_grain = Ingredient.create!(name: "short-grain rice")
+saffron = Ingredient.create!(name: "saffron")
+sake = Ingredient.create!(name: "sake")
 salt = Ingredient.create!(name: "salt")
+sesame_seeds = Ingredient.create!(name: "sesame seeds")
+soy_sauce = Ingredient.create!(name: "soy sauce")
 spaghetti = Ingredient.create!(name: "spaghetti")
+spring_onion = Ingredient.create!(name: "spring onion")
+squid = Ingredient.create!(name: "squid")
 stock_vegetable = Ingredient.create!(name: "vegetable stock")
+sugar = Ingredient.create!(name: "sugar")
+tofu = Ingredient.create!(name: "tofu")
 tomato = Ingredient.create!(name: "tomato")
 tomato_sauce = Ingredient.create!(name: "tomato sauce")
 tumeric = Ingredient.create!(name: "tumeric")
 vinegar_balsamic = Ingredient.create!(name: "balsamic vinegar")
 yoghurt = Ingredient.create!(name: "yoghurt")
+
 
 
 puts "creating recipes..."
@@ -185,6 +210,7 @@ RecipeIngredient.create!(
   measurement_type: "g"
 )
 
+
 recipe_2 = Recipe.create!(
   title: "Carrot & coriander soup",
   description: "Everyone loves this super healthy soup, perfect for an easy supper",
@@ -258,6 +284,7 @@ RecipeIngredient.create!(
   amount: 15,
   measurement_type: "g"
 )
+
 
 recipe_3 = Recipe.create!(
   title: "Caprese Salad",
@@ -336,6 +363,7 @@ RecipeIngredient.create!(
   measurement_type: "to taste"
 )
 
+
 recipe_4 = Recipe.create!(
   title: "Chicken Tikka Masala",
   description: "A popular Indian dish featuring marinated chicken in a creamy tomato sauce.",
@@ -368,7 +396,7 @@ recipe_4 = Recipe.create!(
   STEP 6\n
   Garnish with fresh cilantro and serve with rice or naan.",
   image: "",
-  user: user_1
+  user: user_2
 )
 RecipeIngredient.create!(
   recipe: recipe_4,
@@ -431,7 +459,313 @@ RecipeIngredient.create!(
   measurement_type: "cup"
 )
 
-recipe_16 = Recipe.create!(
+
+recipe_5 = Recipe.create!(
+  title: "Pad Thai",
+  description: "A popular Thai stir-fried noodle dish featuring rice noodles, shrimp, tofu, and peanuts.",
+  cuisine: "Thai",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: false,
+  nut_free: false,
+  prep_time: 20,
+  cook_time: 15,
+  level: "Easy",
+  servings: 4,
+  method: "STEP 1\n
+  Soak rice noodles in warm water until softened. Drain and set aside.\n
+
+  STEP 2\n
+  In a wok or large skillet, heat oil and sauté garlic and tofu until golden brown.\n
+
+  STEP 3\n
+  Add shrimp and cook until pink. Push everything to one side of the wok.\n
+
+  STEP 4\n
+  Crack eggs into the wok and scramble until cooked.\n
+
+  STEP 5\n
+  Add drained rice noodles and stir-fry with the other ingredients.\n
+
+  STEP 6\n
+  Stir in Pad Thai sauce and bean sprouts. Cook until heated through.\n
+
+  STEP 7\n
+  Serve hot, garnished with crushed peanuts, chopped spring onions, and lime wedges.",
+  image: "",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: noodles_rice,
+  amount: 200,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: tofu,
+  amount: 200,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: prawns,
+  amount: 200,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: egg,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: pad_thai_sauce,
+  amount: 100,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: bean_sprouts,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: peanuts,
+  amount: 50,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: spring_onion,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_5,
+  ingredient: lime_wedge,
+  amount: "to taste",
+  measurement_type: ""
+)
+
+
+recipe_6 = Recipe.create!(
+  title: "Chicken Teriyaki",
+  description: "A delicious Japanese dish featuring tender chicken marinated in a sweet and savory teriyaki sauce.",
+  cuisine: "Japanese",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: true,
+  prep_time: 15,
+  cook_time: 15,
+  level: "Easy",
+  servings: 2,
+  method: "STEP 1\n
+  In a bowl, mix together soy sauce, mirin, sake, and sugar to make the teriyaki sauce.\n
+
+  STEP 2\n
+  Cut chicken breasts into bite-sized pieces and marinate in the teriyaki sauce for 10-15 minutes.\n
+
+  STEP 3\n
+  Heat oil in a pan over medium-high heat.\n
+
+  STEP 4\n
+  Add the marinated chicken pieces and cook until golden brown and cooked through.\n
+
+  STEP 5\n
+  Serve the chicken teriyaki hot over steamed rice, garnished with sesame seeds and chopped spring onions.",
+  image: "",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_6,
+  ingredient: soy_sauce,
+  amount: 3,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_6,
+  ingredient: mirin,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_6,
+  ingredient: sake,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_6,
+  ingredient: sugar,
+  amount: 1,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_6,
+  ingredient: chicken,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_6,
+  ingredient: oil_vegetable,
+  amount: 1,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_6,
+  ingredient: sesame_seeds,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_6,
+  ingredient: spring_onion,
+  amount: "to taste",
+  measurement_type: ""
+)
+
+
+recipe_7 = Recipe.create!(
+  title: "Paella",
+  description: "A classic Spanish rice dish cooked with saffron, seafood, and vegetables.",
+  cuisine: "Spanish",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: true,
+  prep_time: 20,
+  cook_time: 40,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1\n
+  Heat olive oil in a paella pan over medium heat.\n
+
+  STEP 2\n
+  Fry chopped onions, garlic, bell peppers, and diced tomatoes until softened.\n
+
+  STEP 3\n
+  Add short-grain rice and stir to coat in the oil.\n
+
+  STEP 4\n
+  Stir in saffron threads and hot vegetable stock. Bring to a boil, then reduce heat and simmer until rice is almost cooked.\n
+
+  STEP 5\n
+  Nestle seafood (such as prawns, mussels, and squid) into the rice mixture.\n
+
+  STEP 6\n
+  Continue to cook until the seafood is cooked through and the rice is tender.\n
+
+  STEP 7\n
+  Garnish with chopped parsley and lemon wedges before serving.",
+  image: "",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: oil_olive,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: onion,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: tomato,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: rice_short_grain,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: saffron,
+  amount: "pinch",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: stock_vegetable,
+  amount: 600,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: prawns,
+  amount: 200,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: mussels,
+  amount: 200,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: squid,
+  amount: 200,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: parsley,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_7,
+  ingredient: lemon_wedge,
+  amount: "to taste",
+  measurement_type: ""
+)
+
+
+recipe_8 = Recipe.create!(
   title: "Spaghetti Carbonara",
   description: "A classic Italian pasta dish with creamy sauce and crispy bacon.",
   cuisine: "Italian",
@@ -469,41 +803,160 @@ recipe_16 = Recipe.create!(
   user: user_1
 )
 RecipeIngredient.create!(
-  recipe: recipe_16,
+  recipe: recipe_8,
   ingredient: spaghetti,
   amount: 200,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
-  recipe: recipe_16,
+  recipe: recipe_8,
   ingredient: bacon,
   amount: 100,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
-  recipe: recipe_16,
+  recipe: recipe_8,
   ingredient: garlic,
   amount: 2,
   measurement_type: "cloves"
 )
 RecipeIngredient.create!(
-  recipe: recipe_16,
-  ingredient: eggs,
+  recipe: recipe_8,
+  ingredient: egg,
   amount: 2,
   measurement_type: ""
 )
 RecipeIngredient.create!(
-  recipe: recipe_16,
+  recipe: recipe_8,
   ingredient: cheese_parmesan,
   amount: 50,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
-  recipe: recipe_16,
+  recipe: recipe_8,
   ingredient: black_pepper,
   amount: 1,
   measurement_type: "tsp"
 )
+
+
+recipe_9 = Recipe.create!(
+  title: "Thai Green Curry",
+  description: "A fragrant and spicy Thai curry made with green curry paste, coconut milk, and a variety of vegetables and protein.",
+  cuisine: "Thai",
+  vegetarian: false,
+  vegan: true,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 20,
+  cook_time: 25,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1\n
+  Heat oil in a large pot or saucepan over medium heat.\n
+
+  STEP 2\n
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3\n
+  Stir in green curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4\n
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5\n
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6\n
+  Stir in chopped basil leaves and lime juice.\n
+
+  STEP 7\n
+  Serve hot with steamed rice.",
+  image: "",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: onion,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: chicken,
+  amount: 400,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: tofu,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_9,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
 
 
 
