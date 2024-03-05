@@ -3,16 +3,17 @@
 
 
 
+
 <div class="reviewsection">
-        <h5 class="containergrace"><strong>Review</strong></h5>
-        <ul class="list-group">
-          <% @recipe.reviews.each do |review| %>
-          <li class="list-group-item"><%= review.content %></li>
-          <% end %>
-        </ul>
-          <%= simple_form_for [@recipe, @review] do |f| %>
-          <%= f.input :content, placeholder: "Leave your review here...", label: false%>
-          <%= f.submit "Submit", class: "btn btn-primary"%>
-          <% end %>
-    </div>
-  </div>
+  <h5 class="containergrace"><strong>Review</strong></h5>
+  <ul class="list-group">
+    <% @recipe.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.comment %></li>
+    <% end %>
+  </ul>
+    <%= simple_form_for [@recipe, @review] do |f| %>
+    <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
+    <%= f.input :rating, collection: 1..5%>
+    <%= f.submit "Submit", class: "btn btn-primary"%>
+    <% end %>
+</div>
