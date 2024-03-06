@@ -1,7 +1,8 @@
+<%# this page is search results and links to the recipe card scss %>
 <div>
   <% @recipes.each do |recipe| %>
-    <ul>
-      <li><%= image_tag recipe.image_url %></li>
+    <ul class="card_recipesearch">
+      <li class="recipecardimg"><%= image_tag recipe.image_url %></li>
       <li><strong>title:</strong> <%= recipe.title %></li>
       <li><strong>description: </strong><%= recipe.description %></li>
       <li><strong>cuisine: </strong><%= recipe.cuisine %></li>
@@ -30,3 +31,18 @@
 </div>
 
 <%= link_to "New Recipe", new_recipe_path %>
+
+
+<style>
+  .card_recipesearch {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  .recipecardimg {
+    border-radius: 5px 5px 0 0;
+  }
+
+
+</style>
