@@ -7,7 +7,6 @@
     </div>
     <!--- end --->
 
-
     <!-- Logo in the Middle -->
     <%= link_to root_path, class: "navbar-brand mx-auto logo" do %>
     <%= image_tag "logo.png", alt: "Your Logo" %>
@@ -24,9 +23,10 @@
       <% else %>
         <!-- If user is not signed in, show sign-in icon -->
         <%= link_to new_user_session_path, class: 'nav-link' do %>
-          <i class="fas fa-sign-in-alt"></i>
+        <i class="fa-solid fa-right-to-bracket fa-2xl" style="color: #ffffff;"></i>
         <% end %>
       <% end %>
     </div>
+    <!--- end --->
   </div>
 </div>
