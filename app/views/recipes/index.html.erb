@@ -2,13 +2,13 @@
   <% @recipes.each do |recipe| %>
     <ul>
       <li><%= image_tag recipe.image_url %></li>
-      <li>title: <%= recipe.title %></li>
-      <li>description: <%= recipe.description %></li>
-      <li>cuisine: <%= recipe.cuisine %></li>
-      <li>prep time: <%= recipe.prep_time.to_i %> minutes</li>
-      <li>cook time: <%= recipe.cook_time.to_i %> minutes</li>
-      <li>level: <%= recipe.level %></li>
-      <li>servings: <%= recipe.servings %></li>
+      <li><strong>title:</strong> <%= recipe.title %></li>
+      <li><strong>description: </strong><%= recipe.description %></li>
+      <li><strong>cuisine: </strong><%= recipe.cuisine %></li>
+      <li><strong>prep time: </strong><%= recipe.prep_time.to_i %> minutes</li>
+      <li><strong>cook time: </strong><%= recipe.cook_time.to_i %> minutes</li>
+      <li><strong>level: </strong><%= recipe.level %></li>
+      <li><strong>servings: </strong><%= recipe.servings %></li>
       <% if recipe.vegetarian %>
         <li>vegetarian</li>
       <% end %>
@@ -21,26 +21,12 @@
       <% if recipe.gluten_free %>
         <li>gluten free</li>
       <% end %>
-      <li>method: <%= simple_format(recipe.method) %></li>
+      <li><strong>method: </strong><%= simple_format(recipe.method) %></li>
+      <%# recipe.recipe_ingredients do |ingredient| %>
+       <%# <li><strong>ingredient: </strong><%= "#{ingredient.amount}#{ingredient.measurement_type}" %>
+      <%# end %>
     </ul>
   <% end %>
 </div>
 
 <%= link_to "New Recipe", new_recipe_path %>
-
-]
-  title: ,
-#   description: ,
-#   cuisine: ,
-#   vegetarian: true,
-#   vegan: true,
-#   gluten_free: true,
-#   dairy_free: true,
-#   egg_free: true,
-#   nut_free: true,
-#   prep_time: ,
-#   cook_time: ,
-#   level: ,
-#   servings: ,
-#   method: ,
-#   image:
