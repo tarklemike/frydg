@@ -1,0 +1,8 @@
+<h1>Welcome to recipe page</h1>
+<%= simple_form_for [@recipe, @recipe_ingredient], data: { new_recipe_target: "form"} do |f|%>
+  <%= f.association :ingredient %>
+  <%= f.input :amount %>
+  <%= f.input :measurement_type %>
+  <%= f.input :recipe, as: :hidden, input_html: {value:@recipe, data:{new_recipe_target: "recipeId"}} %>
+  <%= f.button :submit, data: {action: "click->new-recipe#submit"}%>
+<% end %>
