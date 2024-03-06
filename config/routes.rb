@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :reviews, only: [:new, :create, :destroy]
     resources :recipe_ingredients, only: [:new, :create, :destroy]
+    get "recipe_ingredients", to: "recipe_ingredients#recipe_ingredient_list"
   end
 
   resources :ingredients, only: [:create, :new]
