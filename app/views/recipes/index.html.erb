@@ -1,30 +1,8 @@
-<%# this page is search results and links to the recipe card scss %>
+<%# this page is search resultshs and links to the recipe card scss %>
+
 <div>
   <% @recipes.each do |recipe| %>
-    <ul class="card_recipes_default">
-      <li><%= image_tag recipe.image_url, class: "recipe_img" %></li>
-      <li><strong><%= recipe.title %></strong></li>
-      <li><%= recipe.cuisine %></li>
-      <li><strong>prep time: </strong><%= recipe.prep_time.to_i %> minutes</li>
-      <li><strong>cook time: </strong><%= recipe.cook_time.to_i %> minutes</li>
-      <li><strong>level: </strong><%= recipe.level %></li>
-      <li><strong>servings: </strong><%= recipe.servings %></li>
-      <% if recipe.vegetarian %>
-        <li>vegetarian</li>
-      <% end %>
-      <% if recipe.vegan %>
-        <li>vegan</li>
-      <% end %>
-      <% if recipe.dairy_free %>
-        <li>dairy free</li>
-      <% end %>
-      <% if recipe.gluten_free %>
-        <li>gluten free</li>
-      <% end %>
-      <%# recipe.recipe_ingredients do |ingredient| %>
-       <%# <li><strong>ingredient: </strong><%= "#{ingredient.amount}#{ingredient.measurement_type}" %>
-      <%# end %>
-    </ul>
+   <%= render "shared/cardrecipe", recipe: recipe %>
   <% end %>
 </div>
 
