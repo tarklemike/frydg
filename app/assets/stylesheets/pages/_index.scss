@@ -34,3 +34,9 @@
   width: 290px;
   object-fit: cover;
 }
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
