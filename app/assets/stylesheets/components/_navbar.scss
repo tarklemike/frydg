@@ -1,20 +1,15 @@
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background: white;
-// }
-
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
+// removes padding-t from .navbar bootstrap class so that navbar fills the top.
 .navbar {
-  padding: 0px;
+  padding-top: 0px;
 }
 
+// .nav-all is the container for the whole navbar.
 .nav-all {
   background: #2DD99C;
   flex-grow: 0;
 }
 
+// the width of our navbar logo
 img {
-   width: 200px;
+   width: 150px;
 }
