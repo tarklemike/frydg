@@ -9,7 +9,9 @@
 
 
     <!-- Logo in the Middle -->
-    <a class="navbar-brand mx-auto logo" href="#"><%= image_tag "logo.png", alt: "Your Logo" %></a>
+    <%= link_to root_path, class: "navbar-brand mx-auto logo" do %>
+    <%= image_tag "logo.png", alt: "Your Logo" %>
+    <% end %>
     <!--- end --->
 
     <!-- Profile Sign-in Button on the Right -->
