@@ -7,9 +7,11 @@
 .nav-all {
   background: #2DD99C;
   flex-grow: 0;
+  height: 110;
 }
 
 // the width of our navbar logo
-img {
-   width: 150px;
+.logo img {
+   width: 287px;
+   height: 85px;
 }
