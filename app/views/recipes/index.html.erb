@@ -1,7 +1,46 @@
-<ul>
+<div>
   <% @recipes.each do |recipe| %>
-    <li><%= recipe.title %></li>
+    <ul>
+      <li><%= image_tag recipe.image_url %></li>
+      <li>title: <%= recipe.title %></li>
+      <li>description: <%= recipe.description %></li>
+      <li>cuisine: <%= recipe.cuisine %></li>
+      <li>prep time: <%= recipe.prep_time.to_i %> minutes</li>
+      <li>cook time: <%= recipe.cook_time.to_i %> minutes</li>
+      <li>level: <%= recipe.level %></li>
+      <li>servings: <%= recipe.servings %></li>
+      <% if recipe.vegetarian %>
+        <li>vegetarian</li>
+      <% end %>
+      <% if recipe.vegan %>
+        <li>vegan</li>
+      <% end %>
+      <% if recipe.dairy_free %>
+        <li>dairy free</li>
+      <% end %>
+      <% if recipe.gluten_free %>
+        <li>gluten free</li>
+      <% end %>
+      <li>method: <%= simple_format(recipe.method) %></li>
+    </ul>
   <% end %>
-</ul>
+</div>
 
 <%= link_to "New Recipe", new_recipe_path %>
+
+]
+  title: ,
+#   description: ,
+#   cuisine: ,
+#   vegetarian: true,
+#   vegan: true,
+#   gluten_free: true,
+#   dairy_free: true,
+#   egg_free: true,
+#   nut_free: true,
+#   prep_time: ,
+#   cook_time: ,
+#   level: ,
+#   servings: ,
+#   method: ,
+#   image:

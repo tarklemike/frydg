@@ -499,7 +499,7 @@ recipe_5 = Recipe.create!(
   STEP 7\n
   Serve hot, garnished with crushed peanuts, chopped spring onions, and lime wedges.",
   image: "",
-  image_url: "Pad Thai",
+  image_url: "https://www.kitchensanctuary.com/wp-content/uploads/2019/07/Pad-Thai-square-FS-29.jpg",
   user: user_2
 )
 RecipeIngredient.create!(
