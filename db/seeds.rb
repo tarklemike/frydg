@@ -141,6 +141,7 @@ recipe_1 = Recipe.create!(
   STEP 9\n
   Tip the onions over the dahl, stir in and top with chopped coriander. The dahl will keep warm for about 30 minutes",
   image: "",
+  image_url: "https://thecheekychickpea.com/wp-content/uploads/2022/09/red-lentil-dahl-1.jpg",
   user: user_1
 )
 RecipeIngredient.create!(
@@ -240,6 +241,7 @@ recipe_2 = Recipe.create!(
   STEP 5\n
   Tip into a food processor with a handful of coriander then blitz until smooth (you may need to do this in two batches). Return to pan, taste, add salt if necessary, then reheat to serve.",
   image: "",
+  image_url: "https://images.immediate.co.uk/production/volatile/sites/30/2010/12/carrot-and-coriander-soup-recipe-e71fd8f.jpg?quality=90&webp=true&resize=600,545",
   user: user_1
 )
 RecipeIngredient.create!(
@@ -318,6 +320,7 @@ recipe_3 = Recipe.create!(
   STEP 6\n
   Serve immediately as a side dish or appetizer.",
   image: "",
+  image_url: "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-main-1.jpg",
   user: user_1
 )
 RecipeIngredient.create!(
@@ -396,6 +399,7 @@ recipe_4 = Recipe.create!(
   STEP 6\n
   Garnish with fresh cilantro and serve with rice or naan.",
   image: "",
+  image_url: "https://www.seriouseats.com/thmb/DbQHUK2yNCALBnZE-H1M2AKLkok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-tikka-masala-for-the-grill-recipe-hero-2_1-cb493f49e30140efbffec162d5f2d1d7.JPG",
   user: user_2
 )
 RecipeIngredient.create!(
@@ -462,7 +466,7 @@ RecipeIngredient.create!(
 
 recipe_5 = Recipe.create!(
   title: "Pad Thai",
-  description: "A popular Thai stir-fried noodle dish featuring rice noodles, shrimp, tofu, and peanuts.",
+  description: "A popular Thai stir-fried noodle dish featuring rice noodles, prawns, tofu, and peanuts.",
   cuisine: "Thai",
   vegetarian: false,
   vegan: false,
@@ -481,7 +485,7 @@ recipe_5 = Recipe.create!(
   In a wok or large skillet, heat oil and sauté garlic and tofu until golden brown.\n
 
   STEP 3\n
-  Add shrimp and cook until pink. Push everything to one side of the wok.\n
+  Add prawns and cook until pink. Push everything to one side of the wok.\n
 
   STEP 4\n
   Crack eggs into the wok and scramble until cooked.\n
@@ -495,6 +499,7 @@ recipe_5 = Recipe.create!(
   STEP 7\n
   Serve hot, garnished with crushed peanuts, chopped spring onions, and lime wedges.",
   image: "",
+  image_url: "Pad Thai",
   user: user_2
 )
 RecipeIngredient.create!(
@@ -594,6 +599,7 @@ recipe_6 = Recipe.create!(
   STEP 5\n
   Serve the chicken teriyaki hot over steamed rice, garnished with sesame seeds and chopped spring onions.",
   image: "",
+  image_url: "https://cjeatsrecipes.com/wp-content/uploads/2022/04/Teriyaki-Chicken-Cover-min-500x500.jpg",
   user: user_2
 )
 
@@ -682,6 +688,7 @@ recipe_7 = Recipe.create!(
   STEP 7\n
   Garnish with chopped parsley and lemon wedges before serving.",
   image: "",
+  image_url: "https://i0.wp.com/maicookbook.com/wp-content/uploads/2021/05/maicookbook_seafood_paella_2.jpg?fit=2000%2C2500&ssl=1",
   user: user_2
 )
 
@@ -800,6 +807,7 @@ recipe_8 = Recipe.create!(
   STEP 7\n
   Crumble the cooked bacon and sprinkle over the spaghetti. Serve hot with extra Parmesan cheese if desired.",
   image: "",
+  image_url: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?quality=90&resize=440,400",
   user: user_1
 )
 RecipeIngredient.create!(
@@ -875,6 +883,7 @@ recipe_9 = Recipe.create!(
   STEP 7\n
   Serve hot with steamed rice.",
   image: "",
+  image_url: "https://hot-thai-kitchen.com/wp-content/uploads/2022/09/vegan-green-curry-sq-1.jpg",
   user: user_2
 )
 RecipeIngredient.create!(
