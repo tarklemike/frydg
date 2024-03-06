@@ -6,11 +6,6 @@
 // .navbar-lewagon .navbar-collapse {
 //   flex-grow: 0;
 // }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
-
 .navbar {
   padding: 0px;
 }
@@ -18,4 +13,8 @@
 .nav-all {
   background: #2DD99C;
   flex-grow: 0;
+}
+
+img {
+   width: 200px;
 }
