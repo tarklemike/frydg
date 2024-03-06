@@ -1,9 +1,22 @@
-<%# this page is search resultshs and links to the recipe card scss %>
 
-<div>
-  <% @recipes.each do |recipe| %>
-   <%= render "shared/cardrecipe", recipe: recipe %>
-  <% end %>
+<%# this page is search results and links to the recipe card scss %>
+<div class="container">
+  <div class="wrapper d-flex">
+    <div class="row">
+      <div class="col-2">
+        <div class="d-flex flex-column">
+          <%= link_to "New Recipe", new_recipe_path %>
+          <p>Allergens</p>
+          <p>Cuisine</p>
+        </div>
+      </div>
+
+        <div class="card-grid col-10">
+            <% @recipes.each do |recipe| %>
+              <%= render "shared/cardrecipe", recipe: recipe %>
+            <% end %>
+      </div>
+
+    </div>
+  </div>
 </div>
-
-<%= link_to "New Recipe", new_recipe_path %>
