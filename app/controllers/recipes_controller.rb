@@ -3,6 +3,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+    @recipe_ingredients = RecipeIngredient.all
   end
 
   def show
