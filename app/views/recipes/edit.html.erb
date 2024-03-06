@@ -26,13 +26,9 @@
     <% end %>
     </div>
      <div>
-      <ul data-new-recipe-target="ingredientsList">
-        <% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
-          <li><%= recipe_ingredient.ingredient.name %></li>
-        <% end %>
-
-
-      </ul>
+      <%# <% turbo_frame_tag :reloadable, src: "recipes/#{@recipe.id}/recipe_ingredients_list" do %>
+        <%= render "recipe_ingredients/recipe_ingredients_list", recipe: @recipe %>
+        <%# <% end %>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       Add an ingredient
       </button>

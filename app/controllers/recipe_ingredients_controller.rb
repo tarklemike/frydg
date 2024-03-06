@@ -8,7 +8,7 @@ class RecipeIngredientsController < ApplicationController
   def recipe_ingredient_list
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_ingredients = @recipe.recipe_ingredients
-    render json: @recipe_ingredients.to_json
+    render "recipe_ingredients/recipe_ingredient_list", recipe: @recipe, recipe_ingredients: @recipe_ingredients, status: :ok
   end
 
   def create
