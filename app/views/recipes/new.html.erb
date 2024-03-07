@@ -1,9 +1,9 @@
 <%= simple_form_for @recipe do |form| %>
   <%= form.input :title %> <br>
   <ul>
-    <%= form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
+    <%=  form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
       <li>
-        <%= ingredient_form.input :ingredient_id, as: :select, collection: Ingredient.all %>
+        <%= ingredient_form.input :ingredient_id, as: :select, collection: Ingredient.all, input_html: {multiple: true, data: {controller: "tom-select"}} %>
 
       </li>
     <% end %>
