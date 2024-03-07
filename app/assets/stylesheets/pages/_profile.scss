@@ -1,3 +1,5 @@
+
+// all of this relates the profile containers
 .profile-info {
   img {
     border-radius: 50%;
@@ -15,6 +17,9 @@
 
 .profile-recipes {
   padding-top: 250px;
+  h3 {
+    float:left;
+  }
 }
 
 .profile-bio {
@@ -24,7 +29,7 @@
 
 .card-grid-profile {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   overflow: auto;
   height: 500px;
   width: 100%;
@@ -39,7 +44,7 @@
   color: #2DD99C;
   border: 2px solid #2DD99C;
   padding: 5px 20px 5px 20px;
-  margin-left: 330px;
+  margin-left: 320px;
   &:hover {
     background-color: #2DD99C;
     color: white;

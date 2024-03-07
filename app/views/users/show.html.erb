@@ -14,6 +14,8 @@
         <div class="profile-recipes ">
             <div>
                 <h3>Submitted Recipes</h3>
+                <a href="#"><button class="button_default"><strong>Log Out</strong></button></a>
+                <a href="#"><button class="button_default"><strong>Add Recipe +</strong></button></a>
                 <div class="card-grid-profile col-12">
                   <% @recipes.each do |recipe| %>
                    <%= render "shared/cardrecipe", recipe: recipe %>
