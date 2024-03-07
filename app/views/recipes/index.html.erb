@@ -14,7 +14,9 @@
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid">
                 <% @recipes.each do |recipe| %>
+                  <%= link_to recipe_path(recipe) do %>
                   <%= render "shared/cardrecipe", recipe: recipe %>
+                  <% end %>
                 <% end %>
           </div>
 
