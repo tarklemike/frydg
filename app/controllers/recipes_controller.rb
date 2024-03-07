@@ -1,9 +1,12 @@
 class RecipesController < ApplicationController
 
-
   def index
     @recipes = Recipe.all
     @recipe_ingredients = RecipeIngredient.all
+    if params[:query].present?
+      @recipes = @recipes.searching(params[:query])
+    end
+    @recipes = @recipes.order(updated_at: :desc)
   end
 
   def show
