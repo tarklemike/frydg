@@ -5,8 +5,17 @@
 <p><%= @recipe.method %></p>
 <p><%= @recipe.prep_time %></p>
 <p><%= @recipe.cook_time %></p>
-<p><%= simple_format(recipe.method) %></p>
+<p><%= simple_format(@recipe.method) %></p>
 
+<% if current_user.favorited?(@recipe) %>
+  <%= link_to remove_favorite_path(@recipe), data: {turbo_method: :post} do%>
+    <i class="fa-solid fa-heart"></i>
+  <% end %>
+<% else %>
+  <%= link_to add_favorite_path(@recipe), data: {turbo_method: :post} do%>
+    <i class="fa-regular fa-heart"></i>
+  <% end %>
+<% end %>
 
 <div class="reviewsection">
   <h5 class="containergrace"><strong>Review</strong></h5>

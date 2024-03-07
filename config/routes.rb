@@ -6,8 +6,10 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :destroy]
     resources :recipe_ingredients, only: [:new, :create, :destroy]
     get "recipe_ingredients", to: "recipe_ingredients#recipe_ingredient_list"
-  end
 
+  end
+  post "recipes/:id/add_favorite", to: "recipes#add_favorite", as: :add_favorite
+  post "recipes/:id/remove_favorite", to: "recipes#remove_favorite", as: :remove_favorite
   resources :ingredients, only: [:create, :new]
   resources :users, only: [:show, :update, :edit]
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
