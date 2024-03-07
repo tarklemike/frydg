@@ -1,48 +1,22 @@
+
 <%# this page is search results and links to the recipe card scss %>
-<div>
-  <% @recipes.each do |recipe| %>
-    <ul class="card_recipesearch">
-      <li class="recipecardimg"><%= image_tag recipe.image_url %></li>
-      <li><strong>title:</strong> <%= recipe.title %></li>
-      <li><strong>description: </strong><%= recipe.description %></li>
-      <li><strong>cuisine: </strong><%= recipe.cuisine %></li>
-      <li><strong>prep time: </strong><%= recipe.prep_time.to_i %> minutes</li>
-      <li><strong>cook time: </strong><%= recipe.cook_time.to_i %> minutes</li>
-      <li><strong>level: </strong><%= recipe.level %></li>
-      <li><strong>servings: </strong><%= recipe.servings %></li>
-      <% if recipe.vegetarian %>
-        <li>vegetarian</li>
-      <% end %>
-      <% if recipe.vegan %>
-        <li>vegan</li>
-      <% end %>
-      <% if recipe.dairy_free %>
-        <li>dairy free</li>
-      <% end %>
-      <% if recipe.gluten_free %>
-        <li>gluten free</li>
-      <% end %>
-      <li><strong>method: </strong><%= simple_format(recipe.method) %></li>
-      <%# recipe.recipe_ingredients do |ingredient| %>
-       <%# <li><strong>ingredient: </strong><%= "#{ingredient.amount}#{ingredient.measurement_type}" %>
-      <%# end %>
-    </ul>
-  <% end %>
+<div class="container">
+  <div class="wrapper d-flex">
+    <div class="row">
+      <div class="col-2">
+        <div class="d-flex flex-column">
+          <%= link_to "New Recipe", new_recipe_path %>
+          <p>Allergens</p>
+          <p>Cuisine</p>
+        </div>
+      </div>
+
+        <div class="card-grid col-10">
+            <% @recipes.each do |recipe| %>
+              <%= render "shared/cardrecipe", recipe: recipe %>
+            <% end %>
+      </div>
+
+    </div>
+  </div>
 </div>
-
-<%= link_to "New Recipe", new_recipe_path %>
-
-
-<style>
-  .card_recipesearch {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-  }
-
-  .recipecardimg {
-    border-radius: 5px 5px 0 0;
-  }
-
-
-</style>
