@@ -1,1 +1,61 @@
 // Specific CSS for your home-page
+
+.container_page {
+  position: relative;
+  width: 1600px;
+  height: 700px;
+
+}
+.left_side {
+  background-color: white;
+  // TODO - PUT IN CONDITIONALS FOR SCREEN WIDTH FOR OTHER DEVICES i.e phones etc
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 50px;
+
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ---------------------------------------------------------------
+
+.right_side {
+  background-color: #2dd99c;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  align-items: center;
+
+  padding: 50px;
+}
+.signinarea {
+  display: flex;
+  flex-direction: row;
+}
+.signin {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style: none;
+}
+.textdescription {
+  padding-top: 100px;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.inputs {
+  background-color: rgba(128, 128, 128, 0.445);
+  border-radius: 20px;
+}
