@@ -1,0 +1,10 @@
+  <div class="search-container">
+    <%= form_with url: recipes_path, method: :get, class: "d-flex", style: "max-width: 650px; margin: auto;" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control me-2",
+            placeholder: "Search"
+        %>
+    <button type="submit" class="btn-search"><i class="fa-solid fa-magnifying-glass fa-xl" style="color:  #540375;"></i></button>
+    <% end %>
+  </div>
