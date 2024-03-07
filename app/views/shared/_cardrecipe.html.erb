@@ -1,31 +1,24 @@
 <ul class="card_recipes_default">
       <li><%= image_tag recipe.image_url, class: "recipe_img" %></li>
-      <li><strong><%= recipe.title %></strong></li>
-      <li><%= recipe.cuisine %></li>
-          <div class="d-flex">
-            <p>prep time:</p>
-            <p>cook time:</p>
-            <p>level:</p>
-            <p>servings:</p>
-          </div>
-      <div class="container_infograms d-flex">
-        <li><%= recipe.prep_time.to_i %> min</li>
-        <li><%= recipe.cook_time.to_i %> min</li>
-        <li><%= recipe.level %></li>
-        <li><%= recipe.servings %></li>
-      </div>
-      <div class="container_allergens d-flex">
-        <% if recipe.vegetarian %>
-          <li>V</li>
-        <% end %>
-        <% if recipe.vegan %>
-          <li>Ve</li>
-        <% end %>
-        <% if recipe.dairy_free %>
-          <li>df</li>
-        <% end %>
-        <% if recipe.gluten_free %>
-          <li>gf</li>
-        <% end %>
-      </div>
+        <li><strong><%= recipe.title %></strong></li>
+        <div class="allergens d-flex">
+          <% if recipe.vegetarian %>
+            <li><i class="fa-solid fa-drumstick-bite"></i></li>
+          <% end %>
+          <% if recipe.vegan %>
+            <li><i class="fa-solid fa-seedling"></i></li>
+          <% end %>
+          <% if recipe.dairy_free %>
+            <li><i class="fa-solid fa-glass-water"></i></li>
+          <% end %>
+          <% if recipe.gluten_free %>
+            <li><i class="fa-solid fa-wheat-awn"></i></li>
+          <% end %>
+        </div>
+        <%# took out cuisine more useful as search tool %>
+        <div class="infograms d-flex">
+          <li><i class="fa-solid fa-stopwatch" style="color: #2dd99c;"></i> <%= recipe.prep_time.to_i %> mins</li>
+          <li><i class="fa-solid fa-fire-burner" style="color: #2dd99c;"></i> <%= recipe.cook_time.to_i %> mins</li>
+          <li><i class="fa-solid fa-utensils" style="color: #2dd99c;"></i> <%= recipe.level %></li>
+        </div>
 </ul>
