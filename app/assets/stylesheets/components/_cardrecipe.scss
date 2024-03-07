@@ -1,7 +1,4 @@
-// Import page-specific CSS files here.
-@import "home";
-
-// this page is search results and links to the indexhtml
+// this page is search results and links to the card_recipes html
 
 .card_recipes_default {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -36,7 +33,13 @@
 }
 
 
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.container_infograms {
+  color: #2DD99C;
+  font-size: 6px;
+  justify-content: space-between;
+}
+
+.container_allergens {
+  justify-content: space-between;
+  color: #2DD99C;
 }
