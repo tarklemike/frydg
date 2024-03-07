@@ -1,26 +1,42 @@
-<div class="container d-flex">
+<div class="container_page d-flex">
   <div class="row">
 
-    <div class="col-6">
+    <div class="left_side col-6">
+
       <%= cl_image_tag("https://res.cloudinary.com/dyqyteloe/image/upload/v1709743520/logo_full_arez0w.png",) %>
-      <p>search bar</p>
+      <div class="search">
+        <input class="inputs" type="text" placeholder="Search..">
+        <a href="#"><button class="button_default green round"><strong>+</strong></button></a>
+      </div>
+      <a href="recipes"><button class="button_default green"><strong>GO </strong><i class="fa-regular fa-circle-right"></i></button></a>
+      <%= render "shared/search_bar" %>
       <button type="button">Add</button>
       <button type="button">Go!</button>
     </div>
 
-    <div class="col-6">
-      <p>frydg is on a delicious mission to make cooking fun, easy, and sustainable!</p>
-      <p>Turn your ingredients into tasty treasures, save money, and cut food waste—all in one delicious app!</p>
+    <div class="right_side col-6">
+
+      <div class="textdescription">
+        <p>frydg is on a delicious mission to make cooking fun, easy, and sustainable!</p>
+        <p>Turn your ingredients into tasty treasures, save money, and cut food waste—all in one delicious app!</p>
+      </div>
       <div class="d-flex">
-        <div class="d-flex">
+        <div class="signinarea d-flex">
           <%= cl_image_tag("https://res.cloudinary.com/dyqyteloe/image/upload/v1709744610/logo_small_dhd3yt.png",) %>
-          <div>
+          <div class=signin>
             <p>sign in to:</p>
             <h3>Open your</h3>
             <h3><b>frydg.</b></h3>
+            <form action="action_page.php" method="post">
+                <li><input class="inputs" type="text" placeholder="Username" name="uname" required></li>
+                <li><input class="inputs" type="password" placeholder="Password" name="psw" required></li>
+                <a href="users"><button class="button_default green"><strong>GO </strong><i class="fa-regular fa-circle-right"></i></button></a>
+            </form>
           </div>
         </div>
       </div>
+
+
     </div>
 
   </div>
