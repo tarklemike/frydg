@@ -1,6 +1,6 @@
 // removes padding-t from .navbar bootstrap class so that navbar fills the top.
 .navbar {
-  background: #2DD99C;
+  background: $green;
   overflow: hidden;
   position: fixed;
   top: 0;
