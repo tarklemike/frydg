@@ -1,12 +1,13 @@
-<%= simple_form_for @recipe do |form| %>
+<%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
   <%= form.input :title %> <br>
   <ul>
     <%=  form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
-      <li>
-        <%= ingredient_form.input :ingredient_id, as: :select, collection: Ingredient.all, input_html: {multiple: true, data: {controller: "tom-select"}} %>
+      <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
+        <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select"}} %>
 
       </li>
     <% end %>
+    <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p>
   </ul>
   <%= form.submit %>
 <% end %>

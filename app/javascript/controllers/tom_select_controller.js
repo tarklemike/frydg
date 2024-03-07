@@ -5,10 +5,10 @@ import TomSelect from "tom-select";
 export default class extends Controller {
   connect() {
     //new TomSelect(this.element)
-    unique = new TomSelect(this.element,{
+    new TomSelect(this.element,{
       // create: true,
 
-      maxItems: 10,
+      maxItems: 1,
       // createFilter: function(input) {
       //   input = input.toLowerCase();
       //   return !(input in this.options);
