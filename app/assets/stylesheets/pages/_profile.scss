@@ -20,3 +20,9 @@
 .profile-bio {
   padding-right: 50px;
 }
+
+.card-grid-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: auto;
+}
