@@ -8,7 +8,7 @@ class Recipe < ApplicationRecord
   validates :title, presence: true, uniqueness: true, length: {minimum: 4, too_short: "%{count} characters is too short", maximum: 250, too_long: "%{count} characters is the maximum allowed" }
 
   include PgSearch::Model
-  pg_search_scope :global_search,
+  pg_search_scope :searching,
     associated_against: {
       ingredients: :name,
     },
