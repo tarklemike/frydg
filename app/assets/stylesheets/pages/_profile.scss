@@ -1,10 +1,22 @@
 .profile-info {
   img {
     border-radius: 50%;
-    height: 60px;
+    height: 100px;
+    float: left;
+    margin-right:30px;
   }
 
   p {
-    margin-bottom: 0;
+      margin-bottom: 0;
+      font-size: 30px;
   }
+}
+
+
+.profile-recipes {
+  padding-top: 250px;
+}
+
+.profile-bio {
+  padding-right: 50px;
 }
