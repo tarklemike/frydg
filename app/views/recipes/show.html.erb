@@ -1,5 +1,15 @@
 <div class="container d-flex flex-column">
   <div class="d-flex">
+<% if current_user.favorited?(@recipe) %>
+  <%= link_to remove_favorite_path(@recipe), data: {turbo_method: :post} do%>
+    <i class="fa-solid fa-heart"></i>
+  <% end %>
+<% else %>
+  <%= link_to add_favorite_path(@recipe), data: {turbo_method: :post} do%>
+    <i class="fa-regular fa-heart"></i>
+  <% end %>
+<% end %>
+</div>
 
     <div class="col-6">
       <%= image_tag @recipe.image_url, class: "recipe-image" %></li>
@@ -14,6 +24,8 @@
           <p>John Smith</p>
         </div>
         <div class="recipe-rating">
+          <p><%= @recipe.prep_time %></p>
+          <p><%= @recipe.cook_time %></p>
           <p>stars</p>
           <button type="button">See Reviews</button>
         </div>
@@ -52,11 +64,19 @@
 
   <div class="d-flex">
     <h2>Reviews</h2>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div class="reviewsection">
+  <h5 class="containergrace"><strong>Review</strong></h5>
+  <ul class="list-group">
+    <% @recipe.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.comment %></li>
+    <% end %>
+  </ul>
+    
+    <%= simple_form_for [@recipe, @review] do |f| %>
+      <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
+      <%= f.input :rating, collection: 1..5%>
+      <%= f.submit "Submit", class: "btn btn-primary"%>
+    <% end %>
     <br>
     <br>
     <br>

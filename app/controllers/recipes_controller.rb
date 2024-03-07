@@ -52,6 +52,18 @@ class RecipesController < ApplicationController
     redirect_to recipes_path, notice: "Recipe was successfully deleted"
   end
 
+  def add_favorite
+    @recipe = Recipe.find(params[:id])
+    current_user.favorite(@recipe)
+    redirect_to recipe_path(@recipe)
+  end
+
+  def remove_favorite
+    @recipe = Recipe.find(params[:id])
+    current_user.unfavorite(@recipe)
+    redirect_to recipe_path(@recipe)
+  end
+
   private
 
   def recipe_params
