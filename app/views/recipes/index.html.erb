@@ -10,13 +10,15 @@
           <p>Cuisine</p>
         </div>
       </div>
+        <div class="col-10">
+          <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
+          <div class="card-grid">
+                <% @recipes.each do |recipe| %>
+                  <%= render "shared/cardrecipe", recipe: recipe %>
+                <% end %>
+          </div>
 
-        <div class="card-grid col-10">
-            <% @recipes.each do |recipe| %>
-              <%= render "shared/cardrecipe", recipe: recipe %>
-            <% end %>
-      </div>
-
+      <a href="#"><button class="button_default"><strong>Back To Top</strong></button></a>
     </div>
   </div>
 </div>

@@ -1,6 +1,12 @@
+<%= simple_form_for @recipe do |form| %>
+  <%= form.input :title %> <br>
+  <ul>
+    <%= form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
+      <li>
+        <%= ingredient_form.input :ingredient_id, as: :select, collection: Ingredient.all %>
 
-<%= simple_form_for @recipe do |f| %>
-  <%= f.input :title %>
-  <%= f.submit 'add your recipe' %>
-
+      </li>
+    <% end %>
+  </ul>
+  <%= form.submit %>
 <% end %>

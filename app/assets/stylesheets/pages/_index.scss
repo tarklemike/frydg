@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "profile";
+@import "recipes_show"
 
 // this page is search results and links to the indexhtml
 .card_recipes_default {
@@ -38,4 +39,9 @@
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pagetitle {
+  color: #2DD99C;
+  margin: 40px 0px 15px 15px;
 }
