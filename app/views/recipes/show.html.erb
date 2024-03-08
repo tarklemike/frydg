@@ -23,7 +23,7 @@
       </div>
 
       <div class="imagediv col-6">
-        <%= image_tag @recipe.image_url, class: "recipe-image" %>
+        <%= cl_image_tag @recipe.photo.key, class: "recipe-image" %>
       </div>
 
       <div class="hiii recipe-info col-6">
@@ -83,6 +83,7 @@
   <div class="d-flex">
     <h2>Reviews</h2>
     <div class="reviewsection">
+
       <h5 class="containergrace"><strong>Review</strong></h5>
       <ul class="list-group">
         <% @recipe.reviews.each do |review| %>
@@ -101,6 +102,7 @@
       <br>
       <br>
     </div>
+
   </div>
 
 </div>
