@@ -35,7 +35,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe_ingredient = RecipeIngredient.new
     # @ingredients = Ingredient.all
-    # fixing
+
   end
 
   def update
