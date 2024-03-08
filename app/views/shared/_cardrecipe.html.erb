@@ -1,6 +1,6 @@
 <ul class="card_recipes_default">
       <li><%= image_tag recipe.image_url, class: "recipe_img" %></li>
-        <li><strong><%= recipe.title %></strong></li>
+        <li class="recipe_card_title"><strong><%= recipe.title %></strong></li>
         <div class="allergens d-flex">
           <% if recipe.vegetarian %>
             <li><i class="fa-solid fa-drumstick-bite"></i></li>
