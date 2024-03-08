@@ -3,11 +3,17 @@
 <div class="container">
   <div class="wrapper d-flex">
     <div class="row">
-      <div class="col-2">
+      <div class="side_bar col-2">
         <div class="d-flex flex-column">
-          <%= link_to "New Recipe", new_recipe_path %>
-          <p>Allergens</p>
-          <p>Cuisine</p>
+        <div class="addcomponenet">
+          <p>add</p>
+          <p>search bar</p>
+        </div>
+          <p class="retractablecontainer">Allergens</p>
+          <%# TODO - ADD ALLERGENS %>
+            <p></p>
+          <p class="retractablecontainer">Cuisine</p>
+          <%# TODO - ADD CUISINES %>
         </div>
       </div>
         <div class="col-10">
