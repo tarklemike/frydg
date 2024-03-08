@@ -1,0 +1,8 @@
+ <div class=" profile-favourites *right* col-5">
+                <h3>Favourite Recipes</h3>
+                <div class="card-grid-favourites col-12">
+                  <% @recipes.each do |recipe| %>
+                   <%= render "shared/cardrecipe", recipe: recipe %>
+                 <% end %>
+            </div>
+    </div>

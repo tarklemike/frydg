@@ -7,13 +7,15 @@
     <!--- end --->
 
     <!-- Logo in the Middle -->
+    <div class= "our-logo">
     <%= link_to root_path, class: "navbar-brand mx-auto logo" do %>
       <%= image_tag "logo.png", alt: "Your Logo" %>
     <% end %>
+    </div>
     <!--- end --->
 
     <!-- search bar -->
-    <%= render "shared/search_bar" %>
+    <%# <%= render "shared/search_bar" %>
     <!--- end --->
 
     <!-- Profile Sign-in Button on the Right -->

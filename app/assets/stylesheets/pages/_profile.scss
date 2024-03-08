@@ -22,12 +22,24 @@
   }
 }
 
+.profile-favourites {
+  height: 600px;
+}
+
 .profile-bio {
   padding-right: 50px;
   height:500px;
 }
 
-.card-grid-profile {
+.card-grid-favourites {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: auto;
+  height: 500px;
+  width: 100%;
+}
+
+.card-grid-submitted {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   overflow: auto;
@@ -44,7 +56,7 @@
   color: #2DD99C;
   border: 2px solid #2DD99C;
   padding: 5px 20px 5px 20px;
-  margin-left: 320px;
+  margin-left: 140px;
   &:hover {
     background-color: #2DD99C;
     color: white;
