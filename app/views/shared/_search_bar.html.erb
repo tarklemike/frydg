@@ -1,20 +1,22 @@
-  <div class="search-container">
-    <%= form_with url: recipes_path, method: :get, class: "searchbar d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control me-2",
-            placeholder: "Search"
-        %>
-     <a><button type="submit" class="button_default"> GO </button></a>
-    <% end %>
-  </div>
+<%= form_with url: recipes_path, method: :get, class: "d-flex search-container" do %>
+    <%= text_field_tag :query ,
+          params[:query],
+          class: "form-control searchbar me-2",
+          placeholder: "Search"
+      %>
+    <a><button type="submit" class="button_default green round"> <strong> + </strong></button></a>
+<% end %>
 
 <style>
   .searchbar {
-    background-color: rgba(128, 128, 128, 0.145);
     border-radius: 20px;
     min-width: 200px;
-    height: 60px;
-
+    height: 50px;
+  }
+  .search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   }
 </style>
