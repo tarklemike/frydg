@@ -23,7 +23,11 @@
       </div>
 
       <div class="imagediv col-6">
+      <% if @recipe.photo.attached? %>
         <%= cl_image_tag @recipe.photo.key, class: "recipe-image" %>
+      <% else %>
+        <%= image_tag (@recipe.image_url), class: "recipe-image" %>
+      <% end %>
       </div>
 
       <div class="hiii recipe-info col-6">
