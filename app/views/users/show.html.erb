@@ -1,3 +1,4 @@
+<div class= "container">
 <div class="button-container">
   <a href="/recipes/" class="button_default_user"><strong>Back</strong></a>
   <%= link_to destroy_user_session_path, class: "button_default_out" do %>
@@ -8,7 +9,7 @@
 <div class="container d-flex">
   <div class="left d-flex flex-column m-3 col-7">
     <div class="profile-info">
-      <img src="data:image/jpeg;base64,..." alt="">
+          <%= image_tag "https://i.pinimg.com/originals/14/bc/0d/14bc0ddcd3faf7fb07f49644230eec55.jpg" , class: 'avatar-profile', alt: 'Profile Picture' %>
       <p><%= @user.email %></p>
       <div class="profile-socials">
         <i class="fa-brands fa-instagram"></i>
@@ -47,4 +48,5 @@
 
 <div class="recipe flex-column">
   <div class="w-75 border"></div>
+</div>
 </div>
