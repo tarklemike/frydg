@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def show
     @recipes = Recipe.all
+    favorites = current_user.favorites
+    @favorite_recipes = favorites.map{ |f| Recipe.find(f.favoritable_id)}
   end
 
   def edit
