@@ -1,21 +1,51 @@
 
 <%# this page is search results and links to the recipe card scss %>
+
+
 <div class="container">
+
   <div class="wrapper d-flex">
     <div class="row">
-      <div class="side_bar col-2">
-        <div class="d-flex flex-column">
-        <div class="addcomponenet">
-          <p>add</p>
-          <p>search bar</p>
+      <div class="side_bar col-2" style="overflow-y: scroll; height:700px;">
+          <div class="addcomponenet">
+            <h2><strong>add. </strong>+</h2>
+            <div class= "d-flex">
+              <%= render "shared/search_bar"%>
+            </div>
+              <a><button class="button_default">carrot x</button></a>
+               <a><button class="button_default">egg x</button></a>
+          </div>
+
+          <div class="retractablecontainer">
+            <h4 class="top">Allergens  -</h4>
+            <%# TODO - ADD ALLERGENS %>
+            <div  class="content">
+                <input type="checkbox">
+                <label for="vehicle2"> Gluten <i class="fa-solid fa-wheat-awn"></i></label><br>
+                <input type="checkbox">
+                <label for="vehicle3"> Dairy <i class="fa-solid fa-glass-water"></i></label><br>
+                <input type="checkbox">
+                <label for="vehicle3"> Vegitarian <i class="fa-solid fa-drumstick-bite"></i></label><br>
+                <input type="checkbox">
+                <label for="vehicle3"> Vegan <i class="fa-solid fa-seedling"></i></label><br>
+            </div>
+          </div>
+
+          <div class="retractablecontainer">
+            <h4 class="top">Cuisine  -</h4>
+            <%# TODO - ADD ALLERGENS %>
+            <div  class="content">
+                <input type="checkbox"><label for="vehicle2"> British</label><br>
+                <input type="checkbox"><label for="vehicle3"> Indian</i></label><br>
+                <input type="checkbox"><label for="vehicle3"> Chinese</i></label><br>
+                <input type="checkbox"><label for="vehicle3"> Thai </i></label><br>
+                <input type="checkbox"><label for="vehicle3"> Japenese </i></label><br>
+                <input type="checkbox"><label for="vehicle3"> Italian </i></label><br>
+                <input type="checkbox"><label for="vehicle3"> Meditarian </i></label><br>
+                <input type="checkbox"><label for="vehicle3"> Greek </i></label><br>
+            </div>
+          </div>
         </div>
-          <p class="retractablecontainer">Allergens</p>
-          <%# TODO - ADD ALLERGENS %>
-            <p></p>
-          <p class="retractablecontainer">Cuisine</p>
-          <%# TODO - ADD CUISINES %>
-        </div>
-      </div>
         <div class="col-10">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid">
@@ -28,6 +58,6 @@
 
       <a href="#"><button class="button_default"><strong>Back To Top</strong></button></a>
     </div>
-    </div>
   </div>
+</div>
 </div>
