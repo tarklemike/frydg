@@ -1,17 +1,19 @@
-<%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
-  <%= form.input :title %> <br>
-  <%= form.input :description %> <br>
+<div class="container">
+  <div class="tophalf-new d-flex flex-column">
+    <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
+      <%= form.input :title %> <br>
+      <%= form.input :description %> <br>
 
-  <ul data-ingredients-target="ingredientsWrapper">
-    <template data-ingredients-target="template">
-      <%=  form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
-        <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
-          <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->ingredients#add"}} %>
+      <ul data-ingredients-target="ingredientsWrapper">
+        <template data-ingredients-target="template">
+          <%=  form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
+          <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
+              <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->ingredients#add"}} %>
 
-        </li>
-      <% end %>
-    </template>
-  </ul>
+          </li>
+        <% end %>
+       </template>
+      </ul>
   <%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
         <%= form.input :method %>
           <%# <% if recipe.photo %>
@@ -25,5 +27,8 @@
 
       <%= form.input :servings %>
 
-   <%= form.submit %>
- <% end %>
+    <%= form.submit %>
+    <% end %>
+  </div>
+
+</div>
