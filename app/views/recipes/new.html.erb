@@ -1,15 +1,16 @@
 <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
   <%= form.input :title %> <br>
+  <%= form.input :image %> <br>
   <ul data-ingredients-target="ingredientsWrapper">
     <template data-ingredients-target="template">
       <%=  form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
-        <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
+        <li data-ingredients-target="ingredient(s)" data-id="<%= ingredient_form.options[:child_index] %>">
           <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select"}} %>
 
         </li>
       <% end %>
     </template>
   </ul>
-  <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p>
-  <%= form.submit %>
-<% end %>
+  <%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
+   <%= form.submit %>
+ <% end %>
