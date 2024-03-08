@@ -23,7 +23,7 @@
       </div>
 
       <div class="imagediv col-6">
-        <%= image_tag @recipe.image_url, class: "recipe-image" %>
+        <%= cl_image_tag @recipe.photo.key, class: "recipe-image" %>
       </div>
 
       <div class="hiii recipe-info col-6">
