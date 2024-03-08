@@ -1,9 +1,18 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:edit, :update]
   before_action :correct_user, only: [:edit, :update]
 
   def show
+    @user = current_user
+    # if params[:id] == "destroy_user_session"
+      # Handle session destruction logic here
+      # For example, sign out the current user
+      # Redirect to appropriate path after sign out
+      # redirect_to root_path, notice: "You have been signed out."
+    # else
     @recipes = Recipe.all
+    favorites = current_user.favorites
+    @favorite_recipes = favorites.map{ |f| Recipe.find(f.favoritable_id)}
   end
 
   def edit

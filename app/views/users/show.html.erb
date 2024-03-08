@@ -16,13 +16,14 @@
                 <div>
                 </div>
             </div>
-        </div>
+        
              <div class="profile-recipes ">
             <div>
                 <h3>My Recipes</h3>
                 <%= link_to new_recipe_path do %>
                 <button class="button_default_add"><strong>Add Recipe +</strong></button></a>
                 <% end %>
+
                 <div class="card-grid-submitted col-12">
                   <% @recipes.each do |recipe| %>
                   <%= link_to recipe_path(recipe) do %>
@@ -34,7 +35,7 @@
         </div>
     </div>
     <%if user_signed_in?%>
-    <%= render "shared/favourites"%>
+    <%= render "shared/favourites", favorites: @favorite_recipes%>
     <%else%>
         <%= render "shared/bio"%>
     <%end%>
