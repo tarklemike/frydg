@@ -46,25 +46,29 @@
     <div class="col-6">
       <div class="recipe-method">
       <h2>Method</h2>
-        <p><%= @recipe.method %></p>
-        <input type="checkbox" class="steps">
+        <%= simple_format(@recipe.method) %>
+        <%# <input type="checkbox" class="steps">
         <label for="vehicle1"> Step 1:</label><br>
         <input type="checkbox" class="steps">
         <label for="vehicle2"> Step 2:</label><br>
         <input type="checkbox" class="steps">
-        <label for="vehicle3"> Step 3:</label><br>
+        <label for="vehicle3"> Step 3:</label><br> %>
       </div>
     </div>
 
     <div class="col-6">
       <h2>Ingredients</h2>
-      <button type="button">Add</button>
+      <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %></li>
+      <% end %>
+      </ul>
     </div>
 
   </div>
 
   <div class="d-flex">
-    <h2>More recipes from you <strong>frydg.</strong></h2>
+    <h2>More recipes from your <strong>frydg.</strong></h2>
     <br>
     <br>
     <br>
