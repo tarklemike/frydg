@@ -1,3 +1,4 @@
+<a href="#"><button class="button_default_user"><strong>Back</strong></button></a>
 <div class="container d-flex">
     <div class="*left* d-flex flex-column m-3 col-7">
         <div class="profile-info">
@@ -13,7 +14,9 @@
         <div class="profile-recipes ">
             <div>
                 <h3>Submitted Recipes</h3>
-                <div class="card-grid-profile col-10">
+                <a href="#"><button class="button_default"><strong>Log Out</strong></button></a>
+                <a href="#"><button class="button_default"><strong>Add Recipe +</strong></button></a>
+                <div class="card-grid-profile col-12">
                   <% @recipes.each do |recipe| %>
                    <%= render "shared/cardrecipe", recipe: recipe %>
                  <% end %>
