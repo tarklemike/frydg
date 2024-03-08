@@ -15,5 +15,26 @@
     min-width: 360px;
     height: 60px;
 
+
+<%= form_with url: recipes_path, method: :get, class: "d-flex search-container" do %>
+    <%= text_field_tag :query ,
+          params[:query],
+          class: "form-control searchbar me-2",
+          placeholder: "Search"
+      %>
+    <a><button type="submit" class="button_default green round"> <strong> + </strong></button></a>
+<% end %>
+
+<style>
+  .searchbar {
+    border-radius: 20px;
+    min-width: 200px;
+    height: 50px;
+  }
+  .search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   }
 </style>
