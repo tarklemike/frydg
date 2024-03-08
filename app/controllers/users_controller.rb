@@ -11,7 +11,8 @@ class UsersController < ApplicationController
       # redirect_to root_path, notice: "You have been signed out."
     # else
     @recipes = Recipe.all
-    # end
+    favorites = current_user.favorites
+    @favorite_recipes = favorites.map{ |f| Recipe.find(f.favoritable_id)}
   end
 
   def edit
