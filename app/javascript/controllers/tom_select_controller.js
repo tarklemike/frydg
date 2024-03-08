@@ -9,7 +9,7 @@ export default class extends Controller {
     new TomSelect(this.element,{
       // create: true,
 
-      maxItems: 1,
+      maxItems: 5
       // createFilter: function(input) {
       //   input = input.toLowerCase();
       //   return !(input in this.options);

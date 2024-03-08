@@ -2,6 +2,7 @@
 @import "home";
 @import "profile";
 @import "recipes_show";
+@import "new_recipe";
 
 // this page is search results and links to the indexhtml
 .card-grid {
@@ -74,4 +75,8 @@ color: #2DD99C;
   align-items: center;
   font-size: 20px;
   margin-bottom: 10px;
+}
+
+.button_default btn-plus {
+  position: unset;
 }
