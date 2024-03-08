@@ -1,30 +1,7 @@
 <div class= "d-flex recipe-edit-container" data-controller="new-recipe">
   <div>
     <div></div>
-    <div>
-      <%= form_with model: @recipe do |f| %>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-        <%= f.label :method %>
-        <%= f.number_field :method %>
-        <%= f.label :prep_time %>
-        <%= f.text_field :prep_time %>
-        <%= f.label :cook_time %>
-        <%= f.number_field :cook_time %>
-    </div>
-  </div>
 
-  <div>
-    <div>
-      <%= f.label :level %>
-      <%= f.text_field :level %>
-      <%= f.label :servings %>
-      <%= f.number_field :servings %>
-      <%= f.submit %> <%# This is the submit button %>
-    <% end %>
-    </div>
      <div>
       <div id="unique_id">
           <turbo-frame id="frame_id">
