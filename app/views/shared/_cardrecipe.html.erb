@@ -1,6 +1,10 @@
 <div class="styling">
   <ul class="card_recipes_defaultv">
-        <li><%= image_tag recipe.image_url, class: "recipecards_img" %></li>
+  <% if recipe.photo.attached? %>
+    <li><%= cl_image_tag recipe.photo.key, class: "recipecards_img" %></li>
+  <% else %>
+    <li><%= image_tag recipe.image_url, class: "recipecards_img" %></li>
+  <% end %>
     <div class="bottomcontainer">
           <li class="recipe_card_title"><strong><%= recipe.title %></strong></li>
           <div class="allergens d-flex">
