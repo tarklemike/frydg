@@ -1,4 +1,4 @@
-<a href="#"><button class="button_default_user"><strong>Back</strong></button></a>
+<a href="#"><button class="button_default_user">Back</button></a>
 <div class="container d-flex">
     <div class="*left* d-flex flex-column m-3 col-7">
         <div class="profile-info">
@@ -11,12 +11,12 @@
                 </div>
             </div>
         </div>
-        <a href="destroy_user_session"><button class="button_default"><strong>Log Out</strong></button></a>
-
+        <%# <a href="destroy_user_session"><button class="button_default">Log Out</button></a> %>
+        <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete}, class: "button_default" %>
         <div class="profile-recipes ">
             <div>
                 <h3>Submitted Recipes</h3>
-                <a href="#"><button class="button_default"><strong>Add Recipe +</strong></button></a>
+                <a href="#"><button class="button_default">Add Recipe +</button></a>
                 <div class="card-grid-submitted col-12">
                   <% @recipes.each do |recipe| %>
                    <%= render "shared/cardrecipe", recipe: recipe %>
