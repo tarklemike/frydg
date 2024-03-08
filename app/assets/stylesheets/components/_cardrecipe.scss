@@ -1,57 +1,64 @@
 // this page is search results and links to the card_recipes html
 
-.card_recipes_default {
+
+.card_recipes_defaultv {
   position: relative;
+  border-radius: 30px;
+  height: 460px;
+  width: 315px;
+  margin: 20px;
+  list-style-type: none;
+
   box-shadow: 2px 2px 5px 5px rgba(51, 51, 51, 0.288);
   /* height and width taken from figma */
-  border-radius: 30px;
-  height: 475px;
-  width: 315px;
-  padding: 15px;
-  margin: 15px;
-
   background-color: white;
   border: 2px solid #2DD99C;
-  list-style-type: none;
+  padding: 5px;
+  text-decoration: none;
 }
 
-.recipe_card_title {
-  font-size: 18px;
-  color: black;
-  justify-content: start;
-}
 
-.card_recipes_default:hover {
+.card_recipes_defaultv:hover {
   box-shadow: 2px 2px 5px 5px #2DD99C;
   transform: translate3D(0,-1px,0) scale(1.01);
 }
 
 /* TODO wait for a push for standard image size */
-.recipe_img {
+.recipecards_img {
   /* height and width taken from figma */
-  border-radius: 20px;
-  height: 300px;
+  height: 280px;
   width: 100%;
   object-fit: cover;
   margin-bottom: 10px;
+  border-radius: 50%;
 }
 
+.bottomcontainer {
+  padding: 10px;
+}
+
+.recipe_card_title {
+  font-size: 22px;
+  color: #656565;
+  text-align: start;
+  margin-bottom: 10px;
+}
 .allergens {
-  margin-left: 10px;
+  margin-right: 6px;
   max-width: 80px;
   list-style-type: none;
-  color: rgba(0, 0, 0, 0.342);
-  font-size: 18px;
+  color: #b0b0b0;
+  font-size: 20px;
+  text-align: end;
 
   display: flex;
   column-gap: 10px;
   flex-direction: row;
-  align-items: center;
 }
 
 .infograms {
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   left: 0px;
   width: 100%;
   padding: 0px 20px;
@@ -62,8 +69,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  color:  #414141;
 }
 
 .infograms .fa-solid {
-  font-size: 25px;
+  font-size: 22px;
+  color:  #2DD99C;
 }
