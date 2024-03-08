@@ -1,3 +1,31 @@
 .recipe-image {
   width: 100%;
+  border-radius: 30px;
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
 }
+
+.tophalf {
+  background-color: rgba(173, 216, 230, 0.159);
+  flex-direction: row;
+  margin: 40px;
+}
+
+ .bottomhalf {
+  background-color: rgba(128, 128, 128, 0.206);
+  margin: 40px;
+ }
+
+ .profilepic {
+  width: 80px;
+  border-radius: 50%;
+
+ }
+
+ .userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+ }
