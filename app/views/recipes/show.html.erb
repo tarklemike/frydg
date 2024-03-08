@@ -71,7 +71,7 @@
     <li class="list-group-item"><%= review.comment %></li>
     <% end %>
   </ul>
-    
+
     <%= simple_form_for [@recipe, @review] do |f| %>
       <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
       <%= f.input :rating, collection: 1..5%>

@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
     if @recipe.save!
-      redirect_to edit_recipe_path(@recipe), notice: "Recipe was successfully created"
+      redirect_to recipe_path(@recipe), notice: "Recipe was successfully created"
     else
       render :new, status: :unprocessable_entity
     end
@@ -67,7 +67,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :description, :method, :prep_time, :cook_time, :servings, :cuisine, recipe_ingredients_attributes: [:ingredient_id])
+    params.require(:recipe).permit(:title, :photo, :description, :method, :prep_time, :cook_time, :servings, :cuisine, recipe_ingredients_attributes: [:ingredient_id])
   end
 
 
