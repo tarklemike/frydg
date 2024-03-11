@@ -28,7 +28,7 @@
                     <% @recipes.each_with_index do |recipe, index|%>
                          <%= link_to recipe_path(recipe) do %>
                        <div class="carousel-item <%= "active " if index==0 %>">
-                          <%= render "shared/cardrecipe", recipe: recipe %>
+                          <%= render "shared/cardsubmitted", recipe: recipe %>
                          </div>
                        <% end %>
                       <%end%>
