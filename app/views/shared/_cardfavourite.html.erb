@@ -5,6 +5,20 @@
     <li class="text-decoration"><%= image_tag recipe.image_url %></li>
   <% end %>
   <div class="card-product-infos">
-<li class="favourite_title text-decoration"><strong><%= recipe.title %></strong></li>
+<li class="text-decoration"><strong><%= recipe.title %></strong></li>
+  <div class="allergens d-flex">
+            <% if recipe.vegetarian %>
+              <li><i class="fa-solid fa-drumstick-bite"></i></li>
+            <% end %>
+            <% if recipe.vegan %>
+              <li><i class="fa-solid fa-seedling"></i></li>
+            <% end %>
+            <% if recipe.dairy_free %>
+              <li><i class="fa-solid fa-glass-water"></i></li>
+            <% end %>
+            <% if recipe.gluten_free %>
+              <li><i class="fa-solid fa-wheat-awn"></i></li>
+            <% end %>
+          </div>
    </div>
 </div>

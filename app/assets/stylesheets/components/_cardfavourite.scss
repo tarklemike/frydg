@@ -24,12 +24,6 @@
   object-fit:cover;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
@@ -40,12 +34,22 @@
 
 .card-product .card-product-infos {
   padding: 16px;
-  a {
-    text-decoration: none;
+  li {
+    font-size: 20px;
+    color: #656565;
+    text-align: start;
+  }
+  .allergens li {
+    font-size: 15px;
+    color: #b0b0b0;
+    text-align: start;
   }
 }
 
 .text-decoration {
   list-style-type: none;
-  text-decoration: none!important;
+}
+
+.card-grid-favourites a {
+  text-decoration: none;
 }
