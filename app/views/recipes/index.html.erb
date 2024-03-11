@@ -1,15 +1,73 @@
 
 <%# this page is search results and links to the recipe card scss %>
+
+
 <div class="container">
+
   <div class="wrapper d-flex">
     <div class="row">
-      <div class="col-2">
-        <div class="container_sidebar d-flex flex-column">
-          <%= link_to "New Recipe", new_recipe_path %>
-          <p>Allergens</p>
-          <p>Cuisine</p>
+      <div class="side_bar col-2" style="overflow-y: scroll; height:700px;">
+          <div class="addcomponenet">
+            <h2><strong>add. </strong>+</h2>
+            <div class= "d-flex">
+              <%= render "shared/search_bar_index"%>
+            </div>
+              <a><button class="button_default">carrot x</button></a>
+               <a><button class="button_default">egg x</button></a>
+          </div>
+
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+
+              <div class="retractablecontainer">
+                <h2 class="accordion-header">
+                  <button class="accordion-button top" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    Allergens
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body content">
+                            <input type="checkbox">
+                            <label for="vehicle2"> Gluten <i class="fa-solid fa-wheat-awn"></i></label><br>
+                            <input type="checkbox">
+                            <label for="vehicle3"> Dairy <i class="fa-solid fa-glass-water"></i></label><br>
+                            <input type="checkbox">
+                            <label for="vehicle3"> Vegitarian <i class="fa-solid fa-drumstick-bite"></i></label><br>
+                            <input type="checkbox">
+                            <label for="vehicle3"> Vegan <i class="fa-solid fa-seedling"></i></label><br>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="retractablecontainer">
+                <h2 class="accordion-header">
+                  <button class="accordion-button top collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Cuisine
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body content">
+                          <%# TODO - ADD ALLERGENS %>
+                            <input type="checkbox"><label for="vehicle2"> British</label><br>
+                            <input type="checkbox"><label for="vehicle3"> Indian</i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Chinese</i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Thai </i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Japenese </i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Italian </i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Meditarian </i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Greek </i></label><br>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
         </div>
-      </div>
+
+
         <div class="col-10">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid">
@@ -22,6 +80,6 @@
 
       <a href="#"><button class="button_default">Back To Top</button></a>
     </div>
-    </div>
   </div>
+</div>
 </div>
