@@ -16,36 +16,58 @@
                <a><button class="button_default">egg x</button></a>
           </div>
 
-          <div class="retractablecontainer">
-            <h4 class="top">Allergens  -</h4>
-            <%# TODO - ADD ALLERGENS %>
-            <div  class="content">
-                <input type="checkbox">
-                <label for="vehicle2"> Gluten <i class="fa-solid fa-wheat-awn"></i></label><br>
-                <input type="checkbox">
-                <label for="vehicle3"> Dairy <i class="fa-solid fa-glass-water"></i></label><br>
-                <input type="checkbox">
-                <label for="vehicle3"> Vegitarian <i class="fa-solid fa-drumstick-bite"></i></label><br>
-                <input type="checkbox">
-                <label for="vehicle3"> Vegan <i class="fa-solid fa-seedling"></i></label><br>
-            </div>
-          </div>
 
-          <div class="retractablecontainer">
-            <h4 class="top">Cuisine  -</h4>
-            <%# TODO - ADD ALLERGENS %>
-            <div  class="content">
-                <input type="checkbox"><label for="vehicle2"> British</label><br>
-                <input type="checkbox"><label for="vehicle3"> Indian</i></label><br>
-                <input type="checkbox"><label for="vehicle3"> Chinese</i></label><br>
-                <input type="checkbox"><label for="vehicle3"> Thai </i></label><br>
-                <input type="checkbox"><label for="vehicle3"> Japenese </i></label><br>
-                <input type="checkbox"><label for="vehicle3"> Italian </i></label><br>
-                <input type="checkbox"><label for="vehicle3"> Meditarian </i></label><br>
-                <input type="checkbox"><label for="vehicle3"> Greek </i></label><br>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+
+              <div class="retractablecontainer">
+                <h2 class="accordion-header">
+                  <button class="accordion-button top" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    Allergens
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body content">
+                            <input type="checkbox">
+                            <label for="vehicle2"> Gluten <i class="fa-solid fa-wheat-awn"></i></label><br>
+                            <input type="checkbox">
+                            <label for="vehicle3"> Dairy <i class="fa-solid fa-glass-water"></i></label><br>
+                            <input type="checkbox">
+                            <label for="vehicle3"> Vegitarian <i class="fa-solid fa-drumstick-bite"></i></label><br>
+                            <input type="checkbox">
+                            <label for="vehicle3"> Vegan <i class="fa-solid fa-seedling"></i></label><br>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="retractablecontainer">
+                <h2 class="accordion-header">
+                  <button class="accordion-button top collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Cuisine
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body content">
+                          <%# TODO - ADD ALLERGENS %>
+                            <input type="checkbox"><label for="vehicle2"> British</label><br>
+                            <input type="checkbox"><label for="vehicle3"> Indian</i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Chinese</i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Thai </i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Japenese </i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Italian </i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Meditarian </i></label><br>
+                            <input type="checkbox"><label for="vehicle3"> Greek </i></label><br>
+                  </div>
+                </div>
+              </div>
+
             </div>
-          </div>
+
+
+
         </div>
+
+
         <div class="col-10">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid">
