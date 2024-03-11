@@ -51,7 +51,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_08_122550) do
     t.boolean "blocked", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["blocked"], name: "index_favorites_on_blocked"
+    t.index ["blocked"],
+     name: "index_favorites_on_blocked"
     t.index ["favoritable_id", "favoritable_type"], name: "fk_favoritables"
     t.index ["favoritable_type", "favoritable_id", "favoritor_type", "favoritor_id", "scope"], name: "uniq_favorites__and_favoritables", unique: true
     t.index ["favoritable_type", "favoritable_id"], name: "index_favorites_on_favoritable"
