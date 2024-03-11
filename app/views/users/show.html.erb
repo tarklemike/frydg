@@ -24,7 +24,7 @@
       <div class="card-grid-submitted col-12">
         <% @recipes.each do |recipe| %>
           <%= link_to recipe_path(recipe) do %>
-            <%= render "shared/cardfavourite", recipe: recipe %>
+            <%= render "shared/cardrecipe", recipe: recipe %>
           <% end %>
         <% end %>
       </div>

@@ -1,23 +1,10 @@
 <div class="card-product">
-<% if recipe.photo.attached? %>
-    <li><%= cl_image_tag recipe.photo.key, class: "recipecards_img" %></li>
+  <%if recipe.photo.attached? %>
+    <li class="text-decoration"><%= cl_image_tag recipe.photo.key %></li>
   <% else %>
-    <li><%= image_tag recipe.image_url, class: "recipecards_img" %></li>
+    <li class="text-decoration"><%= image_tag recipe.image_url %></li>
   <% end %>
   <div class="card-product-infos">
-    <li class="recipe_card_title"><strong><%= recipe.title %></strong></li>
-          <div class="allergens d-flex">
-            <% if recipe.vegetarian %>
-              <li><i class="fa-solid fa-drumstick-bite"></i></li>
-            <% end %>
-            <% if recipe.vegan %>
-              <li><i class="fa-solid fa-seedling"></i></li>
-            <% end %>
-            <% if recipe.dairy_free %>
-              <li><i class="fa-solid fa-glass-water"></i></li>
-            <% end %>
-            <% if recipe.gluten_free %>
-              <li><i class="fa-solid fa-wheat-awn"></i></li>
-            <% end %>
-            </div>
-        </div>
+<li class="favourite_title text-decoration"><strong><%= recipe.title %></strong></li>
+   </div>
+</div>
