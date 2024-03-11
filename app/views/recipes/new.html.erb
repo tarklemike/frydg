@@ -1,34 +1,63 @@
 <div class="container">
-  <div class="tophalf-new d-flex flex-column">
-    <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
-      <%= form.input :title %> <br>
-      <%= form.input :description %> <br>
+  <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
+    <a href="/recipes"><button class="button_default">Back</button></a>
 
-      <ul data-ingredients-target="ingredientsWrapper">
+    <div class="d-flex mt-2">
+
+      <div class="imagediv col-6 pe-3">
+        <%# <% if recipe.photo %>
+        <%= form.input :photo, as: :file %>
+        <%# <% end %>
+      </div>
+
+      <div class="recipe-info col-6 d-flex flex-column justify-content-between ps-3">
+        <div>
+          <%= form.input :title %> <br>
+          <%= form.input :description %> <br>
+        </div>
+        <div class="d-flex">
+          <p><i class="fa-solid fa-stopwatch" style="color: #2dd99c;"></i> <%= form.input :prep_time %></p>
+          <p><i class="fa-solid fa-fire-burner" style="color: #2dd99c;"></i> <%= form.input :cook_time %></p>
+          <p><i class="fa-solid fa-traffic-light" style="color: #2dd99c;"></i> <%= form.input :level %></p>
+          <p><i class="fa-solid fa-utensils" style="color: #2dd99c;"></i> <%= form.input :servings %></p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="bottomhalf d-flex">
+
+      <div class="col-6">
+        <div class="index_recipecard recipe-method">
+          <h2 class="top">Method</h2>
+          <div class="content">
+            <%= form.input :method %>
+          </div>
+        </div>
+      </div>
+
+      <div class="index_recipecard col-6">
+        <h2 class="top">Ingredients</h2>
+        <ul class="content" data-ingredients-target="ingredientsWrapper">
         <template data-ingredients-target="template">
-          <%=  form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
-          <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
+          <%= form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
+            <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
               <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->ingredients#add"}} %>
+            </li>
+          <% end %>
+        </template>
+        <button type='button'
+                class=''
+                data-action='click->ingredients#add'>
+          Add Ingredient
+        </button>
+        </ul>
+      </div>
 
-          </li>
-        <% end %>
-       </template>
-      </ul>
-  <%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
-        <%= form.input :method %>
-          <%# <% if recipe.photo %>
-         <%= form.input :photo, as: :file %>
-          <%# <% end %>
-        <%= form.input :prep_time %>
-
-        <%= form.input :cook_time %>
-
-      <%= form.input :level %>
-
-      <%= form.input :servings %>
+    </div>
+    <%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
 
     <%= form.submit %>
-    <% end %>
-  </div>
-
+  <% end %>
 </div>

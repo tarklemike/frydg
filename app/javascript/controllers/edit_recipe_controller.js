@@ -1,16 +1,13 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="ingredients"
+// Connects to data-controller="edit-recipe"
 export default class extends Controller {
-  static targets = ["ingredient", "ingredientsWrapper", "template"]
+  static targets = []
 
   connect() {
-    console.log("Hello from Ingredients controller")
-    console.log(this.templateTarget)
-    this.add()
-  }
 
-  add() {
+  }
+  edit() {
     // console.log("add button clicked!")
     // console.log(this.ingredientTargets.length)
     // console.log(this.templateTarget)
@@ -27,3 +24,8 @@ export default class extends Controller {
     this.ingredientsWrapperTarget.appendChild(copy)
   }
 }
+
+// edit(event) {
+  // Handle edit logic here
+  // console.log('Edit function triggered');
+// }

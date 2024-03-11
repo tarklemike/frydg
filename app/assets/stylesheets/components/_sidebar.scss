@@ -20,9 +20,12 @@ color: #ffff;
 }
 
 .offcanvas-header {
-justify-content: right;
+justify-content: left;
   text-align: right;
-  padding: 10px;
+  padding: 15px;
+  .btn-close .btn-close-white{
+  $btn-close-opacity: 1;
+  }
 }
 
 .sidebar-all p {
