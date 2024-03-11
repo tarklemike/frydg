@@ -23,7 +23,7 @@ export default class extends Controller {
     // console.log(copy)
     // copy = copy.replaceAll("_0_", `_${newId}_`)
     // copy = copy.replaceAll("[0]", `[${newId}]`)
-    
+
     this.ingredientsWrapperTarget.appendChild(copy)
   }
 }

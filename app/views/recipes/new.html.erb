@@ -1,8 +1,79 @@
 <div class="container">
-  <div class="tophalf-new d-flex flex-column">
-    <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
+
+<a href="/recipes"><button class="button_default">Back</button></a>
+
+
+
+<div class="pageclass">
+  <div class="tophalf tophalf-new d-flex flex-column">
+
+    <div class="gracy d-flex">
+
+      <div class="imagediv col-6">
+        <%# <% if recipe.photo %>
+        <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
+          <%= form.input :photo, as: :file %>
+        <%# <% end %>
+      </div>
+
+      <div class="hiii recipe-info col-6">
       <%= form.input :title %> <br>
       <%= form.input :description %> <br>
+        <div class="mealinfo d-flex">
+          <p><i class="fa-solid fa-stopwatch" style="color: #2dd99c;"></i> <%= form.input :prep_time %></p>
+          <p><i class="fa-solid fa-fire-burner" style="color: #2dd99c;"></i> <%= form.input :cook_time %></p>
+          <p><i class="fa-solid fa-taffic-light" style="color: #2dd99c;"></i> <%= form.input :level %></p>
+          <p><i class="fa-solid fa-utensils" style="color: #2dd99c;"></i> <%= form.input :servings %></p>
+        </div>
+
+      </div>
+     </div>
+    </div>
+
+  <div class="bottomhalf d-flex">
+
+    <div class="col-6">
+      <div class="index_recipecard recipe-method">
+        <h2 class="top">Method</h2>
+        <div class="content">
+          <%= form.input :method %>
+        </div>
+      </div>
+    </div>
+
+    <div class="index_recipecard col-6">
+      <h2 class="top">Ingredients</h2>
+      <ul class="content" >
+
+
+      </ul>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="tophalf-new d-flex flex-column">
 
       <ul data-ingredients-target="ingredientsWrapper">
         <template data-ingredients-target="template">
@@ -15,17 +86,6 @@
        </template>
       </ul>
   <%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
-        <%= form.input :method %>
-          <%# <% if recipe.photo %>
-         <%= form.input :photo, as: :file %>
-          <%# <% end %>
-        <%= form.input :prep_time %>
-
-        <%= form.input :cook_time %>
-
-      <%= form.input :level %>
-
-      <%= form.input :servings %>
 
     <%= form.submit %>
     <% end %>
