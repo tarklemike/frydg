@@ -1,9 +1,6 @@
 <div class= "container">
 <div class="button-container">
   <a href="/recipes/" class="button_default_user"><strong>Back</strong></a>
-  <%= link_to destroy_user_session_path, class: "button_default_out" do %>
-    <strong>Log Out</strong>
-  <% end %>
 </div>
 
 <div class="container d-flex">
@@ -27,7 +24,7 @@
       <div class="card-grid-submitted col-12">
         <% @recipes.each do |recipe| %>
           <%= link_to recipe_path(recipe) do %>
-            <%= render "shared/cardrecipe", recipe: recipe %>
+            <%= render "shared/cardfavourite", recipe: recipe %>
           <% end %>
         <% end %>
       </div>
