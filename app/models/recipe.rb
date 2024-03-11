@@ -17,6 +17,14 @@ class Recipe < ApplicationRecord
   using: {
     tsearch: { prefix: true } # <-- now `superman batm` will return something!
   }
+
+
+  def get_rating
+    return 0 if self.reviews.empty?
+    reviews = self.reviews
+    ratings_array = reviews.map { |review| review.rating  }
+    return ratings_array.sum / ratings_array.length
+  end
 #   validates :description, presence: true, length: {minimum: 4, too_short: "%{count} characters is too short", maximum: 150, too_long: "%{count} characters is the maximum allowed" }
 #   validates :method, presence: true, length: {minimum: 4, too_short: "%{count} characters is too short", maximum: 10000, too_long: "%{count} characters is the maximum allowed" }
 #   validates :level, presence: true, inclusion: { in: %w(Easy Medium Hard), message: "%{value} is not a valid level" }
