@@ -1,41 +1,64 @@
-<div class="tophalf-new d-flex flex-column">
-  <div data-controller="edit">
-      <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
-      <%= form.input :title, placeholder: "What is your recipe called?", required: true %> <br>
-      <%= form.input :description, placeholder: "Please write a description", required: true %> <br>
+<div class="container">
+  <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
+    <a href="/recipes"><button class="button_default">Back</button></a>
 
-      <ul data-ingredients-target="ingredientsWrapper">
-        <template data-ingredients-target="template">
-          <%=  form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
-          <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
-              <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->edit_recipe#edit"}} %>
+    <div class="d-flex mt-2">
 
-          </li>
-        <% end %>
-       </template>
-      </ul>
-
-        <%= form.input :method, placeholder: "How do you make this recipe?", required: true %>
-
-         <%= form.input :photo, as: :file %>
-
-        <%= form.label :prep_time, "Prep Time:", required: true %>
-       <%= form.collection_select :prep_time, (0..120).step(5), :to_s, :to_s, { prompt: "Select Minutes" } %>
-        <%= form.label :cook_time, "Cook Time:", required: true %>
-       <%= form.collection_select :cook_time, (0..120).step(5), :to_s, :to_s, { prompt: "Select Minutes" } %>
-      <div>
-        <%= form.label :level, "Level:", required: true %>
-        <%= form.select :level, [['Easy', 'easy'], ['Medium', 'medium'], ['Hard', 'hard']], {}, { class: 'form-control' } %>
+      <div class="imagediv col-6 pe-3">
+        <%# <% if recipe.photo %>
+        <%= form.input :photo, as: :file %>
+        <%# <% end %>
       </div>
-       <div>
 
-         <%= form.input :servings, placeholder: "Per person", required: true %>
-
+      <div class="recipe-info col-6 d-flex flex-column justify-content-between ps-3">
+        <div>
+          <%= form.input :title, input_html: { class: "form-validation" } %> <br>
+          <%= form.input :description, input_html: { class: "form-validation" } %> <br>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p><i class="fa-solid fa-stopwatch" style="color: #2dd99c;"></i> <%= form.input :prep_time, as: :select, collection: (0..120).step(5), prompt: "Minutes", input_html: { class: "form-validation" }  %></p>
+          <p><i class="fa-solid fa-fire-burner" style="color: #2dd99c;"></i> <%= form.input :cook_time, as: :select, collection: (0..120).step(5), prompt: "Minutes", input_html: { class: "form-validation" } %></p>
+          <p><i class="fa-solid fa-traffic-light" style="color: #2dd99c;"></i> <%= form.input :level, as: :select, collection: ["Easy","Medium", "Hard"], input_html: { class: "form-validation" } %></p>
+          <p><i class="fa-solid fa-utensils" style="color: #2dd99c;"></i> <%= form.input :servings, as: :select, collection: (1..10), prompt: "Servings", input_html: { class: "form-validation" } %></p>
         </div>
 
+      </div>
+
+    </div>
+
+    <div class="bottomhalf d-flex">
+
+      <div class="col-6">
+        <div class="index_recipecard recipe-method">
+          <h2 class="top">Method</h2>
+          <div class="content">
+
+            <%= form.input :method, input_html: { class: "form-validation" }  %>
+          </div>
+        </div>
+      </div>
+
+      <div class="index_recipecard col-6">
+        <h2 class="top">Ingredients</h2>
+        <ul class="content" data-ingredients-target="ingredientsWrapper">
+        <template data-ingredients-target="template">
+          <%= form.simple_fields_for :recipe_ingredients, input_html: {class: "form-validation"} do |ingredient_form| %>
+            <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
+              <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {class: "form-validation", data: {controller: "tom-select", action: "change->ingredients#add"}} %>
+            </li>
+          <% end %>
+        </template>
+        <button type='button'
+                class=''
+                data-action='click->ingredients#add'>
+          Add Ingredient
+        </button>
+        </ul>
+      </div>
+
+    </div>
+    <%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
 
     <%= form.submit %>
-    <% end %>
-
-  </div>
+  <% end %>
 </div>
