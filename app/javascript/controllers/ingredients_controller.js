@@ -6,7 +6,7 @@ export default class extends Controller {
 
   connect() {
     console.log("Hello from Ingredients controller")
-    // console.log(this.ingredientTargets)
+    console.log(this.templateTarget)
     this.add()
   }
 
@@ -23,7 +23,7 @@ export default class extends Controller {
     // console.log(copy)
     // copy = copy.replaceAll("_0_", `_${newId}_`)
     // copy = copy.replaceAll("[0]", `[${newId}]`)
-    
+
     this.ingredientsWrapperTarget.appendChild(copy)
   }
 }

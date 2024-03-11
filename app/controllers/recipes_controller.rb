@@ -33,6 +33,7 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
+    raise
     @recipe_ingredient = RecipeIngredient.new
     # @ingredients = Ingredient.all
 
