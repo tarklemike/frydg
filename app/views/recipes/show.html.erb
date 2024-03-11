@@ -6,26 +6,25 @@
 
   <div class="d-flex mt-2">
 
-    <div class="favoriting">
-      <% if current_user %>
-        <% if current_user.favorited?(@recipe) %>
-          <%= link_to remove_favorite_path(@recipe), data: {turbo_method: :post} do%>
-            <i class="fa-solid fa-heart"></i>
-          <% end %>
-        <% else %>
-          <%= link_to add_favorite_path(@recipe), data: {turbo_method: :post} do%>
-            <i class="fa-regular fa-heart"></i>
-          <% end %>
-        <% end %>
-      <% end %>
-    </div>
-
     <div class="imagediv col-6 pe-3">
-    <% if @recipe.photo.attached? %>
-      <%= cl_image_tag @recipe.photo.key, class: "recipe-image" %>
-    <% else %>
-      <%= image_tag (@recipe.image_url), class: "recipe-image" %>
-    <% end %>
+       <div class="favoriting">
+          <% if current_user %>
+            <% if current_user.favorited?(@recipe) %>
+              <%= link_to remove_favorite_path(@recipe), data: {turbo_method: :post} do%>
+                <i class="fa-solid fa-heart"></i>
+              <% end %>
+            <% else %>
+              <%= link_to add_favorite_path(@recipe), data: {turbo_method: :post} do%>
+                <i class="fa-regular fa-heart"></i>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      <% if @recipe.photo.attached? %>
+        <%= cl_image_tag @recipe.photo.key, class: "recipe-image" %>
+      <% else %>
+        <%= image_tag (@recipe.image_url), class: "recipe-image" %>
+      <% end %>
     </div>
 
     <div class="recipe-info col-6 d-flex flex-column justify-content-between ps-3">

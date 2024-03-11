@@ -30,3 +30,19 @@
   margin-top: -10px;
   list-style: none;
 }
+
+.imagediv {
+  position: relative;
+}
+
+.favoriting {
+  position: absolute;
+  top: 12px;
+  right: 40px;
+  z-index: 1;
+  font-size: 40px;
+}
+
+.fa-heart {
+  color: #BF3131;
+}
