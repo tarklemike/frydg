@@ -1,20 +1,15 @@
 <div class="container">
 
-<a href="/recipes"><button class="button_default">Back</button></a>
+  <a href="/recipes"><button class="button_default">Back</button></a>
 
+    <div class="tophalf tophalf-new d-flex flex-column">
 
-
-<div class="pageclass">
-  <div class="tophalf tophalf-new d-flex flex-column">
-
-    <div class="gracy d-flex">
-
-      <div class="imagediv col-6">
-        <%# <% if recipe.photo %>
-        <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
-          <%= form.input :photo, as: :file %>
-        <%# <% end %>
-      </div>
+        <div class="imagediv col-6">
+          <%# <% if recipe.photo %>
+          <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
+            <%= form.input :photo, as: :file %>
+          <%# <% end %>
+        </div>
 
       <div class="hiii recipe-info col-6">
       <%= form.input :title %> <br>
@@ -22,12 +17,11 @@
         <div class="mealinfo d-flex">
           <p><i class="fa-solid fa-stopwatch" style="color: #2dd99c;"></i> <%= form.input :prep_time %></p>
           <p><i class="fa-solid fa-fire-burner" style="color: #2dd99c;"></i> <%= form.input :cook_time %></p>
-          <p><i class="fa-solid fa-taffic-light" style="color: #2dd99c;"></i> <%= form.input :level %></p>
+          <p><i class="fa-solid fa-traffic-light" style="color: #2dd99c;"></i> <%= form.input :level %></p>
           <p><i class="fa-solid fa-utensils" style="color: #2dd99c;"></i> <%= form.input :servings %></p>
         </div>
 
       </div>
-     </div>
     </div>
 
   <div class="bottomhalf d-flex">
