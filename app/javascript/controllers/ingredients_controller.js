@@ -6,7 +6,7 @@ export default class extends Controller {
 
   connect() {
     console.log("Hello from Ingredients controller")
-    // console.log(this.ingredientTargets)
+    console.log(this.templateTarget)
     this.add()
   }
 
