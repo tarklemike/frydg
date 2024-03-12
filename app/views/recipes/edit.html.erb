@@ -1,4 +1,5 @@
 <div class="container">
+
   <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
     <a href="/recipes"><button class="button_default">Back</button></a>
 
@@ -44,7 +45,7 @@
         <template data-ingredients-target="template">
           <%= form.simple_fields_for :recipe_ingredients, input_html: {class: "form-validation"} do |ingredient_form| %>
             <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
-              <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {class: "form-validation", data: {controller: "tom-select", action: "change->ingredients#add"}} %>
+              <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->ingredients#add"}}, wrapper_html: {class: "form-validation"} %>
             </li>
           <% end %>
         </template>
@@ -56,9 +57,10 @@
         </ul>
       </div>
 
-    </div>
-    <%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
 
-    <%= form.submit %>
+    </div><%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
+    <div style="postion:absolute; top:100px; right:50px;">
+      <%= form.submit "Update recipe", class: "button_default" %>
+    </div>
   <% end %>
 </div>

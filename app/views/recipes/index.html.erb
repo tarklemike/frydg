@@ -2,18 +2,20 @@
 <%# this page is search results and links to the recipe card scss %>
 
 
-<div class="container">
+<div data-controller="filtered-index" class="container">
 
   <div class="wrapper d-flex">
     <div class="row">
       <div class="side_bar col-2" style="overflow-y: scroll;">
           <div class="addcomponenet">
-            <h2><strong>add. </strong>+</h2>
-            <div class= "d-flex">
-              <%= render "shared/search_bar_index"%>
+            <h2 class="top"><strong>add. </strong>+</h2>
+            <div class="content">
+              <div class= "d-flex">
+                <%= render "shared/search_bar_index"%>
+              </div>
+                <a><button class="button_default search">carrot x</button></a>
+                <a><button class="button_default search">egg x</button></a>
             </div>
-              <a><button class="button_default">carrot x</button></a>
-               <a><button class="button_default">egg x</button></a>
           </div>
 
 
@@ -22,18 +24,18 @@
               <div class="retractablecontainer">
                 <h2 class="accordion-header">
                   <button class="accordion-button top" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    Allergens
+                   <i class="fa-solid fa-seedling"></i> Allergens
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body content">
-                            <input type="checkbox">
+                            <input type="checkbox" data-action="click->filtered-index#gluten" data-filtered-index-target="checkbox">
                             <label for="vehicle2"> Gluten Free</label><br>
-                            <input type="checkbox">
+                            <input type="checkbox" data-action="click->filtered-index#dairy" data-filtered-index-target="checkbox">
                             <label for="vehicle3"> Dairy Free</label><br>
-                            <input type="checkbox">
+                            <input type="checkbox" data-action="click->filtered-index#vegitarian" data-filtered-index-target="button">
                             <label for="vehicle3"> Vegitarian</label><br>
-                            <input type="checkbox">
+                            <input type="checkbox" data-action="click->filtered-index#vegan" data-filtered-index-target="button">
                             <label for="vehicle3"> Vegan</label><br>
 
                   </div>
@@ -43,7 +45,7 @@
               <div class="retractablecontainer">
                 <h2 class="accordion-header">
                   <button class="accordion-button top collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    <p>Cuisine <i class="fa-solid fa-bowl-food"></i></p>
+                    <i class="fa-solid fa-bowl-food"></i> Cuisine
 
                   </button>
                 </h2>
@@ -62,6 +64,29 @@
                 </div>
               </div>
 
+
+              <div class="retractablecontainer">
+                <h2 class="accordion-header">
+                  <button class="accordion-button top collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    <i class="fa-solid fa-traffic-light"></i>Difficulty
+
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body content">
+                          <%# TODO - ADD ALLERGENS %>
+                            <input type="checkbox" data-action="click->filtered-index#easy" data-filtered-index-target="button">
+                            <label for="vehicle2"> Easy</label><br>
+                            <input type="checkbox" data-action="click->filtered-index#medium" data-filtered-index-target="button">
+                            <label for="vehicle3"> Medium</i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#hard" data-filtered-index-target="button">
+                            <label for="vehicle3"> Hard</i></label><br>
+                  </div>
+                </div>
+              </div>
+
+
+
             </div>
 
 
@@ -72,11 +97,9 @@
         <div class="col-10">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid">
-                <% @recipes.each do |recipe| %>
-                  <%= link_to recipe_path(recipe) do %>
-                  <%= render "shared/cardrecipe", recipe: recipe %>
-                  <% end %>
-                <% end %>
+            <% @recipes.each do |recipe| %>
+              <%= render "shared/cardrecipe", recipe: recipe %>
+            <% end %>
           </div>
 
       <a href="#"><button class="button_default">Back To Top</button></a>
