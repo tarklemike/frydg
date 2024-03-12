@@ -19,6 +19,7 @@
 
 
 .card_recipes_defaultv:hover {
+  border: 2px solid #2DD99C;
   box-shadow: 2px 2px 5px 5px #2DD99C;
   transform: translate3D(0,-1px,0) scale(1.01);
 }
@@ -41,7 +42,7 @@
   font-size: 22px;
   color: #656565;
   text-align: start;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .allergens {
   margin-right: 6px;
@@ -52,7 +53,7 @@
   text-align: end;
 
   display: flex;
-  column-gap: 10px;
+  column-gap: 8px;
   flex-direction: row;
 }
 
@@ -75,5 +76,5 @@
 
 .infograms .fa-solid {
   font-size: 22px;
-  color:  #2DD99C;
+  color:  #125712;
 }
