@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'foodbanks/index'
+  get 'foodbanks/show'
+  get 'foodbanks/new'
+  get 'foodbanks/create'
+  get 'foodbanks/edit'
+  get 'foodbanks/update'
+  get 'foodbanks/destroy'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
