@@ -1,34 +1,39 @@
 .sidebar-all .offcanvas{
-  margin-top: 95px;
+  margin-top: 97px;
   background: $green;
-  text-align:right;
-  width: 200px;
-  box-shadow: 0px 4px 40px grey;
-}
-
-.sidebar-all h1 {
-margin-top: 10px;
-font-weight: bolder;
-font-size: 50px;
-color: #ffff;
-display: flex;
-justify-content: center;
-}
-
-.sidebar-all a {
-  font-size: 25px;
-  padding-bottom: 20px;
-  color: #ffff;
+  width: 195px;
+  box-shadow: 0px 0px 10px black;
+  ul {
+    list-style-type:none;
+    margin-left: -20px;
+  }
 }
 
 .offcanvas-header {
 justify-content: left;
-  padding: 15px;
-  .btn-close .btn-close-white{
+  text-align: right;
+  margin-left: -15px;
+  .btn-close .btn-close-black{
   $btn-close-opacity: 1;
   }
 }
 
-.sidebar-all .all-recipes{
-  margin-top: -20px;
+.sidebar-all {
+a {
+  font-size: 25px;
+  color: #ffff;
+}
+h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 40px;
+  color: #ffff;
+  margin-left:-2px;
+  }
+}
+
+.nav-item1 {
+  padding: 10px;
+  margin: -10px;
 }
