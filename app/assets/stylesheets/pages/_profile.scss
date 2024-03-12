@@ -43,7 +43,7 @@
 .avatar-profile {
   border-radius: 50%;
   width: 100px;
-  box-shadow: 0px 2px 20px black;
+  box-shadow: 0px 0px 10px black;
 }
 .profile-bio {
   padding-right: 50px;
@@ -55,7 +55,7 @@
 .profile-favourites {
   h3{
     padding-bottom: 15px;
-    margin-top: -55px;
+    margin-top: -30px;
     border-radius: 20px 20px 0px 0px;
     background-color: #2DD99C;
     color: white;
@@ -64,12 +64,11 @@
   }
 }
 .card-grid-favourites {
-  margin-top: 10px;
   display: grid;
   margin-top: -8px;
   grid-template-columns: 1fr;
   overflow: auto;
-  height: 720px;
+  height: 700px;
   width: 100%;
   background-color: rgba(223, 222, 222, 0.3);
   justify-items: center;
@@ -93,7 +92,6 @@
 }
 
 #recipeCarousel {
-  justify-items: center;
   width: 100%;
   background-color: rgba(223, 222, 222, 0.3);
   border-bottom-left-radius: 30px;
@@ -102,28 +100,7 @@
   border: solid;
   border-color: #2DD99C;
   margin-top: 42px;
-  .carousel-inner {
-      display: flex;
-      width: 100%;
-      overflow: hidden;
-      align-content: stretch;
-      justify-content: center;
-      height: 500px;
-  }
 }
-
-// .card-grid-submitted {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   overflow: auto;
-//   height: 460px;
-//   width: 100%;
-//   background-color: rgba(223, 222, 222, 0.3);
-//   border-bottom-left-radius: 30px;
-//   border: solid;
-//   border-color: #2DD99C;
-// }
-
 // end //
 
 // Buttons on Profile page//
