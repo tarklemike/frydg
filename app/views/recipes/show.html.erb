@@ -23,6 +23,8 @@
         </div>
       <% if @recipe.photo.attached? %>
         <%= cl_image_tag @recipe.photo.key, class: "recipe-image" %>
+      <% elsif @recipe.image_url == nil %>
+        <%= image_tag ("logo_small.png"), class: "recipe-image" %>
       <% else %>
         <%= image_tag (@recipe.image_url), class: "recipe-image" %>
       <% end %>
