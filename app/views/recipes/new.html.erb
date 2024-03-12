@@ -2,8 +2,6 @@
   <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
     <div class="d-flex justify-content-between">
       <%= link_to "Back", recipes_path, class: "button_default" %>
-
-      <%# <a href="/recipes"><button class="button_default">Back</button></a> %>
       <%= form.submit "Add recipe", class: "button_default"%>
     </div>
 
