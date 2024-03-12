@@ -56,10 +56,51 @@
       </div>
 
       <div class="d-flex justify-content-between">
-        <h4><i class="fa-solid fa-utensils" style="color: #2dd99c;"></i> <%= @recipe.servings %></h4>
-        <h4><i class="fa-solid fa-stopwatch" style="color: #2dd99c;"></i> <%= @recipe.prep_time.to_i %></h4>
-        <h4><i class="fa-solid fa-fire-burner" style="color: #2dd99c;"></i> <%= @recipe.cook_time.to_i %></h4>
-        <h4><i class="fa-solid fa-traffic-light" style="color: #2dd99c;"></i> <%= @recipe.level %></h4>
+        <div class="d-flex">
+          <i class="fa-solid fa-mortar-pestle" style="color: #2dd99c; font-size: 40px;"></i>
+          <div>
+            <p>PREP TIME</p>
+            <p><%= @recipe.prep_time.to_i %> minutes</p>
+          </div>
+        </div>
+        <div class="d-flex">
+            <i class="fa-solid fa-stopwatch" style="color: #2dd99c; font-size: 40px;"></i>
+            <div>
+              <p>COOK TIME</p>
+              <p><%= @recipe.cook_time.to_i %> minutes</p>
+            </div>
+        </div>
+        <div class="d-flex">
+            <i class="fa-solid fa-utensils" style="color: #2dd99c; font-size: 40px;"></i>
+            <div>
+              <p>SERVINGS</p>
+              <p><%= @recipe.servings %></p>
+            </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <div class="d-flex">
+          <i class="fa-solid fa-mortar-pestle" style="color: #2dd99c; font-size: 40px;"></i>
+          <div>
+            <p>CUSINE</p>
+            <p><%= @recipe.cuisine %></p>
+          </div>
+        </div>
+        <div class="d-flex">
+            <i class="fa-solid fa-traffic-light" style="color: #2dd99c; font-size: 40px;"></i>
+            <div>
+              <p>DIFFICULTY</p>
+              <p><%= @recipe.level %></p>
+            </div>
+        </div>
+        <div class="d-flex">
+            <i class="fa-solid fa-utensils" style="color: #2dd99c; font-size: 40px;"></i>
+            <div>
+              <p>ALLERGENS</p>
+              <p></p>
+            </div>
+        </div>
       </div>
     </div>
 
