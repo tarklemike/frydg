@@ -1,8 +1,7 @@
 
 <%# this page is search results and links to the recipe card scss %>
 
-
-<div data-controller="filtered-index" class="container">
+<div data-controller="filtered-index" class="container" >
 
   <div class="wrapper d-flex">
     <div class="row">
@@ -29,13 +28,13 @@
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body content">
-                            <input type="checkbox" data-action="click->filtered-index#gluten" data-filtered-index-target="checkbox">
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="gluten_free">
                             <label for="vehicle2"> Gluten Free</label><br>
-                            <input type="checkbox" data-action="click->filtered-index#dairy" data-filtered-index-target="checkbox">
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="dairy_f">
                             <label for="vehicle3"> Dairy Free</label><br>
-                            <input type="checkbox" data-action="click->filtered-index#vegitarian" data-filtered-index-target="button">
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="vegetarian">
                             <label for="vehicle3"> Vegitarian</label><br>
-                            <input type="checkbox" data-action="click->filtered-index#vegan" data-filtered-index-target="button">
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="vegan">
                             <label for="vehicle3"> Vegan</label><br>
 
                   </div>
@@ -75,11 +74,11 @@
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                   <div class="accordion-body content">
                           <%# TODO - ADD ALLERGENS %>
-                            <input type="checkbox" data-action="click->filtered-index#easy" data-filtered-index-target="button">
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox">
                             <label for="vehicle2"> Easy</label><br>
-                            <input type="checkbox" data-action="click->filtered-index#medium" data-filtered-index-target="button">
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox">
                             <label for="vehicle3"> Medium</i></label><br>
-                            <input type="checkbox" data-action="click->filtered-index#hard" data-filtered-index-target="button">
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox">
                             <label for="vehicle3"> Hard</i></label><br>
                   </div>
                 </div>
@@ -96,10 +95,8 @@
 
         <div class="col-10">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
-          <div class="card-grid">
-            <% @recipes.each do |recipe| %>
-              <%= render "shared/cardrecipe", recipe: recipe %>
-            <% end %>
+          <div class="card-grid" data-filtered-index-target='container'>
+              <%= render "shared/cardrecipe", recipes: @recipes %>
           </div>
 
       <a href="#"><button class="button_default">Back To Top</button></a>
