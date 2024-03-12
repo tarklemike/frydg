@@ -1,9 +1,10 @@
+  <% @recipes.each do |recipe| %>
   <div class="styling">
     <%= link_to recipe_path(recipe) do %>
 
     <ul class="card_recipes_defaultv">
       <% if recipe.photo.attached? %>
-        <%= cl_image_tag @recipe.photo.key, class: "recipecards_img" %>
+        <%= cl_image_tag recipe.photo.key, class: "recipecards_img" %>
       <% elsif recipe.image_url != nil %>
         <%= image_tag (recipe.image_url), class: "recipecards_img" %>
       <% else %>
@@ -50,3 +51,4 @@
     </ul>
 <% end %>
   </div>
+<% end %>

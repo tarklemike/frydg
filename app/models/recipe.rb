@@ -24,7 +24,7 @@ class Recipe < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :searching,
     associated_against: {
-      ingredients: :name,
+      ingredients: :name
     },
   using: {
     tsearch: { prefix: true } # <-- now `superman batm` will return something!

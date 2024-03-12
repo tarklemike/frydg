@@ -2,11 +2,38 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
-    @recipe_ingredients = RecipeIngredient.all
-    if params[:query].present?
-      @recipes = @recipes.searching(params[:query])
-    end
     @recipes = @recipes.order(updated_at: :desc)
+    @recipe_ingredients = RecipeIngredient.all
+
+    if params[:query].present?
+      if params[:query] != 'true'
+        @recipes = @recipes.searching(params[:query])
+        @recipes = @recipes.order(updated_at: :desc)
+      end
+
+      if params[:gluten_free] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.gluten_free == true }
+      end
+
+      if params[:dairy_f] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.dairy_free == true }
+      end
+
+      if params[:vegetarian] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.vegetarian == true }
+      end
+
+      if params[:vegan] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.vegan == true }
+      end
+
+    end
+
+
+    respond_to do |format|
+      format.html
+      format.text { render partial: "shared/cardrecipe", locals: { recipes: @recipes }, formats: [:html]}
+    end
   end
 
   def show
