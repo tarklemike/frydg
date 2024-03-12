@@ -104,23 +104,48 @@
     <br>
     <br>
     <br>
-    <br>
+
   </div>
 
-  <div id="reviews">
-    <h2>Reviews</h2>
-    <div class="reviewsection">
-      <ul class="list-group">
+  <div class="index_recipecard"  id="reviews">
+    <h1 class="top">Reviews</h1>
+    <div class="content">
+      <div class="review-container">
         <% @recipe.reviews.each do |review| %>
-        <li class="list-group-item"><%= review.comment %></li>
-        <% end %>
-      </ul>
+        <div class="review">
+          <div>
+            <div class="list-group-item user">
+              <% if review.user.photo.attached? %>
+                <%= cl_image_tag review.user.photo.key, class: 'avatar' %>
+              <% end %>
+              <p><%= review.user.first_name %> <%= review.user.last_name %></p>
+            </div>
+            <div class="rating-stars d-flex">
+              <% review.rating.times do %>
+                <p><i class="fa-solid fa-star"></i></p>
+              <% end %>
+              <% (5 - review.rating).times do %>
+                <p><i class="fa-regular fa-star"></i></p>
+              <% end %>
+            </div>
+          </div>
 
+          <p class="list-group-item comment"><%= review.comment %></p>
+        </div>
+      <% end %>
+      </div>
+
+
+
+
+    <div class="reviewsection mt-5">
       <%= simple_form_for [@recipe, @review], html: { action: "#{recipe_path(@recipe)}#reviews"} do |f| %>
         <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
         <%= f.input :rating, collection: 1..5%>
         <%= f.submit "Add Review +", class: "button_default"%>
       <% end %>
+    </div>
+
     </div>
   </div>
 

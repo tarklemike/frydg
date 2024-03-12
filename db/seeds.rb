@@ -7,6 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require 'open-uri'
 
 puts "removing old data..."
 
@@ -33,6 +34,10 @@ user_2 = User.create(
   postcode: "E17",
   image: ""
 )
+user_2_image = URI.open("https://upload.wikimedia.org/wikipedia/en/a/a5/Donald_Duck_angry_transparent_background.png")
+user_2.photo.attach(io: user_2_image, filename: 'donald.jpg', content_type: "image/jpeg")
+user_2.save
+
 
 
 puts "creating ingredients database..."
