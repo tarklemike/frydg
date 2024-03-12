@@ -1,8 +1,8 @@
 .sidebar-all .offcanvas{
   margin-top: 95px;
   background: $green;
-  text-align:center;
-  width: 300px;
+  text-align:right;
+  width: 200px;
   box-shadow: 0px 4px 40px grey;
 }
 
@@ -11,6 +11,8 @@ margin-top: 10px;
 font-weight: bolder;
 font-size: 50px;
 color: #ffff;
+display: flex;
+justify-content: center;
 }
 
 .sidebar-all a {
@@ -21,15 +23,10 @@ color: #ffff;
 
 .offcanvas-header {
 justify-content: left;
-  text-align: right;
   padding: 15px;
   .btn-close .btn-close-white{
   $btn-close-opacity: 1;
   }
-}
-
-.sidebar-all p {
-  color: white;
 }
 
 .sidebar-all .all-recipes{
