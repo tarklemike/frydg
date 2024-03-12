@@ -1,34 +1,34 @@
 <div class="styling">
   <ul class="card_recipes_defaultv">
-  <% if recipe.photo.attached? %>
-        <%= cl_image_tag @recipe.photo.key, class: "recipecards_img" %>
-      <% elsif recipe.image_url != nil %>
-        <%= image_tag (recipe.image_url), class: "recipecards_img" %>
-      <% else %>
-        <%= image_tag ("logo_small.png"), class: "recipecards_img" %>
-      <% end %>
+    <% if recipe.photo.attached? %>
+      <%= cl_image_tag @recipe.photo.key, class: "recipecards_img" %>
+    <% elsif recipe.image_url != nil %>
+      <%= image_tag (recipe.image_url), class: "recipecards_img" %>
+    <% else %>
+      <%= image_tag ("logo_small.png"), class: "recipecards_img" %>
+    <% end %>
     <div class="bottomcontainer">
-          <li class="recipe_card_title"><strong><%= recipe.title %></strong></li>
-          <div class="allergens d-flex">
-            <% if recipe.vegetarian %>
-              <li>V</li>
-            <% end %>
-            <% if recipe.vegan %>
-              <li>Ve</li>
-            <% end %>
-            <% if recipe.dairy_free %>
-              <li>DF</li>
-            <% end %>
-            <% if recipe.gluten_free %>
-              <li>GF</li>
-            <% end %>
-          </div>
-          <%# took out cuisine more useful as search tool %>
-          <div class="infograms d-flex">
-            <li><i class="fa-solid fa-stopwatch"></i> <%= recipe.prep_time.to_i %> mins</li>
-            <li><i class="fa-solid fa-fire-burner"></i> <%= recipe.cook_time.to_i %> mins</li>
-            <li><i class="fa-solid fa-utensils"></i> <%= recipe.level %></li>
-          </div>
+      <li class="recipe_card_title"><strong><%= recipe.title %></strong></li>
+      <div class="allergens d-flex">
+        <% if recipe.vegetarian %>
+          <li>V</li>
+        <% end %>
+        <% if recipe.vegan %>
+          <li>Ve</li>
+        <% end %>
+        <% if recipe.dairy_free %>
+          <li>DF</li>
+        <% end %>
+        <% if recipe.gluten_free %>
+          <li>GF</li>
+        <% end %>
+      </div>
+      <%# took out cuisine more useful as search tool %>
+      <div class="infograms d-flex">
+        <li><i class="fa-solid fa-stopwatch"></i> <%= recipe.prep_time.to_i %> mins</li>
+        <li><i class="fa-solid fa-fire-burner"></i> <%= recipe.cook_time.to_i %> mins</li>
+        <li><i class="fa-solid fa-utensils"></i> <%= recipe.level %></li>
+      </div>
     </div>
   </ul>
 </div>
