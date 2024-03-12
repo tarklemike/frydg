@@ -22,7 +22,7 @@
           <div class= "carousel-inner" >
             <% @recipes.each_slice(2).with_index do |(recipe1, recipe2), index|%>
               <div class="carousel-item <%= "active " if index==0 %>">
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-center">
                 <%= link_to recipe_path(recipe1) do %>
                   <%= render "shared/cardrecipe", recipe: recipe1 %>
                 <%end%>
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="right col-md-5">
+    <div class="right col-md-5 d-flex justify-content-center">
       <% if user_signed_in? %>
         <%= render "shared/favourites", favorites: @favorite_recipes %>
       <% else %>
