@@ -53,6 +53,8 @@
 
 // My Favourites Container//
 .profile-favourites {
+  margin-left: 110px;
+
   h3{
     padding-bottom: 15px;
     margin-top: -30px;
@@ -61,17 +63,16 @@
     color: white;
     padding: 10px 20px 0px 20px;
     text-align: center;
+    width: 100%;
   }
 }
 .card-grid-favourites {
-  display: grid;
   margin-top: -8px;
   grid-template-columns: 1fr;
   overflow: auto;
   height: 700px;
   width: 100%;
   background-color: rgba(223, 222, 222, 0.3);
-  justify-items: center;
   border-bottom-left-radius: 30px;
   border: solid;
   border-color: #2DD99C;
@@ -92,7 +93,7 @@
 }
 
 #recipeCarousel {
-  width: 100%;
+  width: 110%;
   background-color: rgba(223, 222, 222, 0.3);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -143,3 +144,27 @@
   margin-top: -25px;
 }
 //end//
+
+.carousel-control-prev {
+width: 5%;
+border-bottom-left-radius: 30px;
+
+&:hover {
+  background-color:white;
+}
+}
+.carousel-control-next{
+  width: 5%;;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  &:hover {
+    background-color: white;
+  }
+  }
+
+
+@media (min-width: 1450px) {
+.container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1450px;
+}
+}
