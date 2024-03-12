@@ -1,3 +1,5 @@
+
+<!-- the original code for the ingredients in recipe#new -->
 <ul class="content" data-ingredients-target="ingredientsWrapper">
         <template data-ingredients-target="template">
           <%= form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
@@ -12,3 +14,9 @@
           Add Ingredient
         </button>
         </ul>
+
+<!-- the original code for the recipe options in recipe#new -->
+          <p><i class="fa-solid fa-stopwatch" style="color: #2dd99c;"></i> <%= form.input :prep_time, as: :select, collection: (0..120).step(5), prompt: "minutes", input_html: { class: "form-validation" }  %></p>
+          <p><i class="fa-solid fa-fire-burner" style="color: #2dd99c;"></i> <%= form.input :cook_time, as: :select, collection: (0..120).step(5), prompt: "minutes", input_html: { class: "form-validation" } %></p>
+          <p><i class="fa-solid fa-traffic-light" style="color: #2dd99c;"></i> <%= form.input :level, as: :select, collection: ["Easy","Medium", "Hard"], input_html: { class: "form-validation" } %></p>
+          <p><i class="fa-solid fa-utensils" style="color: #2dd99c;"></i> <%= form.input :servings, as: :select, collection: (1..10), prompt: "servings", input_html: { class: "form-validation" } %></p>

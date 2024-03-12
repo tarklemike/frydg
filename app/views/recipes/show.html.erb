@@ -148,9 +148,9 @@
     <br>
   </div>
 
-  <div id="reviews">
-    <h2>Reviews</h2>
-    <div class="reviewsection">
+  <div class="index_recipecard" id="reviews">
+    <h2 class="top" >Reviews</h2>
+    <div class="reviewsection content">
       <ul class="list-group">
         <% @recipe.reviews.each do |review| %>
         <li class="list-group-item"><%= review.comment %></li>
