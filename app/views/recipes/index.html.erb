@@ -8,12 +8,14 @@
     <div class="row">
       <div class="side_bar col-2" style="overflow-y: scroll;">
           <div class="addcomponenet">
-            <h2><strong>add. </strong>+</h2>
-            <div class= "d-flex">
-              <%= render "shared/search_bar_index"%>
+            <h2 class="top"><strong>add. </strong>+</h2>
+            <div class="content">
+              <div class= "d-flex">
+                <%= render "shared/search_bar_index"%>
+              </div>
+                <a><button class="button_default search">carrot x</button></a>
+                <a><button class="button_default search">egg x</button></a>
             </div>
-              <a><button class="button_default">carrot x</button></a>
-               <a><button class="button_default">egg x</button></a>
           </div>
 
 
@@ -22,7 +24,7 @@
               <div class="retractablecontainer">
                 <h2 class="accordion-header">
                   <button class="accordion-button top" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    Allergens
+                    Allergens <i class="fa-solid fa-seedling"></i>
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
@@ -43,7 +45,7 @@
               <div class="retractablecontainer">
                 <h2 class="accordion-header">
                   <button class="accordion-button top collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    <p>Cuisine <i class="fa-solid fa-bowl-food"></i></p>
+                    Cuisine <i class="fa-solid fa-bowl-food"></i>
 
                   </button>
                 </h2>
