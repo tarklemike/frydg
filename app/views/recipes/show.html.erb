@@ -1,7 +1,7 @@
 <div class="container">
   <div class="justify-content-between d-flex">
     <%= link_to "Back", recipes_path, class: "button_default" %>
-    <% if current_user %>
+    <% if current_user == @recipe.user %>
       <%=link_to"Edit", edit_recipe_path(@recipe), class: "button_default"  %>
     <% end %>
   </div>
@@ -39,8 +39,14 @@
 
       <div class="d-flex justify-content-between mt-auto">
         <div>
-          <img class="avatar-bordered" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUSEhISEhIVGBgVGBIZERgYEhESGBISGBgZGRgYGBgcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHjQkISs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIANwA5QMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAABAECBQMGB//EAD4QAAIBAgQDBAkCBgECBwAAAAECAAMRBBIhMUFRcQVhgZEGEyIyUqGxwdFCchQjYoLh8KIzshVDU5KTwvH/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAjEQADAQACAgIDAQEBAAAAAAAAAQIRITEDEkFhE1FxMvAi/9oADAMBAAIRAxEAPwDdkQhOIsJEIQAmEIQAJndq9o+r9hNXI8EHxN9hxnftDFikmbcnRB8TcPDie4Ty5JJLMbsxuxPEmNIqZ0gAkk6lmN2J1LHvmxhMNkFz7x37u6KdnUbksf07dZpE23ip/B0SghaLvifhF+87Ti1RjufLSChsVeWUM4k+ydeUUkQm0z6rDmuvZ6TIhCUQdsM1m6gxuZ0sGI2JHjM6j2em0eT1WMekxRMSeIv8jGUcEXEyqXPZvNquiKtIOCrC4MxMdhzTOuqn3W7+R75u3la9IVFKtqD/ALfrHFYT5fErX2eYqbRem2pjOKQ02NNtxx+JeBEUTjOldHn+ucMjOdYvUa4tLs28XfhKRaRsYBMtMTsdxKYbRF6RZ638wTPNZD7GWdbmEWY6mEPUMPoZMIQMwOkISIQAmEJyxNUU0dz+lWbyF4Aee7Xr+sqnknsr1/UfPT+2KSBfjvue8ncyVFyBzIlGyWLDZwtPKijuuepnUi+hhImZrgvUw3Fde78ReaM51qQbrz/M0i/hmF+H5QlCWdSDYiVmpzhCEIwCELRyjRy6nf6RVSlFzLp4ilLD8W8B+YxCEwqnR1TKnoiSJEkSSzL7dwuamKg3TU96H3vLfwM82ptmnt3QMCp2IIPQ6GeKSkRdTuCVP9pIP0nR4nxhx+ecei+fUmczuI7/AAL5iBqTa3ScjTs4VtNReaJoyNEVRa3G0Rw4NSofONFAX02H0nPs9B/EAHa58ZK6ZMrXhasljrxhLduvesRyAEIJhU8n0C8iBhOc6EEIQgMJn9uPagw+JqY83BPyBmhMr0gP8umObi/gjmNdglyYktS95f3L9ZWWpe8vUfWM1NwyJJkTM1CSJEmICr0wwsfDuidSmVOvh3x6L4t09lHaxZrIASCWsTpbkATNJprgyvxp8/ItCQgOVSeN9eZBt9pdqWiE7FgCNdRY/e01bSWnMobeDOHpZdTv9P8AM7SlELYZdjrxl7zCnrOuJUrEEiTC8ksiSJF5MAJnl3pXxFRBxdvnZvvPUTIOHLVMQV94MmXrkWaRWNmHmn2lf0tglAqkcVUAzN7epAVAeYF+s1qVH1bU2J1a4fqYn2jTz+tYfotb7y5f/rTKv8ZnOmfh3AuG48eUWw1/WA31vpNHAYdXSpm1sNO46xJqRUK3Br28Jqs1o58aSZwxTEuxO5JvJkjW94SsFp9D/iRJSsDpEQ0rnsbzmOxrDUhFqGJBGptOwaSBeZPpD7lP9/8A9HmpmmX6QC9NDydfmrL940C7MQSyC5FuYtIgHYEFbXHME/KM0N6L4jG06f8A1KiL1ZQfKeb7TqWQvXr1MvwqwpgnkAtifEmV7J9E3xIFR70Kbaqou9V14MSdF8YLxp8thXkzhI16vpFQXZmf9qN9TYRCt6WL+imf73VfkLzVX0GwtrM1djzNUD5BbTlV9GGpa0H9Yo/RUC57f0uANe5h4y1Mmf5Kf0YlX0mrN7oRegZz8zG/R6i9Wo2JqkswUrTLcL7kDgNPrO6bXsRwIIIII3BHAzYwVLIgvudTJqklwsLlNvl6Xp0gEVNwAB1txk1EuLdCOoII+kvATLTXDyvbOGq06zPRZxnN2COQL88t7a/WJCrjD+ur5oJ6/HUM63G6/McpkYTA1sX/ANNhTpDeqy5mqWNiKa8Rv7R05Xm0PUY0s50xXpYk3L1HUcS+IyD6zvgsFXqH+Xi0v3Yp2PlPWYb0TwqavTNVuL1XZyfC+UeUMX6J4OoNKIQ8GpkowP0PiJWoz/7sxqeExyHSvTccnDH5gXmrhKlQ6VaYU/Ejh0PnYjymLiWxHZrqKrNWwzGyv+qlfYN3/I8LbT0NGqrqrowZWF1I2Imdprs3hp9HSLYRf5lf9yf9ixiccJvUPNz8lUSEN/AY6kXQhd916icMNh8lNg27XLR4zlV0Vuh+kFT6F6rtnnuynsai81NvCRWW+HQ/CTF0fIwbgbiPYdL4dxzLWnQ+Hv8ADjh+3H0zGVrXkSHGsJqZntM95BnDUbyHcicuHYzoxjuBqmxB24TMLHea1IjKLcomKVrGQ0z+29aLdzUz/wA1v8rzjiO1QrFaa57aE5sqg8gbG8UxnaualUVqbC6NYqwcXtpyO8EmVgrIZrC52Gp6SZmdv1WFMU096qyovj/oHjKS14Oni0b9Gezf42scVVF6NJitFSNHYa5jzA08dOE95Fey8EuHo06K7IoF/ibdm8SSfGNSqemSMn0g7aXCIvs53e+Rb5RYbsx4DUecR7E9IKtdm9ZQGRBd3RjZL7XVt9jtr3TP9OcOwqUqxBKBSjNuEbNfXle+/dM70UxbU3ejRtV9eRmG3qrAjOxHCx472EpSvXSdent8bhfa9YttdHHxAbN1G3Q90XmhiBamRyAEz5hXZ0+PoiTIkyTQg4b1tqZNlP8A1LGxKcVB4X26XinbXpGuGf1FGmHdAuYXyJTW3srpxtbSaWFazjv0nhvSbClMTXWocoqnPTY7Mp4eG1u6beNJ9nP5XjPc9lYypUp02rU0QuLplcuCLXANxoSNeO00J4v0Tx9WoaWGGV6dEEu+UgqoBCJe9r3IHOwM9pHSxkJnOvQSojI6hlYEMp1BBniOzQ2Bxb4KoSab+3hmPffTxsR1HfPdzyvp1gTVTDerH80VLU+YUglieSgqpv8AmC54Y9aeo1DFsPWVVOZlF2qHUgfqI+0YW4AvvYXPfxi+BpgU0IAuwzNpuW9o385idAyGBFwQRwO4M4Y02puf6TKYhPV/zF02zjgQdM3Uc+US7QxJKEc7Qla0TbyGxVMMGoOTuCSPCRgKuVLbi584Uj/LIvveJ4Z918pu+UzllY1/BbEpZj4yYzWS5kTRMzqeT0n6BfcGStEFm7hIdrg9by1KpYMec5tOzNLYaiCCeoi+KrNTpuA3cDyJ0H1jFF/Yt1mb2gQSqA7nM3QbfO3lBcsbnEsE0c/oUWGgJNr25aS1Nw4uO8HuPEQc5VsvRf8Ae6VZMgBX9IAbvUceo385QFqHuL0APUaGccbhs+RlNnRlemdwHUgi44jSdaB0IHBm+ev3nWG4xYmj1eAxy1VBFg1gWS9yp4jvHfGZ5PCYYscxNgDuNye6bDYxwAFZdPiUtf5iL2Qvxv4NQiQiBfdUDoAPpMo9oVOdPrkf6ZvvA4qo29QD9iBf+7ND2Qfjr9DuOfQLz1MSgTfck95NzCQ3rNZWLCIQhJKJB4x9kSslqiK44qyqwv0MQhfcXIvyJHzEqawip9jToUEprkpoqL8KqqjyEvMVnI2qVP8A5GP1lVxDAg+sc2/qFvkNZXsiPxUbT1AouTM2sQzl7akADuUcBOfrsxuTeWBidaVMevZyxj5adRuSOfIGZePxV2Wkp9kAhz8RAHs9Occ7YqZaFQjUkKoHMswUD5zKNPQa6jW/9XE+OvnHK40dP4HcNTKqyH3XU5eQax25f4iFd8yKeYB+U1+yqudGVt0bUddQR3TMenYsvwsw8Lm3ytKnsy8v+c/ZRR7PhFVp8RwMbduU5DSWtM208+irNCQXEIEumaSYmdlq6TONMyVLCS5RpNNGktURF2zVHPKyjoBf6kyAxlKZ9px3g+BA/BizC1W8EU9SW6heg38z9BOjMBvKIpW44XJB5XN7Hzk1UJAtupuPmCPImBRxwqFcynTYqOS6gDyAjJM457sp6qRxB3F/IzqYMEM0a1lt3mBqGGFo5lPcZ3/hTMX2dcucQvnM74dyTLrhYxTogRBVThck20Fzw6xepi1pgKTmI3698amViezOI9rruOkuc+TnoYXtFeKkeRkt2ivBT8hMwLbTXTnvAU8/sgE9357o8QvZms9ZXT1iH3Pa8tweovOlVzaKYTAZTdtBe+UbHjrH2W8VFS/2Zb1DOeYzQfCgyhwkg6FU4KLUImhh3vOS4WM00tBE25fQj23Uy01vxenfuAuxPha/hEox24cxp0xxzse5QAt/+R84uiEmyi5mq6OZ9jXZI9uoeAVAet2P0PziXalUJVqd+Q+aj8TYpqtGmWYgW1czx+OxRqVGci2Y+Q2A8pULXpn5WlKQy2J4QFWJot9bywcibepzaMFoTlmhHgaev/hRD+FEYEm3fOfWdWI4DCLOGJ7Nv7SGzDyYcj+ZoBe+WAhrDg841wcrAgjcH7c5QhuBHQ/kT0dbDrUFmAP26HhMXGYVqR4lODb5e5vzAeiNRCAXJ1BUm3ALv8rxiQdR3GUw59kX3Gh6rp9oxmj2W+rDmAfL/wDZomY+EfLUU+B8ZsTOlyXLCEISSghCc3rKuhIvyvr5bwAl6at7yg+ElEVRZQB0E5+vHAOf7G+8PXf0v/7DHyLg7QnJK6n9Wp4G4PkdZ1EQwvCEi8ALQkCDG2p4bxiMzE4d6lRipUKoVbm5ObVjYD9w4xqjTWihZm72Y2EXodoUkph2qJ7V3NmBPtG4FhrtYeEwO0+1DXYAXCKfZHM8zLmXTz4M6pSt+Q7Y7SNZsq3CLsPiPxN9hEEadAANZBXSdMpJYjkqnT1lQ0sQYC0sF1gTpTMZE7mlJj1Bp6/OecnOecoFk2nIduHQX5y4J5ziBJ1gGHbOectmi+sspMoWHN8DTJvkt+0svyBmdjMMKb+yLK4uN9HG/mLHwM1rzji6PrEK7HQqeTDYwTEZU2cNUzoD4HrMVSdQRYjRhyP4jWCr5Gsdm+R5xUi5Zq2nOpUtYAEk7AfflOkJBoccjN7xsOSkjzO/0l0phfdAHSXhDQwo9ZF0LAHrISujGwYE8pDYZDqUHlBKCKbqoBhwLku6A6EA9dZz9UV9w+BJI8OInWENDCqNcbEdx/3WWkwgMBMn0kx3q6WQe9Uuo7l/UfLTxmnXqrTUuxsBv/jvnkceWrVDUfoo+FeA685cTr0z8lYvsz1XSQFjXqpzemZ06cuHHN3y5fScgks40gLC6m+06rcxZJ0MBOTuGMJRXsBCLBYe3heL55Oacx24d4RfPDPAMGLyVMWzyc0AwZiuKxqU9GOvBRqx8OHjEcf2iVORDr+pt8vcO+ZPM8TqSdSTzJlJfsjRnF4xqjBgqrl6ksOTGXo1w+mx4j8cxFJBWUGnocFi9kc/tP2MfM8omJK2De0NB366eM1sFj9LMbjnxXuMipNJo1IQBvtCZlhCEIAEIQtACZyxOJSmuZz0HFjyA4xbH9pLT9hbM/w393kW5TAq1Gds7m5+QHIDgJanSKrDri8a9R8x0Ue6nAd5PxTmrBtt+IO8pKsPMbHiJqnhk1vJ0ZJxqppGaVS/stvw5N/mVxCaGNMlozkpyXpSUUgxh0PKVpGCyUTJqJl3jS0dNvnOVdNIJiaFM0JfLCUSewzQvIEJynaTCEIAEvKSVEAMPHUClR7C4NmtxF97c9QYupvtNvtGnbI/I5W6Nt8wPOZtTDhtRoefPqOMtMho4QkOrL7w8RqP8eMAYxEMbWPJk/7hNB6YJvseY38efjM99vI+RmnBgi+Gxj09GGZf6dbd9vxea+HrrUGZGBHdw7iOExZAWxzKSp5g2P8AmQ5TNFWG9CYy4qqP/MB/cgJ+REGxVU71LftQD63i9WP2Rr1qqoMzMAPr3AcZmYjHs+iXRef6j0+H69Itl1ubk8yST5mTGpSE6EK6gObcl87tKy+J989F+8pLM2ElELHKoJPIfU8hL4ag1Rsq/wBx4KO/8TfwuFWmuVRvueLHvk1WDmdMd8Bkanma7asQNhpYdd/lIrRiq+dmYbHRf2jT8nxitUmVIqw4KgvLVTpKZzylHeUQS7m2hnDOeMlnlLiMkvlkymaEYsPUXk3nPNC85zqOmaGac80i8AOuaSGnK8LygLVVzqVPEf6ZnrfY7jQ9Y/eZ9dyzll2GlvitxvEhMtOYwqFhcW11ynLLo4O3j3SYxDL9ioQRnex70/E6f+Hj/wBR/wDh+J3wlXMmu66H7Gd5HsyvVCR7OHCo/wDwP2i1eiabAE3BBsbW23BmtFe0V9gN8JB8Dofr8o1T0GhGEISiSLkmwVjzspNust6p+FNv+I+pjvZyWphuLkt4Hb5ARoROh4YTdm1XctZVBC7tc6XvoB94zT7HH63J7lGUee81byInTH6opTpqoCqoAHASmLfKhtudF6nj9/Cdpn4muDUyg+4Nf3N+B9YktYN4jgQQABwi7tO1R5n1ams1lGVM7FZwajeDVbCLK5vvKSIbGDQEBQEFeWvAeIr6oQl7whoYa4MmQBK1aqoLsQB/u3OZmul4TLrdqHZFt3nX5RKpWd/ecnuvYeQhg0mzcqYpF9516XufIRZ+1EHuhm8Mo+cyAJMeIak74vGvUBHui2ynfqZoU7ZRl2sLdOEyIxhMRk9lvdO39J/EAqR4pqGGh494l4QMQjph6uRr8OPSawNxccZixzAVv0H+38SaXyCH5SqgdWU/qBHnLwklGKhuBffY9zDQ/OD7W52A6k2H1k4xClVrbOA1jz2ax6gH+6Vw1MtUp5jexLW4WUaddSs0+yDZVbAAbAADwloQtMiwvCE51GIFlFyduQ7zADhjMVl9hNXPjlvx690WxOCtRzXIdLsTffmDzv8AWO4fCrT13Y3JY8Txmbj8Z6z2U90bn4z3d0tP9Ap9mJmobai/ePxFnYX/ADpGpBEpXhVeBPpir6iUQRk0VPC3TSU9QRqDfr+RLVoyrw0vsAISC1veFvp5y14zJrOyIQvCAGpiMQKa3O/6RzMxatVnOZj05AchL45yajX4aDuE5SOjeV8hCEIGgQhCABCEIAd8Piimh1XlxHSaCVAwupuJkQFQoM6mx+R6iGaZ0jZlkazA8iJSmbjXkJMQjbhCAmRQl2ml0DjdNT+w6N+fCU7MT3n/ALV6DU/P6TQKgjXjoekrSohAqqLACwHdK3jBZyWhAwEkYTlXxC0xdjblzPQScQ5VXYbjbynng5azMbltzy7hyEaRUrRnFYxqmnury4n9x+0XhCM3UpBCRCAEwhIgAETi9G3u+XDw5TvCNU0KoVLkUz/57pE71KIJ4jobXhNtOR+M/9k=" alt="">
-          <p><strong>John Smith</strong></p>
+          <% if @recipe.user.photo.attached? %>
+            <%= cl_image_tag @recipe.user.photo.key, class: "avatar-bordered" %>
+          <% elsif @recipe.user.image.empty? %>
+            <%= image_tag ("avatar.png"), class: "avatar-bordered" %>
+          <% else %>
+            <%= image_tag (@recipe.user.image), class: "avatar-bordered" %>
+          <% end %>
+          <p><strong><%= @recipe.user.username %></strong></p>
         </div>
         <div class="d-flex flex-column align-items-end">
           <div class="rating-stars d-flex">
@@ -145,23 +151,50 @@
     <br>
     <br>
     <br>
-    <br>
+
   </div>
 
-  <div class="index_recipecard" id="reviews">
-    <h2 class="top" >Reviews</h2>
-    <div class="reviewsection content">
+  <div class="index_recipecard"  id="reviews">
+    <h1 class="top">Reviews</h1>
+    <div class="content">
+      <div class="review-container">
+
       <ul class="list-group">
         <% @recipe.reviews.each do |review| %>
-        <li class="list-group-item"><%= review.comment %></li>
-        <% end %>
-      </ul>
+        <div class="review">
+          <div>
+            <div class="list-group-item user">
+              <% if review.user.photo.attached? %>
+                <%= cl_image_tag review.user.photo.key, class: 'avatar' %>
+              <% end %>
+              <p><%= review.user.first_name %> <%= review.user.last_name %></p>
+            </div>
+            <div class="rating-stars d-flex">
+              <% review.rating.times do %>
+                <p><i class="fa-solid fa-star"></i></p>
+              <% end %>
+              <% (5 - review.rating).times do %>
+                <p><i class="fa-regular fa-star"></i></p>
+              <% end %>
+            </div>
+          </div>
 
+          <p class="list-group-item comment"><%= review.comment %></p>
+        </div>
+      <% end %>
+      </div>
+
+
+
+
+    <div class="reviewsection mt-5">
       <%= simple_form_for [@recipe, @review], html: { action: "#{recipe_path(@recipe)}#reviews"} do |f| %>
         <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
         <%= f.input :rating, collection: 1..5%>
         <%= f.submit "Add Review +", class: "button_default"%>
       <% end %>
+    </div>
+
     </div>
   </div>
 

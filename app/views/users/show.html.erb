@@ -1,7 +1,4 @@
 <div class="container">
-  <div class="button-container mb-3">
-    <a href="/recipes/" class="button_default_user"><strong>Back</strong></a>
-  </div>
 
   <div class="d-flex justify-content-between">
     <div class="left m-3 col-md-7">
@@ -12,39 +9,41 @@
           <h5><%= current_user.first_name %> <%= current_user.last_name %> | <%= current_user.postcode %></h5>
         </div>
         <div class="profile-icons">
-
-         <a href="http://www.instagram.com"><i class="fa-brands fa-instagram" style="color: #cd4cc8;"></i></a>
-         <a href="http://www.facebook.com"> <i class="fa-brands fa-facebook" style="color: #30658d;"></i> </a>
+          <a href="http://www.instagram.com"><i class="fa-brands fa-instagram" style="color: #cd4cc8;"></i></a>
+          <a href="http://www.facebook.com"> <i class="fa-brands fa-facebook" style="color: #30658d;"></i> </a>
         </div>
       </div>
-
       <div class="profile-recipes">
         <h3>My Recipes</h3>
-          <%= link_to new_recipe_path, class: "button_default_add" do %>
-            <strong>Add Recipe +</strong>
-          <% end %>
-             <div id= "recipeCarousel" class="carousel carousel-dark slide" data-ride="carousel">
-                <div class= "carousel-inner" >
-                    <% @recipes.each_with_index do |recipe, index|%>
-                         <%= link_to recipe_path(recipe) do %>
-                       <div class="carousel-item <%= "active " if index==0 %>">
-                          <%= render "shared/cardsubmitted", recipe: recipe %>
-                         </div>
-                       <% end %>
-                      <%end%>
-                   </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-
-                      <button class="carousel-control-next" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
-                 </div>
-             </div>
-         </div>
-
-
+        <%= link_to new_recipe_path, class: "button_default_add" do %>
+          <strong>Add Recipe +</strong>
+        <% end %>
+        <div id= "recipeCarousel" class="carousel carousel-dark slide" data-ride="carousel">
+          <div class= "carousel-inner" >
+            <% @recipes.each_slice(2).with_index do |(recipe1, recipe2), index|%>
+              <div class="carousel-item <%= "active " if index==0 %>">
+                <div class="d-flex justify-content-around">
+                <%= link_to recipe_path(recipe1) do %>
+                  <%= render "shared/cardrecipe", recipe: recipe1 %>
+                <%end%>
+                <%if recipe2%>
+                  <%= link_to recipe_path(recipe2) do %>
+                    <%= render "shared/cardrecipe", recipe: recipe2 %>
+                  <% end %>
+                <%end%>
+              </div>
+              </div>
+            <%end%>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="right col-md-5">
       <% if user_signed_in? %>
         <%= render "shared/favourites", favorites: @favorite_recipes %>
@@ -54,13 +53,8 @@
     </div>
   </div>
 </div>
-
-
-         <div class="w-25 border"></div>
-          </div>
-
-
+<div class="w-25 border"></div>
+</div>
 <div class="recipe flex-column">
   <div class="w-75 border"></div>
-</div>
 </div>

@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @recipe = Recipe.find(params[:recipe_id])
     @review.recipe = @recipe
+    @review.user = current_user
     if @review.save
       redirect_to recipe_path(@recipe)
     else

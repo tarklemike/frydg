@@ -5,16 +5,17 @@
   font-size: 18px;
   background-color: white;
   color: #2DD99C;
-  border: 2px solid #2DD99C;
-  padding: 5px 20px 5px 20px;
+  border: 1.5px solid #2DD99C;
+  padding: 3px 15px 3px 15px;
   margin: 5px;
   text-decoration: none;
   font-weight: bold;
 }
 
 .search {
-  border: 2px solid #125712;
-  color: #6a6a6a;
+  border: 1px solid #177152;
+  color: #2DD99C;
+  box-shadow: 1px 1px 1px 1px rgba(51, 51, 51, 0.288);
 }
 
 .button_default:hover {
@@ -25,10 +26,11 @@
 
 .round {
   padding: 0px;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   justify-content: center;
-  font-size: 40px;
+  font-size: 35px;
+  box-shadow: 1px 1px 1px 1px rgba(51, 51, 51, 0.288);
  }
 
 .green {
