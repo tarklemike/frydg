@@ -1,10 +1,10 @@
 <div class="container">
   <div class="justify-content-between d-flex">
-  <a href="/recipes"><button class="button_default">Back</button></a>
-  <% if current_user %>
-  <%=link_to"Edit",edit_recipe_path(@recipe), class: "button_default"  %>
-  <% end %>
-</div>
+    <%= link_to "Back", recipes_path, class: "button_default" %>
+    <% if current_user %>
+      <%=link_to"Edit", edit_recipe_path(@recipe), class: "button_default"  %>
+    <% end %>
+  </div>
   <div class="d-flex mt-2">
 
     <div class="imagediv col-6 pe-3">
@@ -56,10 +56,51 @@
       </div>
 
       <div class="d-flex justify-content-between">
-        <h4><i class="fa-solid fa-utensils" style="color: #2dd99c;"></i> <%= @recipe.servings %></h4>
-        <h4><i class="fa-solid fa-stopwatch" style="color: #2dd99c;"></i> <%= @recipe.prep_time.to_i %></h4>
-        <h4><i class="fa-solid fa-fire-burner" style="color: #2dd99c;"></i> <%= @recipe.cook_time.to_i %></h4>
-        <h4><i class="fa-solid fa-traffic-light" style="color: #2dd99c;"></i> <%= @recipe.level %></h4>
+        <div class="d-flex" style="width: 300px">
+          <i class="icon-large fa-solid fa-mortar-pestle" style="color: #2dd99c;"></i>
+          <div>
+            <p>PREP TIME</p>
+            <p><%= @recipe.prep_time.to_i %> minutes</p>
+          </div>
+        </div>
+        <div class="d-flex" style="width: 300px">
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch" style="color: #2dd99c;"></i></div>
+            <div>
+              <p>COOK TIME</p>
+              <p><%= @recipe.cook_time.to_i %> minutes</p>
+            </div>
+        </div>
+        <div class="d-flex" style="width: 300px">
+            <i class="icon-large fa-solid fa-utensils" style="color: #2dd99c;"></i>
+            <div>
+              <p>SERVINGS</p>
+              <p><%= @recipe.servings %></p>
+            </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <div class="d-flex" style="width: 300px">
+          <i class="icon-large fa-solid fa-earth-americas" style="color: #2dd99c;"></i>
+          <div>
+            <p>CUISINE</p>
+            <p><%= @recipe.cuisine %></p>
+          </div>
+        </div>
+        <div class="d-flex" style="width: 300px">
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light" style="color: #2dd99c;"></i></div>
+            <div>
+              <p>DIFFICULTY</p>
+              <p><%= @recipe.level %></p>
+            </div>
+        </div>
+        <div class="d-flex" style="width: 300px">
+            <i class="icon-large fa-solid fa-seedling" style="color: #2dd99c;"></i>
+            <div>
+              <p>ALLERGENS</p>
+              <p><%= @recipe.attributes.select { |key, value| value == true }.keys %></p>
+            </div>
+        </div>
       </div>
     </div>
 
@@ -111,6 +152,8 @@
     <h1 class="top">Reviews</h1>
     <div class="content">
       <div class="review-container">
+
+      <ul class="list-group">
         <% @recipe.reviews.each do |review| %>
         <div class="review">
           <div>

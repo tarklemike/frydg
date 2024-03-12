@@ -1,32 +1,28 @@
 <div class="navbar container-fluid">
-
-<!-- Logo in the Middle -->
-    <div class= "our-logo">
+  <!-- Logo in the Middle -->
+  <div class= "our-logo">
     <%= link_to recipes_path, class: "navbar-brand mx-auto logo" do %>
       <%= image_tag "logo.png", alt: "Your Logo" %>
     <% end %>
-    </div>
-    <!--- end --->
-
-    <!-- search bar -->
-    <%# <%= render "shared/search_bar" %>
-    <!--- end --->
-
-    <!-- Profile Sign-in Button on the Right -->
-    <div class="navbar-nav">
-      <% if user_signed_in? %>
-        <!-- If user is signed in, show profile picture (current_user.profile_picture_url) -->
-    <div class="sidebar-nav">
-      <i class="burger fa-solid fa-burger fa-2xl" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" style="color: #ffffff; border: none; background-color: transparent; cursor: pointer;"></i>
-    </div>
-  <% else %>
+  </div>
+  <!--- end --->
+  <!-- search bar -->
+  <%# <%= render "shared/search_bar" %>
+  <!--- end --->
+  <!-- Profile Sign-in Button on the Right -->
+  <div class="navbar-nav">
+    <% if user_signed_in? %>
+      <!-- If user is signed in, show profile picture (current_user.profile_picture_url) -->
+      <div class="sidebar-nav">
+        <i class="burger fa-solid fa-burger fa-2xl" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" style="color: #ffffff; border: none; background-color: transparent; cursor: pointer;"></i>
+      </div>
+    <% else %>
       <!-- If user is not signed in, show sign-in icon -->
-        <%= link_to new_user_session_path, class: 'nav-link' do %>
-          <i class="fa-solid fa-right-to-bracket fa-2xl" style="color: #ffffff;"></i>
-        <% end %>
+      <%= link_to new_user_session_path, class: 'nav-link' do %>
+        <i class="fa-solid fa-right-to-bracket fa-2xl" style="color: #ffffff;"></i>
       <% end %>
-    </div>
-    <!--- end --->
+    <% end %>
+  </div>
+  <!--- end --->
 </div>
-
 <div class="spacer mb-3"></div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_12_113741) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_12_125729) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,6 +60,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_12_113741) do
     t.index ["scope"], name: "index_favorites_on_scope"
   end
 
+  create_table "foodbanks", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -69,7 +78,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_12_113741) do
   create_table "recipe_ingredients", force: :cascade do |t|
     t.string "amount"
     t.bigint "recipe_id", null: false
-    t.bigint "ingredient_id", null: false
+    t.bigint "ingredient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "measurement_type"
