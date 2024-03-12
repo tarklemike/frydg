@@ -64,7 +64,7 @@
           </div>
         </div>
         <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-stopwatch" style="color: #2dd99c;"></i>
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch" style="color: #2dd99c;"></i></div>
             <div>
               <p>COOK TIME</p>
               <p><%= @recipe.cook_time.to_i %> minutes</p>
@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="d-flex" style="width: 300px">
-            <div><i class="icon-large fa-solid fa-traffic-light" style="color: #2dd99c;"></i></div>
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light" style="color: #2dd99c;"></i></div>
             <div>
               <p>DIFFICULTY</p>
               <p><%= @recipe.level %></p>
