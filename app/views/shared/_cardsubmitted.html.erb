@@ -1,10 +1,12 @@
 <div class="styling">
   <ul class="card_recipes_submitted">
   <% if recipe.photo.attached? %>
-    <li><%= cl_image_tag recipe.photo.key, class: "recipecards_img" %></li>
-  <% else %>
-    <li><%= image_tag recipe.image_url, class: "recipecards_img" %></li>
-  <% end %>
+        <%= cl_image_tag @recipe.photo.key, class: "recipecards_img" %>
+      <% elsif recipe.image_url != nil %>
+        <%= image_tag (recipe.image_url), class: "recipecards_img" %>
+      <% else %>
+        <%= image_tag ("logo_small.png"), class: "recipecards_img" %>
+      <% end %>
     <div class="bottomcontainer">
           <li class="recipe_card_title"><strong><%= recipe.title %></strong></li>
           <div class="allergens d-flex">
