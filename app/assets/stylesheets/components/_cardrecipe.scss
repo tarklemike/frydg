@@ -40,7 +40,8 @@
 
 .recipe_card_title {
   font-size: 22px;
-  color: #656565;
+  color: #177152;
+  // color: #656565;
   text-align: start;
   margin-bottom: 5px;
 }
@@ -49,8 +50,9 @@
   max-width: 80px;
   list-style-type: none;
   color: #d92d6a;
-  font-size: 20px;
+  font-size: 18px;
   text-align: end;
+  font-style: oblique;
 
   display: flex;
   column-gap: 8px;
@@ -71,10 +73,18 @@
   align-items: center;
   justify-content: space-between;
 
-  color:  #414141;
+  color:  #177152;
 }
 
 .infograms .fa-solid {
   font-size: 22px;
-  color:  #125712;
+  color:  #177152;
+}
+
+.favoriting_index {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1;
+  font-size: 30px;
 }
