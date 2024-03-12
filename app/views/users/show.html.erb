@@ -12,26 +12,38 @@
           <h5><%= current_user.first_name %> <%= current_user.last_name %> | <%= current_user.postcode %></h5>
         </div>
         <div class="profile-icons">
-          <i class="fa-brands fa-instagram" style="color: #cd4cc8;"></i>
-          <i class="fa-brands fa-facebook" style="color: #30658d;"></i>
+
+         <a href="http://www.instagram.com"><i class="fa-brands fa-instagram" style="color: #cd4cc8;"></i></a>
+         <a href="http://www.facebook.com"> <i class="fa-brands fa-facebook" style="color: #30658d;"></i> </a>
         </div>
       </div>
 
       <div class="profile-recipes">
         <h3>My Recipes</h3>
-        <%= link_to new_recipe_path, class: "button_default_add" do %>
-          <strong>Add Recipe +</strong>
-        <% end %>
-
-        <div class="card-grid-submitted col-12">
-          <% @recipes.each do |recipe| %>
-            <%= link_to recipe_path(recipe) do %>
-              <%= render "shared/cardrecipe", recipe: recipe %>
-            <% end %>
+          <%= link_to new_recipe_path, class: "button_default_add" do %>
+            <strong>Add Recipe +</strong>
           <% end %>
-        </div>
-      </div>
-    </div>
+             <div id= "recipeCarousel" class="carousel carousel-dark slide" data-ride="carousel">
+                <div class= "carousel-inner" >
+                    <% @recipes.each_with_index do |recipe, index|%>
+                         <%= link_to recipe_path(recipe) do %>
+                       <div class="carousel-item <%= "active " if index==0 %>">
+                          <%= render "shared/cardsubmitted", recipe: recipe %>
+                         </div>
+                       <% end %>
+                      <%end%>
+                   </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+
+                      <button class="carousel-control-next" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                 </div>
+             </div>
+         </div>
+
 
     <div class="right col-md-5">
       <% if user_signed_in? %>
