@@ -1,0 +1,14 @@
+<ul class="content" data-ingredients-target="ingredientsWrapper">
+        <template data-ingredients-target="template">
+          <%= form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
+            <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
+              <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->ingredients#add"}} %>
+            </li>
+          <% end %>
+        </template>
+        <button type='button'
+                class=''
+                data-action='click->ingredients#add'>
+          Add Ingredient
+        </button>
+        </ul>

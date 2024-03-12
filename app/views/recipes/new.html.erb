@@ -44,19 +44,18 @@
       <div class="index_recipecard col-6">
         <h2 class="top">Ingredients</h2>
         <ul class="content" data-ingredients-target="ingredientsWrapper">
-        <template data-ingredients-target="template">
-          <%= form.simple_fields_for :recipe_ingredients do |ingredient_form| %>
-            <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
-              <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->ingredients#add"}} %>
-            </li>
-          <% end %>
-        </template>
-        <button type='button'
-                class=''
-                data-action='click->ingredients#add'>
-          Add Ingredient
-        </button>
-        </ul>
+    <%= form.simple_fields_for :recipe_ingredients do |recipe_ingredient_form| %>
+        <!-- Use the virtual attribute for ingredient name -->
+        <li>
+          <%= recipe_ingredient_form.input :ingredient_name, placeholder: "Enter ingredient name" %>
+          <%= recipe_ingredient_form.input :amount %>
+          <%= recipe_ingredient_form.input :measurement_type %>
+          <%= recipe_ingredient_form.hidden_field :_destroy %>
+          <%= link_to "Remove", '#', class: "remove-recipe-ingredient" %>
+      </li>
+    <% end %>
+    <!-- Button to add a new recipe ingredient -->
+   <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p>
       </div>
 
     </div>
