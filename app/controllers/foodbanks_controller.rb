@@ -5,7 +5,9 @@ class FoodbanksController < ApplicationController
     @markers = @foodbanks.geocoded.map do |foodbank|
       {
         lat: foodbank.latitude,
-        lng: foodbank.longitude
+        lng: foodbank.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {foodbank: foodbank}),
+        marker_html: render_to_string(partial: "marker" , locals: {foodbank: foodbank})
       }
     end
   end
