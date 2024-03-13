@@ -1,12 +1,13 @@
+$green-lining: #177152;
 $background-color-on-hover: #ffffff;
 $text-color: #ffffff;
-$text-color-on-hover: $green;
+$text-color-on-hover: $green_lining;
 $sidebar-width: 195px;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
 
 .sidebar-all .offcanvas {
   margin-top: 97px;
-  background: $green;
+  background: $green_lining;
   width: $sidebar-width;
   box-shadow: 0 0 10px $box-shadow-color;
   ul {
@@ -75,7 +76,7 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
 
 .card {
   --bs-card-bg:none;
-  background-attachment: $green;
+  background-attachment: $green_lining;
   color: $text-color;
   margin-top: 10px 0;
   display: block;

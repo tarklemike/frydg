@@ -10,8 +10,8 @@ class UsersController < ApplicationController
       # Redirect to appropriate path after sign out
       # redirect_to root_path, notice: "You have been signed out."
     # else
-    @recipes = current_user.recipes
-    favorites = current_user.favorites
+    @recipes = @user.recipes
+    favorites = @user.favorites
     @favorite_recipes = favorites.map{ |f| Recipe.find(f.favoritable_id)}
   end
 
