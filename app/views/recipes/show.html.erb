@@ -164,43 +164,19 @@
 
   <div class="index_recipecard"  id="reviews">
     <h1 class="top">Reviews</h1>
-    <div class="content d-flex">
-              <div class="reviewsection col-6 px-5 mt-4">
-      <%= simple_form_for [@recipe, @review], html: { action: "#{recipe_path(@recipe)}#reviews"} do |f| %>
-        <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
-        <%= f.input :rating, collection: 1..5%>
-        <%= f.submit "Add Review +", class: "button_default"%>
-      <% end %>
-    </div>
-      <div class="review-container col-6" style="height: 260px; overflow: auto;">
+    <div class="content" data-controller="insert-reviews">
+      <div class="review-container" data-insert-reviews-target="list">
 
-      <%# <ul class="list-group"> %>
+        <%# <ul class="list-group"> %>
         <% @recipe.reviews.each do |review| %>
-        <div class="review" style="min-height: 125px; overflow: auto;">
-          <div>
-            <div class="d-flex justify-content-between align-items-center w-100">
-              <div class="list-group-item user">
-                <% if review.user.photo.attached? %>
-                  <%= cl_image_tag review.user.photo.key, class: 'avatar' %>
-                <% end %>
-                <p><%= review.user.first_name %> <%= review.user.last_name %></p>
-              </div>
-              <p><%= review.created_at.strftime("%b %d, %Y")%> </p>
-            </div>
-            <div class="rating-stars d-flex">
-              <% review.rating.times do %>
-                <p><i class="fa-solid fa-star"></i></p>
-              <% end %>
-              <% (5 - review.rating).times do %>
-                <p><i class="fa-regular fa-star"></i></p>
-              <% end %>
-            </div>
-          </div>
-
-          <p class="list-group-item comment"><%= review.comment %></p>
-        </div>
-      <% end %>
+          <%= render 'reviews/review', review: review %>
+        <% end %>
       </div>
+
+      <div class="reviewsection mt-5">
+        <%= render 'reviews/form', recipe: @recipe, review: @review%>
+      </div>
+
 
     </div>
   </div>
