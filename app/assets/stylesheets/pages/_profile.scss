@@ -1,13 +1,15 @@
 
 // Profile Details, Avatar ansd Icons//
 .profile-info {
-  padding-top: 20px;
-  margin-top: -25px;
+  padding-top: 15px;
+  margin-top: -20px;
   img {
     border-radius: 50%;
     height: 100px;
     float: left;
     margin-right:30px;
+    margin-top:15px;
+
   }
   p {
       margin-bottom: 0;
@@ -63,7 +65,7 @@
     color: white;
     padding: 10px 20px 0px 20px;
     text-align: center;
-    width: 100%;
+    width: 105%;
   }
 }
 .card-grid-favourites {
@@ -71,7 +73,7 @@
   grid-template-columns: 1fr;
   overflow: auto;
   height: 700px;
-  width: 100%;
+  width: 105%;
   background-color: rgba(223, 222, 222, 0.3);
   border-bottom-left-radius: 30px;
   border: solid;

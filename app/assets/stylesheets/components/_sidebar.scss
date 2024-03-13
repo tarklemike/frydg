@@ -50,10 +50,17 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  float:left;
 }
+
+.user-info {
+  margin-left: 10%;
+}
+
 
 .user-info .user-name {
   color: $text-color;
+  margin-left: 10%;
 }
 
 .quick-actions .action-link {
@@ -68,7 +75,7 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
 
 @media (max-width: 768px) {
   .sidebar-all .offcanvas {
-    width: 100%;
+    width: 10%;
     margin-top: 0;
   }
   .sidebar-all a {
