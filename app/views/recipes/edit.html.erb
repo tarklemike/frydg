@@ -1,7 +1,10 @@
 <div class="container">
 
   <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
-    <a href="/recipes"><button class="button_default">Back</button></a>
+  <div class="d-flex justify-content-between">
+      <%= link_to "Back", recipes_path, class: "button_default" %>
+      <%= form.submit "Update recipe", class: "button_default"%>
+    </div>
 
     <div class="d-flex mt-2">
 
@@ -126,8 +129,5 @@
 
 
     </div><%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
-    <div style="postion:absolute; top:100px; right:50px;">
-      <%= form.submit "Update recipe", class: "button_default" %>
-    </div>
   <% end %>
 </div>
