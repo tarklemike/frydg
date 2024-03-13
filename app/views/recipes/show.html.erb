@@ -1,6 +1,6 @@
 <div class="container">
   <div class="justify-content-between d-flex">
-    <%= link_to "Back", recipes_path, class: "button_default" %>
+    <%= link_to "<", recipes_path, class: "button_default round" %>
     <% if current_user == @recipe.user %>
       <%=link_to"Edit", edit_recipe_path(@recipe), class: "button_default"  %>
     <% end %>
@@ -48,7 +48,10 @@
           <% else %>
             <%= image_tag (@recipe.user.image), class: "avatar-bordered" %>
           <% end %>
-          <p class="ms-2"><strong><%= @recipe.user.username %></strong></p>
+          <div class="ms-2 d-flex flex-column align-items-start">
+            <p><strong><%= @recipe.user.username %></strong></p>
+            <p>June 2023</p>
+          </div>
         </div>
         <div class="d-flex flex-column align-items-end">
           <div class="rating-stars d-flex">
@@ -59,55 +62,56 @@
               <p><i class="fa-regular fa-star"></i></p>
             <% end %>
           </div>
-          <a href="#reviews"><button class="button_default special">See Reviews</button></a>
+          <a href="#reviews"><button class="button_default green special">See Reviews</button></a>
         </div>
       </div>
  </div>
 
+  <div class="infos">
       <div class="d-flex justify-content-between">
         <div class="d-flex" style="width: 300px">
-          <i class="icon-large fa-solid fa-mortar-pestle" style="color: #2dd99c;"></i>
+          <i class="icon-large fa-solid fa-mortar-pestle"></i>
           <div>
             <h5>Prep time</h5>
-            <p><%= @recipe.prep_time.to_i %> minutes</p>
+            <p class="allergens_show"><%= @recipe.prep_time.to_i %> minutes</p>
           </div>
         </div>
         <div class="d-flex" style="width: 300px">
-            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch" style="color: #2dd99c;"></i></div>
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch"></i></div>
             <div>
               <h5>Cook time</h5>
-              <p><%= @recipe.cook_time.to_i %> minutes</p>
+              <p class="allergens_show"><%= @recipe.cook_time.to_i %> minutes</p>
             </div>
         </div>
         <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-utensils" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-utensils"></i>
             <div>
               <h5>Servings</h5>
-              <p><%= @recipe.servings %></p>
+              <p class="allergens_show"><%= @recipe.servings %></p>
             </div>
         </div>
       </div>
 
       <div class="d-flex justify-content-between">
         <div class="d-flex" style="width: 300px">
-          <i class="icon-large fa-solid fa-earth-americas" style="color: #2dd99c;"></i>
+          <i class="icon-large fa-solid fa-earth-americas"></i>
           <div>
             <h5>Cuisine</h5>
-            <p><%= @recipe.cuisine %></p>
+            <p class="allergens_show"><%= @recipe.cuisine %></p>
           </div>
         </div>
         <div class="d-flex" style="width: 300px">
-            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light" style="color: #2dd99c;"></i></div>
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light"></i></div>
             <div>
               <h5>Difficulty</h5>
-              <p><%= @recipe.level %></p>
+              <p class="allergens_show"><%= @recipe.level %></p>
             </div>
         </div>
         <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-seedling" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-seedling"></i>
             <div>
               <h5>Allergens</h5>
-              <p class="allergens">
+              <p class="allergens_show">
               <%= "V" if @recipe.vegetarian %>
               <%= "VE" if @recipe.vegan %>
               <%= "GF" if @recipe.gluten_free %>
@@ -119,35 +123,32 @@
         </div>
       </div>
     </div>
-
+    </div>
   </div>
 
   <div class="bottomhalf d-flex">
 
-    <div class="col-6">
-      <div class="index_recipecard recipe-method">
-        <h2 class="top">Method</h2>
-        <div class="content">
-          <p><%= simple_format(@recipe.method) %></p>
-        </div>
-        <%# <input type="checkbox" class="steps">
-        <label for="vehicle1"> Step 1:</label><br>
-        <input type="checkbox" class="steps">
-        <label for="vehicle2"> Step 2:</label><br>
-        <input type="checkbox" class="steps">
-        <label for="vehicle3"> Step 3:</label><br> %>
-      </div>
-    </div>
 
     <div class="index_recipecard col-6">
       <h2 class="top">Ingredients</h2>
-      <ul class="content" >
+      <ul class="content i" >
         <% @recipe.ingredients.each do |ingredient| %>
           <li><input type="checkbox" class="steps">
-          <label> <%= ingredient.name %></label><br></li>
+          <label> <%= ingredient.name.capitalize %></label><br></li>
         <% end %>
       </ul>
     </div>
+
+    <div class="col-6">
+      <div class="index_recipecard recipe-method">
+        <h2 class="top">Method</h2>
+        <div class="content m" style="overflow-y: scroll;">
+          <p><%= simple_format(@recipe.method) %></p>
+        </div>
+      </div>
+    </div>
+
+
 
   </div>
 
