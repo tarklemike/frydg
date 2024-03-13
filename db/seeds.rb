@@ -28,9 +28,9 @@ user_1 = User.create(
 user_2 = User.create(
   email: 'test@test.com',
   password: "123456",
-  username: "test",
-  first_name: "Big",
-  last_name: "Poppa",
+  username: "dunefan",
+  first_name: "Romulo",
+  last_name: "Arias-Alvarez",
   postcode: "E17",
   image: ""
 )
