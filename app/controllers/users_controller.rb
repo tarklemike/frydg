@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
 
   def show
-    @user = current_user
     # if params[:id] == "destroy_user_session"
       # Handle session destruction logic here
       # For example, sign out the current user
@@ -29,7 +28,7 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
   end
 
   def correct_user
