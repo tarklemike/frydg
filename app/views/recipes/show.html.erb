@@ -7,7 +7,7 @@
   </div>
   <div class="d-flex mt-2">
 
-    <div class="imagediv col-6 pe-3">
+    <div class="imagediv col-6 pe-5">
        <div class="favoriting">
           <% if current_user %>
             <% if current_user.favorited?(@recipe) %>
@@ -30,7 +30,7 @@
       <% end %>
     </div>
 
-    <div class="recipe-info col-6 d-flex flex-column justify-content-between ps-3">
+    <div class="recipe-info col-6 d-flex flex-column justify-content-between">
 
       <div>
         <h1><strong><%= @recipe.title %></strong></h1>
