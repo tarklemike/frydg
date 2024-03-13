@@ -36,8 +36,12 @@ export default class extends Controller {
           },
           // When active the map will receive updates to the device's location as it changes.
           trackUserLocation: true,
+          showUserLocation: true,
           // Draw an arrow next to the location dot to indicate which direction the device is heading.
-          showUserHeading: true
+          showUserHeading: true,
+
+
+
       })
     );
   }
@@ -58,6 +62,6 @@ export default class extends Controller {
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+    this.map.fitBounds(bounds, { padding: 70, maxZoom: 10, duration: 15 })
   }
 }
