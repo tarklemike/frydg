@@ -41,10 +41,7 @@ export default class extends Controller {
       if (checkbox.checked && checkbox.id === "hard") hard = true;
 
       // CUISINE
-      if (checkbox.checked && checkbox.id === "british") {
-        british = true;
-        console.log('british!');
-      }
+      if (checkbox.checked && checkbox.id === "british") british = true;
       if (checkbox.checked && checkbox.id === "chinese") chinese = true;
       if (checkbox.checked && checkbox.id === "french") french = true;
       if (checkbox.checked && checkbox.id === "indian") indian = true;
@@ -57,7 +54,7 @@ export default class extends Controller {
 
 
     })
-    const url = `/recipes/?query=true&gluten_free=${glutenFree}&dairy_f=${dairyF}&vegetarian=${vegetarian}&vegan=${vegan}&easy=${easy}&medium=${medium}&hard=${hard}&british=${british}`
+    const url = `/recipes/?query=true&gluten_free=${glutenFree}&dairy_f=${dairyF}&vegetarian=${vegetarian}&vegan=${vegan}&easy=${easy}&medium=${medium}&hard=${hard}&british=${british}&chinese=${chinese}&french=${french}&indian=${indian}&italian=${italian}&japanese=${japanese}&mexican=${mexican}&spanish=${spanish}&thai=${thai}`
     localStorage.setItem("filteredUrl", url)
     console.log(url);
     fetch(url, {headers: {'Accept': 'text/plain'}})
