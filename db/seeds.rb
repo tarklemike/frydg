@@ -231,20 +231,20 @@ recipe_2 = Recipe.create!(
   cook_time: 25,
   level: "Easy",
   servings: 4,
-  method: "STEP 1\n
-  Heat 1 tbsp vegetable oil in a large pan, add 1 chopped onion, then fry for 5 mins until softened.\n
+  method: "STEP 1
+   Heat 1 tbsp vegetable oil in a large pan, add 1 chopped onion, then fry for 5 mins until softened.\n
 
-  STEP 2\n
-  Stir in 1 tsp ground coriander and 1 chopped potato, then cook for 1 min.\n
+  STEP 2
+   Stir in 1 tsp ground coriander and 1 chopped potato, then cook for 1 min.\n
 
-  STEP 3\n
-  Add the 450g peeled and chopped carrots and 1.2l vegetable or chicken stock, bring to the boil, then reduce the heat.\n
+  STEP 3
+   Add the 450g peeled and chopped carrots and 1.2l vegetable or chicken stock, bring to the boil, then reduce the heat.\n
 
-  STEP 4\n
-  Cover and cook for 20 mins until the carrots are tender.\n
+  STEP 4
+   Cover and cook for 20 mins until the carrots are tender.\n
 
-  STEP 5\n
-  Tip into a food processor with a handful of coriander then blitz until smooth (you may need to do this in two batches). Return to pan, taste, add salt if necessary, then reheat to serve.",
+  STEP 5
+   Tip into a food processor with a handful of coriander then blitz until smooth (you may need to do this in two batches). Return to pan, taste, add salt if necessary, then reheat to serve.",
   image: "",
   image_url: "https://images.immediate.co.uk/production/volatile/sites/30/2010/12/carrot-and-coriander-soup-recipe-e71fd8f.jpg?quality=90&webp=true&resize=600,545",
   user: user_1
