@@ -8,12 +8,10 @@
       <div class="side_bar col-2" style="overflow-y: scroll;">
           <div class="addcomponenet">
             <h2 class="top"><strong>add. </strong>+</h2>
-            <div class="content">
+            <div class="content" data-filtered-index-target="content">
               <div class= "d-flex">
                 <%= render "shared/search_bar_index"%>
               </div>
-                <a><button class="button_default search">carrot x</button></a>
-                <a><button class="button_default search">egg x</button></a>
             </div>
           </div>
 
@@ -109,9 +107,7 @@
         <div class="col-10">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid" data-filtered-index-target='container'>
-          <% @recipes.each do |recipe| %>
-              <%= render "shared/cardrecipe", recipe: recipe %>
-          <% end %>
+            <%= render "shared/cardrecipe", recipes: @recipes %>
           </div>
     </div>
   </div>

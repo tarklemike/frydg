@@ -6,10 +6,17 @@ class RecipesController < ApplicationController
     @recipe_ingredients = RecipeIngredient.all
 
     if params[:query].present?
-      if params[:query] != 'true'
-        @recipes = @recipes.searching(params[:query])
+      if params[:ingredient1] != 'null'
+        @recipes = @recipes.searching(params[:ingredient1])
         @recipes = @recipes.order(updated_at: :desc)
       end
+      if params[:ingredient2] != 'null'
+        @recipes = @recipes.searching(params[:ingredient2])
+        @recipes = @recipes.order(updated_at: :desc)
+      end
+      # if params[:query] != 'true'
+      #   # @recipes = @recipes.searching(params[:query])
+      # end
 
       if params[:gluten_free] == 'true'
         @recipes = @recipes.select { |recipe| recipe.gluten_free == true }
