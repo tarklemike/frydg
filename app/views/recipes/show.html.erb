@@ -169,15 +169,18 @@
     <div class="content">
       <div class="review-container">
 
-      <ul class="list-group">
+      <%# <ul class="list-group"> %>
         <% @recipe.reviews.each do |review| %>
         <div class="review">
           <div>
-            <div class="list-group-item user">
-              <% if review.user.photo.attached? %>
-                <%= cl_image_tag review.user.photo.key, class: 'avatar' %>
-              <% end %>
-              <p><%= review.user.first_name %> <%= review.user.last_name %></p>
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="list-group-item user">
+                <% if review.user.photo.attached? %>
+                  <%= cl_image_tag review.user.photo.key, class: 'avatar' %>
+                <% end %>
+                <p><%= review.user.first_name %> <%= review.user.last_name %></p>
+              </div>
+              <p><%= review.created_at.strftime("%b %d, %Y")%> </p>
             </div>
             <div class="rating-stars d-flex">
               <% review.rating.times do %>
