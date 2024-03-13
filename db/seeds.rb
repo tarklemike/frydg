@@ -307,22 +307,22 @@ recipe_3 = Recipe.create!(
   cook_time: 0,
   level: "Easy",
   servings: 2,
-  method: "STEP 1\n
+  method: "STEP 1
   Slice tomatoes and fresh mozzarella cheese into equal-sized slices.\n
 
-  STEP 2\n
+  STEP 2
   Arrange tomato and mozzarella slices on a plate, alternating them.\n
 
-  STEP 3\n
+  STEP 3
   Sprinkle fresh basil leaves over the tomatoes and mozzarella.\n
 
-  STEP 4\n
+  STEP 4
   Drizzle with extra virgin olive oil and balsamic vinegar.\n
 
-  STEP 5\n
+  STEP 5
   Season with salt and black pepper to taste.\n
 
-  STEP 6\n
+  STEP 6
   Serve immediately as a side dish or appetizer.",
   image: "",
   image_url: "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-main-1.jpg",
@@ -386,22 +386,22 @@ recipe_4 = Recipe.create!(
   cook_time: 30,
   level: "Medium",
   servings: 4,
-  method: "STEP 1\n
+  method: "STEP 1
   Marinate chicken pieces in yogurt, lemon juice, and spices for at least 1 hour.\n
 
-  STEP 2\n
+  STEP 2
   Grill or broil marinated chicken until cooked through.\n
 
-  STEP 3\n
+  STEP 3
   In a separate pan, heat oil and sauté onions until translucent. Add minced garlic and ginger and cook until fragrant.\n
 
-  STEP 4\n
+  STEP 4
   Add tomato sauce, cream, and spices to the pan. Simmer for a few minutes.\n
 
-  STEP 5\n
+  STEP 5
   Add cooked chicken to the sauce and simmer until flavors meld.\n
 
-  STEP 6\n
+  STEP 6
   Garnish with fresh cilantro and serve with rice or naan.",
   image: "",
   image_url: "https://www.seriouseats.com/thmb/DbQHUK2yNCALBnZE-H1M2AKLkok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-tikka-masala-for-the-grill-recipe-hero-2_1-cb493f49e30140efbffec162d5f2d1d7.JPG",
@@ -483,25 +483,25 @@ recipe_5 = Recipe.create!(
   cook_time: 15,
   level: "Easy",
   servings: 4,
-  method: "STEP 1\n
+  method: "STEP 1
   Soak rice noodles in warm water until softened. Drain and set aside.\n
 
-  STEP 2\n
+  STEP 2
   In a wok or large skillet, heat oil and sauté garlic and tofu until golden brown.\n
 
-  STEP 3\n
+  STEP 3
   Add prawns and cook until pink. Push everything to one side of the wok.\n
 
-  STEP 4\n
+  STEP 4
   Crack eggs into the wok and scramble until cooked.\n
 
-  STEP 5\n
+  STEP 5
   Add drained rice noodles and stir-fry with the other ingredients.\n
 
-  STEP 6\n
+  STEP 6
   Stir in Pad Thai sauce and bean sprouts. Cook until heated through.\n
 
-  STEP 7\n
+  STEP 7
   Serve hot, garnished with crushed peanuts, chopped spring onions, and lime wedges.",
   image: "",
   image_url: "https://www.kitchensanctuary.com/wp-content/uploads/2019/07/Pad-Thai-square-FS-29.jpg",
@@ -589,19 +589,19 @@ recipe_6 = Recipe.create!(
   cook_time: 15,
   level: "Easy",
   servings: 2,
-  method: "STEP 1\n
+  method: "STEP 1
   In a bowl, mix together soy sauce, mirin, sake, and sugar to make the teriyaki sauce.\n
 
-  STEP 2\n
+  STEP 2
   Cut chicken breasts into bite-sized pieces and marinate in the teriyaki sauce for 10-15 minutes.\n
 
-  STEP 3\n
+  STEP 3
   Heat oil in a pan over medium-high heat.\n
 
-  STEP 4\n
+  STEP 4
   Add the marinated chicken pieces and cook until golden brown and cooked through.\n
 
-  STEP 5\n
+  STEP 5
   Serve the chicken teriyaki hot over steamed rice, garnished with sesame seeds and chopped spring onions.",
   image: "",
   image_url: "https://cjeatsrecipes.com/wp-content/uploads/2022/04/Teriyaki-Chicken-Cover-min-500x500.jpg",
@@ -672,25 +672,25 @@ recipe_7 = Recipe.create!(
   cook_time: 40,
   level: "Medium",
   servings: 4,
-  method: "STEP 1\n
+  method: "STEP 1
   Heat olive oil in a paella pan over medium heat.\n
 
-  STEP 2\n
+  STEP 2
   Fry chopped onions, garlic, bell peppers, and diced tomatoes until softened.\n
 
-  STEP 3\n
+  STEP 3
   Add short-grain rice and stir to coat in the oil.\n
 
-  STEP 4\n
+  STEP 4
   Stir in saffron threads and hot vegetable stock. Bring to a boil, then reduce heat and simmer until rice is almost cooked.\n
 
-  STEP 5\n
+  STEP 5
   Nestle seafood (such as prawns, mussels, and squid) into the rice mixture.\n
 
-  STEP 6\n
+  STEP 6
   Continue to cook until the seafood is cooked through and the rice is tender.\n
 
-  STEP 7\n
+  STEP 7
   Garnish with chopped parsley and lemon wedges before serving.",
   image: "",
   image_url: "https://i0.wp.com/maicookbook.com/wp-content/uploads/2021/05/maicookbook_seafood_paella_2.jpg?fit=2000%2C2500&ssl=1",
@@ -791,25 +791,25 @@ recipe_8 = Recipe.create!(
   cook_time: 15,
   level: "Easy",
   servings: 2,
-  method: "STEP 1\n
+  method: "STEP 1
   Cook spaghetti according to package instructions until al dente. Reserve 1/2 cup of pasta water before draining.\n
 
-  STEP 2\n
+  STEP 2
   In a pan, cook bacon until crispy. Remove bacon from pan and set aside. Discard excess bacon grease, leaving about 1 tablespoon in the pan.\n
 
-  STEP 3\n
+  STEP 3
   In the same pan, add minced garlic and cook until fragrant.\n
 
-  STEP 4\n
+  STEP 4
   Add cooked spaghetti to the pan with garlic. Toss to combine.\n
 
-  STEP 5\n
+  STEP 5
   In a small bowl, whisk together eggs, grated Parmesan cheese, and black pepper.\n
 
-  STEP 6\n
+  STEP 6
   Pour egg mixture over the spaghetti and quickly toss until the eggs thicken and coat the pasta. If the sauce is too thick, add reserved pasta water gradually.\n
 
-  STEP 7\n
+  STEP 7
   Crumble the cooked bacon and sprinkle over the spaghetti. Serve hot with extra Parmesan cheese if desired.",
   image: "",
   image_url: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?quality=90&resize=440,400",
@@ -867,25 +867,25 @@ recipe_9 = Recipe.create!(
   cook_time: 25,
   level: "Medium",
   servings: 4,
-  method: "STEP 1\n
+  method: "STEP 1
   Heat oil in a large pot or saucepan over medium heat.\n
 
-  STEP 2\n
+  STEP 2
   Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
 
-  STEP 3\n
+  STEP 3
   Stir in green curry paste and cook for 1-2 minutes until fragrant.\n
 
-  STEP 4\n
+  STEP 4
   Pour in coconut milk and vegetable broth. Bring to a simmer.\n
 
-  STEP 5\n
+  STEP 5
   Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
 
-  STEP 6\n
+  STEP 6
   Stir in chopped basil leaves and lime juice.\n
 
-  STEP 7\n
+  STEP 7
   Serve hot with steamed rice.",
   image: "",
   image_url: "https://hot-thai-kitchen.com/wp-content/uploads/2022/09/vegan-green-curry-sq-1.jpg",
