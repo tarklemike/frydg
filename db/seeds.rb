@@ -972,15 +972,15 @@ RecipeIngredient.create!(
 
 
 
-foodbank_1 = Foodbank.create!(:name => "The Trussell Trust", :address => "150 Camden Road, London, NW1", telephone: "020 7267 1900")
-foodbank_2 = Foodbank.create!(:name => "The Romulo Treasure Trove", :address => "200 Green Lanes, London, N16", telephone: "020 707 1950")
-foodbank_3 = Foodbank.create!(:name => "Grace Giving Inn", :address => "150 Brixton Road, London, SW5", telephone: "020 7558 2000")
-foodbank_4 = Foodbank.create!(:name => "Toren's Treat", :address => "150 Kingsland Road, London, N1", telephone: "020 7222 1885")
-foodbank_5 = Foodbank.create!(:name => "Big Poppa's Food Fountain", :address => "150 Harrow Road, London, NW10", telephone: "020 7485 5000")
-foodbank_6 = Foodbank.create!(:name => "Food Bank For All", :address => "150 Southgate Road, London, NW1", telephone: "020 7707 8700")
-foodbank_8 = Foodbank.create!(:name => "Food For All", :address => "45 Old Street, London, EC1", telephone: "020 7967 5252")
-foodbank_9 = Foodbank.create!(:name => "No Hunger", :address => "Kilburn High Road, London, NW6", telephone: "020 7857 8800")
-foodbank_10 = Foodbank.create!(:name => "Bigger Hearts", :address => "89 Mare Street, London, E8", telephone: "020 7887 0000")
+# foodbank_1 = Foodbank.create!(:name => "The Trussell Trust", :address => "150 Camden Road, London, NW1", telephone: "020 7267 1900")
+# foodbank_2 = Foodbank.create!(:name => "The Romulo Treasure Trove", :address => "200 Green Lanes, London, N16", telephone: "020 707 1950")
+# foodbank_3 = Foodbank.create!(:name => "Grace Giving Inn", :address => "150 Brixton Road, London, SW5", telephone: "020 7558 2000")
+# foodbank_4 = Foodbank.create!(:name => "Toren's Treat", :address => "150 Kingsland Road, London, N1", telephone: "020 7222 1885")
+# foodbank_5 = Foodbank.create!(:name => "Big Poppa's Food Fountain", :address => "150 Harrow Road, London, NW10", telephone: "020 7485 5000")
+# foodbank_6 = Foodbank.create!(:name => "Food Bank For All", :address => "150 Southgate Road, London, NW1", telephone: "020 7707 8700")
+# foodbank_8 = Foodbank.create!(:name => "Food For All", :address => "45 Old Street, London, EC1", telephone: "020 7967 5252")
+# foodbank_9 = Foodbank.create!(:name => "No Hunger", :address => "Kilburn High Road, London, NW6", telephone: "020 7857 8800")
+# foodbank_10 = Foodbank.create!(:name => "Bigger Hearts", :address => "89 Mare Street, London, E8", telephone: "020 7887 0000")
 
 
 
@@ -1067,7 +1067,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_10,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1179,7 +1179,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_11,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1232,117 +1232,117 @@ RecipeIngredient.create!(
   measurement_type: "tbsp"
 )
 
-recipe_12 = Recipe.create!(
-  title: "Turmeric Veggie Fried Rice",
-  description: "A spicy and flavoursome rice dish full of carrots and other mix vegetables rice.",
-  cuisine: "indian",
-  vegetarian: true,
-  vegan: false,
-  gluten_free: true,
-  dairy_free: true,
-  egg_free: true,
-  nut_free: false,
-  prep_time: 15,
-  cook_time: 35,
-  level: "Medium",
-  servings: 4,
-  method: "STEP 1
-  Heat oil in a large pot or saucepan over medium heat.\n
+# recipe_12 = Recipe.create!(
+#   title: "Turmeric Veggie Fried Rice",
+#   description: "A spicy and flavoursome rice dish full of carrots and other mix vegetables rice.",
+#   cuisine: "indian",
+#   vegetarian: true,
+#   vegan: false,
+#   gluten_free: true,
+#   dairy_free: true,
+#   egg_free: true,
+#   nut_free: false,
+#   prep_time: 15,
+#   cook_time: 35,
+#   level: "Medium",
+#   servings: 4,
+#   method: "STEP 1
+#   Heat oil in a large pot or saucepan over medium heat.\n
 
-  STEP 2
-  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+#   STEP 2
+#   Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
 
-  STEP 3
-  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+#   STEP 3
+#   Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
 
-  STEP 4
-  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+#   STEP 4
+#   Pour in coconut milk and vegetable broth. Bring to a simmer.\n
 
-  STEP 5
-  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+#   STEP 5
+#   Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
 
-  STEP 6
-  Stir in prawns, chopped basil leaves and lime juice.\n
+#   STEP 6
+#   Stir in prawns, chopped basil leaves and lime juice.\n
 
-  STEP 7
-  Serve hot with steamed rice.",
-  image: "",
-  image_url: "https://images.immediate.co.uk/production/volatile/sites/2/2018/01/Spicy-Veg-Rice-b065a02.jpg?quality=90&webp=true&resize=975,649",
-  user: user_2
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: oil_vegetable,
-  amount: 2,
-  measurement_type: "tbsp"
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: carrot,
-  amount: 1,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: garlic,
-  amount: 2,
-  measurement_type: "cloves"
-)
+#   STEP 7
+#   Serve hot with steamed rice.",
+#   image: "",
+#   image_url: "https://images.immediate.co.uk/production/volatile/sites/2/2018/01/Spicy-Veg-Rice-b065a02.jpg?quality=90&webp=true&resize=975,649",
+#   user: user_2
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: oil_vegetable,
+#   amount: 2,
+#   measurement_type: "tbsp"
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: carrot,
+#   amount: 1,
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: garlic,
+#   amount: 2,
+#   measurement_type: "cloves"
+# )
 
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: prawn,
-  amount: 300,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: green_curry_paste,
-  amount: 2,
-  measurement_type: "tbsp"
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: coconut_milk,
-  amount: 400,
-  measurement_type: "ml"
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: stock_vegetable,
-  amount: 250,
-  measurement_type: "ml"
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: carrot,
-  amount: 2,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: red_pepper,
-  amount: 1,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: bamboo_shoots,
-  amount: 100,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: basil,
-  amount: "to taste",
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_12,
-  ingredient: lime_juice,
-  amount: 2,
-  measurement_type: "tbsp"
-)
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: prawns,
+#   amount: 300,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: green_curry_paste,
+#   amount: 2,
+#   measurement_type: "tbsp"
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: coconut_milk,
+#   amount: 400,
+#   measurement_type: "ml"
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: stock_vegetable,
+#   amount: 250,
+#   measurement_type: "ml"
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: carrot,
+#   amount: 2,
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: red_pepper,
+#   amount: 1,
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: bamboo_shoots,
+#   amount: 100,
+#   measurement_type: "g"
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: basil,
+#   amount: "to taste",
+#   measurement_type: ""
+# )
+# RecipeIngredient.create!(
+#   recipe: recipe_12,
+#   ingredient: lime_juice,
+#   amount: 2,
+#   measurement_type: "tbsp"
+# )
 
 recipe_13 = Recipe.create!(
   title: "Easy Roasted Carrots with Thyme",
@@ -1403,7 +1403,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1515,7 +1515,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_14,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1627,7 +1627,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_15,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1740,7 +1740,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_16,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1854,7 +1854,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_17,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1969,7 +1969,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_18,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2083,7 +2083,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_19,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2197,7 +2197,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_20,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2310,7 +2310,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_21,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2425,7 +2425,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_22,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2539,7 +2539,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_23,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2654,7 +2654,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_24,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2710,7 +2710,7 @@ RecipeIngredient.create!(
 
 
 recipe_25 = Recipe.create!(
-  title: "Egg Friend Rice",
+  title: "Egg Fried Rice",
   description: "Seasoned and fragrant rice fried with egg, carrots and vegetables",
   cuisine: "Chinese",
   vegetarian: true,
@@ -2769,7 +2769,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_25,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2824,7 +2824,7 @@ RecipeIngredient.create!(
 
 
 recipe_26 = Recipe.create!(
-  title: "Granma's Carrot Salad",
+  title: "Carrot Salad",
   description: "Seasoned and fragrant carrots served up in a fresh salad",
   cuisine: "Spanish",
   vegetarian: true,
@@ -2883,7 +2883,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_26,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2999,7 +2999,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_27,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
