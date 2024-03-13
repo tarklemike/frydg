@@ -15,8 +15,16 @@ class RecipesController < ApplicationController
         @recipes = @recipes.select { |recipe| recipe.gluten_free == true }
       end
 
-      if params[:dairy_f] == 'true'
+      if params[:dairy_free] == 'true'
         @recipes = @recipes.select { |recipe| recipe.dairy_free == true }
+      end
+
+      if params[:nut_free] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.nut_free == true }
+      end
+
+      if params[:egg_free] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.egg_free == true }
       end
 
       if params[:vegetarian] == 'true'

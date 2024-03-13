@@ -10,9 +10,11 @@ export default class extends Controller {
   sendRequest(event) {
     console.log(this.checkboxTargets);
     let glutenFree = null
-    let dairyF = null
+    let dairyFree = null
     let vegetarian = null
     let vegan = null
+    let eggFree = null
+    let nutFree = null
   // DIFFICULTY LEVEL
     let easy = null
     let medium = null
@@ -30,7 +32,9 @@ export default class extends Controller {
 
     this.checkboxTargets.forEach((checkbox)=>{
       if (checkbox.checked && checkbox.id === "gluten_free") glutenFree = true;
-      if (checkbox.checked && checkbox.id === "dairy_f") dairyF = true;
+      if (checkbox.checked && checkbox.id === "dairy_free") dairyFree = true;
+      if (checkbox.checked && checkbox.id === "nut_free") nutFree = true;
+      if (checkbox.checked && checkbox.id === "egg_free") eggFree = true;
       if (checkbox.checked && checkbox.id === "vegetarian") vegetarian = true;
       if (checkbox.checked && checkbox.id === "vegan") vegan = true;
       // this.dairyFree = (checkbox.checked && checkbox.id === "dairy_free") ? true : false;
@@ -54,7 +58,7 @@ export default class extends Controller {
 
 
     })
-    const url = `/recipes/?query=true&gluten_free=${glutenFree}&dairy_f=${dairyF}&vegetarian=${vegetarian}&vegan=${vegan}&easy=${easy}&medium=${medium}&hard=${hard}&british=${british}&chinese=${chinese}&french=${french}&indian=${indian}&italian=${italian}&japanese=${japanese}&mexican=${mexican}&spanish=${spanish}&thai=${thai}`
+    const url = `/recipes/?query=true&gluten_free=${glutenFree}&dairy_free=${dairyFree}&nut_free=${nutFree}&egg_free=${eggFree}&vegetarian=${vegetarian}&vegan=${vegan}&easy=${easy}&medium=${medium}&hard=${hard}&british=${british}&chinese=${chinese}&french=${french}&indian=${indian}&italian=${italian}&japanese=${japanese}&mexican=${mexican}&spanish=${spanish}&thai=${thai}`
     localStorage.setItem("filteredUrl", url)
     console.log(url);
     fetch(url, {headers: {'Accept': 'text/plain'}})
