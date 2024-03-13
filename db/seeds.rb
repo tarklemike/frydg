@@ -1232,117 +1232,117 @@ RecipeIngredient.create!(
   measurement_type: "tbsp"
 )
 
-# recipe_12 = Recipe.create!(
-#   title: "Turmeric Veggie Fried Rice",
-#   description: "A spicy and flavoursome rice dish full of carrots and other mix vegetables rice.",
-#   cuisine: "indian",
-#   vegetarian: true,
-#   vegan: false,
-#   gluten_free: true,
-#   dairy_free: true,
-#   egg_free: true,
-#   nut_free: false,
-#   prep_time: 15,
-#   cook_time: 35,
-#   level: "Medium",
-#   servings: 4,
-#   method: "STEP 1
-#   Heat oil in a large pot or saucepan over medium heat.\n
+recipe_12 = Recipe.create!(
+  title: "Harissa beef and carrot with barley and tomato salad",
+  description: "A spicy beef and flavoursome rice dish full of carrots and other mix vegetables rice.",
+  cuisine: "French",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 35,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1
+  Heat oil in a large pot or saucepan over medium heat.\n
 
-#   STEP 2
-#   Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
 
-#   STEP 3
-#   Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
 
-#   STEP 4
-#   Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
 
-#   STEP 5
-#   Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
 
-#   STEP 6
-#   Stir in prawns, chopped basil leaves and lime juice.\n
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
 
-#   STEP 7
-#   Serve hot with steamed rice.",
-#   image: "",
-#   image_url: "https://images.immediate.co.uk/production/volatile/sites/2/2018/01/Spicy-Veg-Rice-b065a02.jpg?quality=90&webp=true&resize=975,649",
-#   user: user_2
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: oil_vegetable,
-#   amount: 2,
-#   measurement_type: "tbsp"
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: carrot,
-#   amount: 1,
-#   measurement_type: ""
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: garlic,
-#   amount: 2,
-#   measurement_type: "cloves"
-# )
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://img.delicious.com.au/XxFvvWzn/del/2018/03/harissa-beef-and-carrot-with-barley-and-tomato-salad-75706-2.jpg",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
 
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: prawns,
-#   amount: 300,
-#   measurement_type: "g"
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: green_curry_paste,
-#   amount: 2,
-#   measurement_type: "tbsp"
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: coconut_milk,
-#   amount: 400,
-#   measurement_type: "ml"
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: stock_vegetable,
-#   amount: 250,
-#   measurement_type: "ml"
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: carrot,
-#   amount: 2,
-#   measurement_type: ""
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: red_pepper,
-#   amount: 1,
-#   measurement_type: ""
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: bamboo_shoots,
-#   amount: 100,
-#   measurement_type: "g"
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: basil,
-#   amount: "to taste",
-#   measurement_type: ""
-# )
-# RecipeIngredient.create!(
-#   recipe: recipe_12,
-#   ingredient: lime_juice,
-#   amount: 2,
-#   measurement_type: "tbsp"
-# )
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: prawns,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
 
 recipe_13 = Recipe.create!(
   title: "Easy Roasted Carrots with Thyme",
