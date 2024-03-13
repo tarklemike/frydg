@@ -1,7 +1,7 @@
 <div class="container">
 
   <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
-    <a href="/recipes"><button class="button_default">Back</button></a>
+    <a href="<%=recipes_path%>"><button class="button_default"><i class="fa-solid fa-chevron-left"></i></button></a>
 
     <div class="d-flex mt-2">
 
