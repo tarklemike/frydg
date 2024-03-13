@@ -10,11 +10,18 @@ class ReviewsController < ApplicationController
     @recipe = Recipe.find(params[:recipe_id])
     @review.recipe = @recipe
     @review.user = current_user
-    if @review.save
-      redirect_to recipe_path(@recipe)
-    else
-      render "recipes/show", status: :unprocessable_entity
+
+    respond_to do |format|
+      if @review.save!
+        format.html {redirect_to recipe_path(@recipe)}
+        format.json
+      else
+        format.html {render "recipes/show", status: :unprocessable_entity}
+        format.json
+      end
     end
+
+
   end
 
   private

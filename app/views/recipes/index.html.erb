@@ -109,7 +109,9 @@
         <div class="col-10">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid" data-filtered-index-target='container'>
-              <%= render "shared/cardrecipe", recipes: @recipes %>
+          <% @recipes.each do |recipe| %>
+              <%= render "shared/cardrecipe", recipe: recipe %>
+          <% end %>
           </div>
     </div>
   </div>

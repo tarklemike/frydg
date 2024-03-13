@@ -1008,3 +1008,2046 @@ foodbank_10 = Foodbank.create!(:name => "Bigger Hearts", :address => "89 Mare St
 #   ingredient: ,
 #   amount:
 # )
+recipe_10 = Recipe.create!(
+  title: "Thai Red Prawn Curry",
+  description: "A succulent and spicy Thai prawn curry made with red curry paste, coconut milk, and a variety of vegetables.",
+  cuisine: "Thai",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 20,
+  cook_time: 25,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1
+  Heat oil in a large pot or saucepan over medium heat.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://healthylivingjames.co.uk/wp-content/uploads/2023/03/Thai-Red-Prawn-Curry.jpg",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: onion,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_10,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+recipe_11 = Recipe.create!(
+  title: "Turmeric Veggie Fried Rice",
+  description: "A spicy and flavoursome rice dish full of carrots and other mix vegetables rice.",
+  cuisine: "indian",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 35,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1
+  Heat oil in a large pot or saucepan over medium heat.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://images.immediate.co.uk/production/volatile/sites/2/2018/01/Spicy-Veg-Rice-b065a02.jpg?quality=90&webp=true&resize=975,649",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_11,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+recipe_12 = Recipe.create!(
+  title: "Turmeric Veggie Fried Rice",
+  description: "A spicy and flavoursome rice dish full of carrots and other mix vegetables rice.",
+  cuisine: "indian",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 35,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1
+  Heat oil in a large pot or saucepan over medium heat.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://images.immediate.co.uk/production/volatile/sites/2/2018/01/Spicy-Veg-Rice-b065a02.jpg?quality=90&webp=true&resize=975,649",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_12,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+recipe_13 = Recipe.create!(
+  title: "Easy Roasted Carrots with Thyme",
+  description: "Jazzy carrots roasted with thyme and other seasoning.",
+  cuisine: "british",
+  vegetarian: true,
+  vegan: true,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 35,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1
+  Heat oil in a large pot or saucepan over medium heat.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://assets.bonappetit.com/photos/64e65c62101bebaac94dcf59/1:1/w_1920%2Cc_limit/20230822-SEO-ITS-2336.jpg",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_13,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+recipe_14 = Recipe.create!(
+  title: "Red Wine Brisket with carrots",
+  description: "Scrumptious beef brisket cooked in red wine and served with seasoned baked carrots.",
+  cuisine: "british",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 20,
+  cook_time: 65,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1
+  Heat oil in a large pot or saucepan over medium heat.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://assets.bonappetit.com/photos/64cc03006f59ff6a365f3d4a/1:1/w_1920%2Cc_limit/20230719-COOKING-29237_crop.jpg",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_14,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+recipe_15 = Recipe.create!(
+  title: "Do Chua Pickle",
+  description: "Seasoned and fermented carrots.",
+  cuisine: "Thai",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 120,
+  cook_time: 0,
+  level: "Easy",
+  servings: 5,
+  method: "STEP 1
+  Wash and peel half a bag of carrots.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://assets.bonappetit.com/photos/6437638a3016d5911231026d/1:1/w_1920%2Cc_limit/20230302-ANDREA-NGUYEN-27272.jpg",
+  user: user_1
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_15,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+recipe_16 = Recipe.create!(
+  title: "Salmon with pickle and spicey salad",
+  description: "Seasoned pan fried salmon on a bed of pickle carrots and hot salad.",
+  cuisine: "Mexican",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 20,
+  cook_time: 35,
+  level: "Easy",
+  servings: 5,
+  method: "STEP 1
+  Wash and peel half a bag of carrots.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://assets.bonappetit.com/photos/5fdbe32ecee8e86c5f6476ec/1:1/w_1920%2Cc_limit/BA0221feelgood05_web.jpg",
+  user: user_2
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_16,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+recipe_17 = Recipe.create!(
+  title: "Spring vegetable bhajia",
+  description: "Seasoned spicey carrot based vegetable bhajia.",
+  cuisine: "indian",
+  vegetarian: true,
+  vegan: true,
+  gluten_free: false,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 20,
+  cook_time: 35,
+  level: "Easy",
+  servings: 5,
+  method: "STEP 1
+  Wash and peel half a bag of carrots.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://assets.bonappetit.com/photos/6046f582263f39d98776ef41/1:1/w_1920%2Cc_limit/Holi-Spring-Vegetable-Bhajia.jpg",
+  user: user_1
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_17,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+
+recipe_18 = Recipe.create!(
+  title: "Sach Ko Jakak Skewers",
+  description: "Seasoned spicey chicken skewers with shredded carrot and other root based vegetables.",
+  cuisine: "Thai",
+  vegetarian: true,
+  vegan: true,
+  gluten_free: false,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 20,
+  cook_time: 35,
+  level: "Easy",
+  servings: 5,
+  method: "STEP 1
+  Wash and peel half a bag of carrots.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://assets.bonappetit.com/photos/60c12d326b8f2e5376fe5dfc/1:1/w_1920%2Cc_limit/Recipe-Sach-Ko-Jakak-Skewers.jpg",
+  user: user_1
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_18,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+recipe_19 = Recipe.create!(
+  title: "Slowed Roasted Duck with Honey Glazed Root Vegetables",
+  description: "Slowly roasted chicken skewers with sweetly glazed carrots and other root based vegetables.",
+  cuisine: "French",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 20,
+  cook_time: 75,
+  level: "Hard",
+  servings: 5,
+  method: "STEP 1
+  Add sliced onions, chopped garlic, whole chicken, or vegetables of your choice. Cook until browned.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://assets.bonappetit.com/photos/5a7dcf70bcc56579b57f2129/1:1/w_1920%2Cc_limit/chicken-with-honey-glazed-carrots-and-ginger.jpg",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_19,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+recipe_20 = Recipe.create!(
+  title: "Carrot Kinpira",
+  description: "Sharp and scrumptious pickled carrot and seasome dish.",
+  cuisine: "Japanese",
+  vegetarian: true,
+  vegan: true,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 35,
+  cook_time: 0,
+  level: "Easy",
+  servings: 4,
+  method: "STEP 1
+  Add sliced onions, chopped garlic, whole chicken, or vegetables of your choice. Cook until browned.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://www.sidechef.com/recipe/a4ada139-6b83-42e9-a231-c6ab22c6ca58.jpg?d=1408x1120",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_20,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+recipe_21 = Recipe.create!(
+  title: "Beijin Carrot Fritters",
+  description: "Sweet and sour carrot, vegetable and seasome fritters.",
+  cuisine: "Chinese",
+  vegetarian: true,
+  vegan: true,
+  gluten_free: false,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 10,
+  level: "Medium",
+  servings: 2,
+  method: "STEP 1
+  Add chopped carrots, bell peppers, and bamboo shoots to flour mix.\n
+
+  STEP 2
+  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+
+  STEP 3
+  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://omnivorescookbook.com/wp-content/uploads/2022/04/220330_Fried-Carrot-Fritters_1.jpg",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_21,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+
+recipe_22 = Recipe.create!(
+  title: "Spanish Marinated Carrots",
+  description: "Sweetly seasoned sauted carrot tapas dish",
+  cuisine: "Spanish",
+  vegetarian: true,
+  vegan: true,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 35,
+  level: "Medium",
+  servings: 2,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://i0.wp.com/spainonafork.com/wp-content/uploads/2019/07/carrot1-11.png?fit=750%2C750&ssl=1",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_22,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+recipe_23 = Recipe.create!(
+  title: "Tuscan Roasted Carrots",
+  description: "Seasoned roasted carrots serving up a taste of Tuscany",
+  cuisine: "Italian",
+  vegetarian: true,
+  vegan: true,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 35,
+  level: "Medium",
+  servings: 4,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://www.afamilyfeast.com/wp-content/uploads/2016/04/Tuscan-Style-Roasted-Carrots.jpg",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_23,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+
+recipe_24 = Recipe.create!(
+  title: "Roasted Carrots & Lentil Salad",
+  description: "Seasoned roasted carrots served with a lentil salad",
+  cuisine: "British",
+  vegetarian: true,
+  vegan: true,
+  gluten_free: true,
+  dairy_free: true,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 45,
+  level: "Medium",
+  servings: 5,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/carrot-salad-e050f73.jpg?quality=90&webp=true&resize=300,272",
+  user: user_1
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_24,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+
+recipe_25 = Recipe.create!(
+  title: "Egg Friend Rice",
+  description: "Seasoned and fragrant rice fried with egg, carrots and vegetables",
+  cuisine: "Chinese",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: false,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 25,
+  level: "Medium",
+  servings: 5,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://healthynibblesandbits.com/wp-content/uploads/2018/02/Egg-Fried-Rice-10.jpg",
+  user: user_1
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_25,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+recipe_26 = Recipe.create!(
+  title: "Granma's Carrot Salad",
+  description: "Seasoned and fragrant carrots served up in a fresh salad",
+  cuisine: "Spanish",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: false,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 25,
+  level: "Easy",
+  servings: 5,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://www.allrecipes.com/thmb/AC3tclGP9HUT-giQ5ug8ghvoMdk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/240181grandmas-carrot-saladEdibleTimes4x3-2c18d373ef574ae98eafc0ae7671f6ce.jpg",
+  user: user_1
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_26,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+
+
+recipe_27 = Recipe.create!(
+  title: "Roasted Spiced Carrots and Chickpeas",
+  description: "Seasoned and fragrant carrots baked in a rich marinated chickpea sauce",
+  cuisine: "Mexican",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: false,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 55,
+  level: "Hard",
+  servings: 5,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://www.oliveandmango.com/images/uploads/2023_02_15_roasted_carrots_and_chickpeas_2.jpg",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: prawn,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_27,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
