@@ -1,0 +1,15 @@
+.food_bank_card {
+  position: relative;
+  border-radius: 30px;
+  height: 460px;
+  width: 315px;
+  margin: 20px;
+  list-style-type: none;
+
+  box-shadow: 2px 2px 5px 5px rgba(51, 51, 51, 0.288);
+  /* height and width taken from figma */
+  background-color: white;
+  border: 2px solid #2DD99C;
+  padding: 5px;
+  text-decoration: none;
+}

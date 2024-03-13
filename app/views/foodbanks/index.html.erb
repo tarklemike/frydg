@@ -1,10 +1,14 @@
-  <div>
-    <h1>Foodbanks#index</h1>
-    <a href="/recipes"><button class="button_default">Back</button></a>
-     <div style="width: 100%; height: 600px;"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-
-    </div>
- </div>
+<div class="container">
+            <a href="/recipes"><button class="button_default">Back</button></a>
+      <div class="row">
+          <h1 class="map-title">Foodbanks in your area</h1>
+        <div class="d-flex flex-column justify-text-center">
+          <h5>"Don't have time to cook something sustainably scrumptous? Please don't let it go to waste...</h5>
+          <p> ...help feed people struggling with food insecurity, minimise UK food wastage and donate your unwanted food directly to foodbanks who can get food to people who need it.</p>
+        </div>
+        <div style="width: 100%; height: 600px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+</div>
