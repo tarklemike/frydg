@@ -27,6 +27,47 @@ class RecipesController < ApplicationController
         @recipes = @recipes.select { |recipe| recipe.vegan == true }
       end
 
+
+      if params[:easy] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.level == "easy" }
+      end
+      if params[:medium] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.level == "medium" }
+      end
+      if params[:hard] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.level == "hard" }
+      end
+
+
+      if params[:british] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "british" }
+      end
+      if params[:chinese] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "chinese" }
+      end
+      if params[:french] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "french" }
+      end
+      if params[:indian] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "indian" }
+      end
+      if params[:italian] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "italian" }
+      end
+      if params[:japanese] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "japanese" }
+      end
+      if params[:mexican] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "mexican" }
+      end
+      if params[:spanish] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "spanish" }
+      end
+      if params[:thai] == 'true'
+        @recipes = @recipes.select { |recipe| recipe.cuisine == "thai" }
+      end
+
+
     end
 
 
