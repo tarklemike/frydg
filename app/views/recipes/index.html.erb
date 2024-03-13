@@ -111,9 +111,10 @@
           <div class="card-grid" data-filtered-index-target='container'>
               <%= render "shared/cardrecipe", recipes: @recipes %>
           </div>
-
-      <a href="#"><button class="button_default">Back To Top</button></a>
     </div>
   </div>
+</div>
+<div class="d-flex justify-content-end m-3">
+<%= link_to "Back to top", recipes_path, class: "button_default" %>
 </div>
 </div>
