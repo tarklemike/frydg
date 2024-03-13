@@ -1,39 +1,81 @@
-.sidebar-all .offcanvas{
+$background-color-on-hover: #ffffff;
+$text-color: #ffffff;
+$text-color-on-hover: $green;
+$sidebar-width: 195px;
+$box-shadow-color: rgba(0, 0, 0, 0.5);
+
+.sidebar-all .offcanvas {
   margin-top: 97px;
   background: $green;
-  width: 195px;
-  box-shadow: 0px 0px 10px black;
+  width: $sidebar-width;
+  box-shadow: 0 0 10px $box-shadow-color;
   ul {
-    list-style-type:none;
-    margin-left: -20px;
+    list-style-type: none;
+    padding-left: 0;
   }
 }
 
 .offcanvas-header {
-justify-content: left;
+  justify-content: left;
   text-align: right;
-  margin-left: -15px;
-  .btn-close .btn-close-black{
-  $btn-close-opacity: 1;
+  .btn-close, .btn-close-white {
+    opacity: 1;
   }
 }
 
 .sidebar-all {
-a {
-  font-size: 25px;
-  color: #ffff;
-}
-h1 {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-weight: bolder;
-  font-size: 40px;
-  color: #ffff;
-  margin-left:-2px;
+  a {
+    font-size: 25px;
+    color: $text-color;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    &:hover {
+      background-color: $background-color-on-hover;
+      color: $text-color-on-hover;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  }
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: 40px;
+    color: $text-color;
+    padding-left: 20px;
   }
 }
 
-.nav-item1 {
-  padding: 10px;
-  margin: -10px;
+.user-info .profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-info .user-name {
+  color: $text-color;
+}
+
+.quick-actions .action-link {
+  color: $text-color;
+  margin-top: 10px 0;
+  display: block;
+  &:hover {
+    background-color: $background-color-on-hover;
+    color: $text-color-on-hover;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-all .offcanvas {
+    width: 100%;
+    margin-top: 0;
+  }
+  .sidebar-all a {
+    font-size: 20px;
+    padding: 15px 20px;
+  }
+  .sidebar-all h1 {
+    font-size: 30px;
+  }
 }

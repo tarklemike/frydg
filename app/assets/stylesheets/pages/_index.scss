@@ -4,7 +4,10 @@
 @import "recipes_show";
 @import "new_recipe";
 @import "recipe_edit";
+
 @import "map_title";
+
+@import "useredit";
 
 // this page is search results and links to the indexhtml
 .card-grid {
@@ -20,7 +23,7 @@
 .pagetitle {
   position: relative;
 
-  padding: 0px 30px;
+  padding: 0px 15px;
   justify-content: center;
   margin-bottom: 15px;
   margin-left: 27%;
@@ -143,4 +146,11 @@
 
 .button_default btn-plus {
   position: unset;
+}
+
+
+
+input[type='checkbox' i] {
+  accent-color: #d92d6a !important;
+  font-size: 100px;
 }
