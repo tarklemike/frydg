@@ -73,6 +73,17 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
   }
 }
 
+.card {
+  --bs-card-bg:none;
+  .card-body {
+    width: 100%;
+  }
+}
+
+.nav-linl h6{
+  float: right;
+}
+
 @media (max-width: 768px) {
   .sidebar-all .offcanvas {
     width: 10%;
