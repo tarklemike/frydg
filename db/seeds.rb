@@ -972,16 +972,15 @@ RecipeIngredient.create!(
 
 
 
-foodbank_1 = Foodbank.create!(:name => "The Trussell Trust", :address => "150 Camden Road, London, NW1")
-foodbank_2 = Foodbank.create!(:name => "The Romulo Treasure Trove", :address => "200 Green Lanes, London, N16")
-foodbank_3 = Foodbank.create!(:name => "Grace Giving Inn", :address => "150 Brixton Road, London, SW5")
-foodbank_4 = Foodbank.create!(:name => "Toren's Treat", :address => "150 Kingsland Road, London, N1")
-foodbank_5 = Foodbank.create!(:name => "Big Poppa's Food Fountain", :address => "150 Harrow Road, London, NW10")
-foodbank_6= Foodbank.create!(:name => "Food4all", :address => "150 Southgate Road, London, NW1")
-foodbank_7 = Foodbank.create!(:name => "Foodisyourright", :address => "15 Columbia Road, London, E1")
-foodbank_8 = Foodbank.create!(:name => "Comidaparatodos", :address => "45 Old Street, London, EC1")
-foodbank_9 = Foodbank.create!(:name => "Nohunger", :address => "Kilburn High Road, London, NW6")
-foodbank_10 = Foodbank.create!(:name => "Bigger Hearts", :address => "89 Mare Street, London, E8")
+foodbank_1 = Foodbank.create!(:name => "The Trussell Trust", :address => "150 Camden Road, London, NW1", telephone: "020 7267 1900")
+foodbank_2 = Foodbank.create!(:name => "The Romulo Treasure Trove", :address => "200 Green Lanes, London, N16", telephone: "020 707 1950")
+foodbank_3 = Foodbank.create!(:name => "Grace Giving Inn", :address => "150 Brixton Road, London, SW5", telephone: "020 7558 2000")
+foodbank_4 = Foodbank.create!(:name => "Toren's Treat", :address => "150 Kingsland Road, London, N1", telephone: "020 7222 1885")
+foodbank_5 = Foodbank.create!(:name => "Big Poppa's Food Fountain", :address => "150 Harrow Road, London, NW10", telephone: "020 7485 5000")
+foodbank_6 = Foodbank.create!(:name => "Food Bank For All", :address => "150 Southgate Road, London, NW1", telephone: "020 7707 8700")
+foodbank_8 = Foodbank.create!(:name => "Food For All", :address => "45 Old Street, London, EC1", telephone: "020 7967 5252")
+foodbank_9 = Foodbank.create!(:name => "No Hunger", :address => "Kilburn High Road, London, NW6", telephone: "020 7857 8800")
+foodbank_10 = Foodbank.create!(:name => "Bigger Hearts", :address => "89 Mare Street, London, E8", telephone: "020 7887 0000")
 
 
 
