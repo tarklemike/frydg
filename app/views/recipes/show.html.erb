@@ -168,14 +168,14 @@
   <div class="index_recipecard"  id="reviews">
     <h1 class="top">Reviews</h1>
     <div class="content d-flex">
-              <div class="reviewsection col-6 mt-5">
+              <div class="reviewsection col-6 px-5 mt-3">
       <%= simple_form_for [@recipe, @review], html: { action: "#{recipe_path(@recipe)}#reviews"} do |f| %>
         <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
         <%= f.input :rating, collection: 1..5%>
         <%= f.submit "Add Review +", class: "button_default"%>
       <% end %>
     </div>
-      <div class="review-container col-6">
+      <div class="review-container col-6" style="height: 260px; overflow: auto;">
 
       <%# <ul class="list-group"> %>
         <% @recipe.reviews.each do |review| %>
