@@ -1,0 +1,5 @@
+<%= simple_form_for [recipe, review], data: { action: "insert-reviews#insert",insert_reviews_target: "form"} do |f| %>
+  <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
+  <%= f.input :rating, collection: 1..5%>
+  <%= f.submit "Add Review +", class: "button_default"%>
+<% end %>
