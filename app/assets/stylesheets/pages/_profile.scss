@@ -84,6 +84,10 @@
 // My Recipes container //
 .profile-recipes {
   padding-top: 30px;
+  a{
+    text-decoration: none;
+    list-style-type: none;
+  }
   h3 {
     border-radius: 20px 20px 0px 0px;
     background-color: #2DD99C;
@@ -104,6 +108,7 @@
   border-color: #2DD99C;
   margin-top: 42px;
 }
+
 // end //
 
 // Buttons on Profile page//
@@ -141,10 +146,7 @@
   }
 }
 
-.button-container {
-  margin-left: 20px;
-  margin-top: -25px;
-}
+
 //end//
 
 .carousel-control-prev {

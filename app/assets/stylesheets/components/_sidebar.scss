@@ -108,3 +108,19 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
     font-size: 30px;
   }
 }
+
+@media (min-width: 1920px) {
+  .sidebar-all .offcanvas {
+    width: calc($sidebar-width * 1.2);
+    margin-top: 0;
+  }
+  .sidebar-all a {
+    font-size: calc(25px * 1.2);
+    padding: 15px 20px;
+  }
+  .sidebar-all h1 {
+    font-size: calc(40px * 1.2);
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
