@@ -13,3 +13,42 @@
   color: white;
   border: 2px solid white;
 }
+
+.imageplaceholder {
+  background-color: rgb(165, 165, 165);
+  border-radius: 30px;
+
+  height: 420px;
+  object-fit: cover;
+
+}
+
+.theform {
+  background-color: pink !important;
+  color: blue !important;
+  height: 300px !important;
+}
+
+.yoo {
+   margin-top: -10px;
+   margin-bottom: -10px;
+   font-size: 14px;
+}
+
+.acb {
+ padding-left: 10px;
+ padding-top: -10px;
+}
+
+.index_recipecard .ii {
+  width: 90%;
+  padding: 30px;
+  font-size: 12px;
+  max-height: 400px;
+  flex-direction: row;
+  column-gap: 20px;
+  column-width: 60px;
+  column-count: 3;
+  float: left;
+
+}

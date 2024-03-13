@@ -1,7 +1,10 @@
 <div class="container">
 
   <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
-    <a href="<%=recipes_path%>"><button class="button_default"><i class="fa-solid fa-chevron-left"></i></button></a>
+      <div class="d-flex justify-content-between">
+      <a href="<%=recipes_path%>"><button class="button_default"><i class="fa-solid fa-chevron-left"></i></button></a>
+      <%= form.submit "Update recipe", class: "button_default"%>
+    </div>
 
     <div class="d-flex mt-2">
 
@@ -19,20 +22,20 @@
 
         <div class="d-flex justify-content-between">
           <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-mortar-pestle" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-mortar-pestle"></i>
             <div>
               <%= form.input :prep_time, as: :select, collection: (0..120).step(5), prompt: "minutes", input_html: { class: "form-validation" }  %>
             </div>
           </div>
           <div class="d-flex" style="width: 300px">
-            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch" style="color: #2dd99c;"></i>
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch"></i>
             </div>
             <div>
               <%= form.input :cook_time, as: :select, collection: (0..120).step(5), prompt: "minutes", input_html: { class: "form-validation" } %>
             </div>
           </div>
           <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-utensils" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-utensils"></i>
             <div>
               <%= form.input :servings, as: :select, collection: (1..10), prompt: "servings", input_html: { class: "form-validation" } %>
             </div>
@@ -41,13 +44,13 @@
 
         <div class="d-flex justify-content-between">
           <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-earth-americas" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-earth-americas"></i>
             <div>
               <%= form.input :cuisine, as: :select, collection: Recipe::CUISINES, input_html: { class: "form-validation" } %>
             </div>
           </div>
           <div class="d-flex" style="width: 300px">
-            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light" style="color: #2dd99c;"></i>
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light"></i>
             </div>
             <div>
               <%= form.input :level, as: :select, collection: ["Easy","Medium", "Hard"], input_html: { class: "form-validation" } %>
@@ -56,7 +59,7 @@
         </div>
 
           <div class="d-flex">
-            <i class="icon-large fa-solid fa-seedling" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-seedling"></i>
             <div class="d-flex flex-column">
               <p>Allergens</p>
               <div class="d-flex justify-content-between">
@@ -73,40 +76,58 @@
 
     </div>
 
-    <div class="bottomhalf d-flex">
+     <div class="bottomhalf d-flex">
 
-      <div class="col-6">
-        <div class="index_recipecard recipe-method">
-          <h2 class="top">Method</h2>
-          <div class="content">
+    <div class="index_recipecard col-6 pe-4">
+      <h2 class="top">Ingredients</h2>
+      <ul class="content i" data-ingredients-target="ingredientsWrapper">
+        <%= form.simple_fields_for :recipe_ingredients do |recipe_ingredient_form| %>
+            <!-- Use the virtual attribute for ingredient name -->
+          <li>
+            <%= recipe_ingredient_form.input :ingredient_name, placeholder: "Enter ingredient name" %>
+            <%= recipe_ingredient_form.input :amount %>
+            <%= recipe_ingredient_form.input :measurement_type %>
+            <%= recipe_ingredient_form.hidden_field :_destroy %>
+            <%= link_to "Remove", '#', class: "remove-recipe-ingredient" %>
+          </li>
+        <% end %>
+    <!-- Button to add a new recipe ingredient -->
+        <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p>
+      </ul>
+    </div>
 
-            <%= form.input :method, input_html: { class: "form-validation" }  %>
-          </div>
+    <div class="col-6">
+      <div class="index_recipecard recipe-method">
+        <h2 class="top">Method</h2>
+        <div class="content m">
+          <%= form.input :method class: "methodbox"%>
         </div>
       </div>
+    </div>
 
-      <div class="index_recipecard col-6">
+    </div>
+
+
+
+      <%# <div class="index_recipecard col-6">
         <h2 class="top">Ingredients</h2>
         <ul class="content" data-ingredients-target="ingredientsWrapper">
         <template data-ingredients-target="template">
           <%= form.simple_fields_for :recipe_ingredients, input_html: {class: "form-validation"} do |ingredient_form| %>
-            <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>">
-              <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->ingredients#add"}}, wrapper_html: {class: "form-validation"} %>
-            </li>
+            <%# <li data-ingredients-target="ingredient" data-id="<%= ingredient_form.options[:child_index] %>
+              <%# <%= ingredient_form.association :ingredient, as: :select, collection: Ingredient.all, input_html: {data: {controller: "tom-select", action: "change->ingredients#add"}}, wrapper_html: {class: "form-validation"} %>
+            <%# </li>
           <% end %>
-        </template>
+        <%# </template>
         <button type='button'
                 class=''
                 data-action='click->ingredients#add'>
           Add Ingredient
         </button>
         </ul>
-      </div>
+      </div> %>
 
 
     </div><%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
-    <div style="postion:absolute; top:100px; right:50px;">
-      <%= form.submit "Update recipe", class: "button_default" %>
-    </div>
   <% end %>
 </div>

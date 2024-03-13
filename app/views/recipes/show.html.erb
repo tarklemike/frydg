@@ -35,7 +35,7 @@
 
     <div class="recipe-info col-6 d-flex flex-column justify-content-between">
 
-      <div>
+      <div class="showtitle">
         <h1><strong><%= @recipe.title %></strong></h1>
         <h5><%= @recipe.description %></h5>
       </div>
@@ -135,9 +135,11 @@
     <div class="index_recipecard col-6">
       <h2 class="top">Ingredients</h2>
       <ul class="content i" >
-        <% @recipe.ingredients.each do |ingredient| %>
+        <% @recipe.recipe_ingredients.each do |ingredient| %>
           <li><input type="checkbox" class="steps">
-          <label> <%= ingredient.name.capitalize %></label><br></li>
+          <%= ingredient.amount %>
+          <%= ingredient.measurement_type %>
+          <label> <%= ingredient.ingredient.name.capitalize %></label><br></li>
         <% end %>
       </ul>
     </div>
@@ -170,8 +172,15 @@
 
   <div class="index_recipecard"  id="reviews">
     <h1 class="top">Reviews</h1>
-    <div class="content">
-      <div class="review-container">
+    <div class="content d-flex">
+              <div class="reviewsection col-6 mt-5">
+      <%= simple_form_for [@recipe, @review], html: { action: "#{recipe_path(@recipe)}#reviews"} do |f| %>
+        <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
+        <%= f.input :rating, collection: 1..5%>
+        <%= f.submit "Add Review +", class: "button_default"%>
+      <% end %>
+    </div>
+      <div class="review-container col-6">
 
       <%# <ul class="list-group"> %>
         <% @recipe.reviews.each do |review| %>
@@ -204,13 +213,7 @@
 
 
 
-    <div class="reviewsection mt-5">
-      <%= simple_form_for [@recipe, @review], html: { action: "#{recipe_path(@recipe)}#reviews"} do |f| %>
-        <%= f.input :comment, placeholder: "Leave your review here...", label: false%>
-        <%= f.input :rating, collection: 1..5%>
-        <%= f.submit "Add Review +", class: "button_default"%>
-      <% end %>
-    </div>
+
 
     </div>
   </div>
