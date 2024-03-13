@@ -7,7 +7,7 @@
   </div>
   <div class="d-flex mt-2">
 
-    <div class="imagediv col-6 pe-3">
+    <div class="imagediv col-6 pe-5">
        <div class="favoriting">
           <% if current_user %>
             <% if current_user.favorited?(@recipe) %>
@@ -30,15 +30,17 @@
       <% end %>
     </div>
 
-    <div class="recipe-info col-6 d-flex flex-column ps-3">
+    <div class="recipe-info col-6 d-flex flex-column justify-content-between">
 
       <div>
         <h1><strong><%= @recipe.title %></strong></h1>
-        <h4><%= @recipe.description %></h4>
+        <h5><%= @recipe.description %></h5>
       </div>
 
+      <div>
+
       <div class="d-flex justify-content-between mt-auto">
-        <div>
+        <div class="d-flex align-items-center mb-3">
           <% if @recipe.user.photo.attached? %>
             <%= cl_image_tag @recipe.user.photo.key, class: "avatar-bordered" %>
           <% elsif @recipe.user.image.empty? %>
@@ -46,7 +48,7 @@
           <% else %>
             <%= image_tag (@recipe.user.image), class: "avatar-bordered" %>
           <% end %>
-          <p><strong><%= @recipe.user.username %></strong></p>
+          <p class="ms-2"><strong><%= @recipe.user.username %></strong></p>
         </div>
         <div class="d-flex flex-column align-items-end">
           <div class="rating-stars d-flex">
@@ -60,26 +62,27 @@
           <a href="#reviews"><button class="button_default special">See Reviews</button></a>
         </div>
       </div>
+ </div>
 
       <div class="d-flex justify-content-between">
         <div class="d-flex" style="width: 300px">
           <i class="icon-large fa-solid fa-mortar-pestle" style="color: #2dd99c;"></i>
           <div>
-            <p>PREP TIME</p>
+            <h5>Prep time</h5>
             <p><%= @recipe.prep_time.to_i %> minutes</p>
           </div>
         </div>
         <div class="d-flex" style="width: 300px">
             <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch" style="color: #2dd99c;"></i></div>
             <div>
-              <p>COOK TIME</p>
+              <h5>Cook time</h5>
               <p><%= @recipe.cook_time.to_i %> minutes</p>
             </div>
         </div>
         <div class="d-flex" style="width: 300px">
             <i class="icon-large fa-solid fa-utensils" style="color: #2dd99c;"></i>
             <div>
-              <p>SERVINGS</p>
+              <h5>Servings</h5>
               <p><%= @recipe.servings %></p>
             </div>
         </div>
@@ -89,22 +92,29 @@
         <div class="d-flex" style="width: 300px">
           <i class="icon-large fa-solid fa-earth-americas" style="color: #2dd99c;"></i>
           <div>
-            <p>CUISINE</p>
+            <h5>Cuisine</h5>
             <p><%= @recipe.cuisine %></p>
           </div>
         </div>
         <div class="d-flex" style="width: 300px">
             <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light" style="color: #2dd99c;"></i></div>
             <div>
-              <p>DIFFICULTY</p>
+              <h5>Difficulty</h5>
               <p><%= @recipe.level %></p>
             </div>
         </div>
         <div class="d-flex" style="width: 300px">
             <i class="icon-large fa-solid fa-seedling" style="color: #2dd99c;"></i>
             <div>
-              <p>ALLERGENS</p>
-              <p><%= @recipe.attributes.select { |key, value| value == true }.keys %></p>
+              <h5>Allergens</h5>
+              <p class="allergens">
+              <%= "V" if @recipe.vegetarian %>
+              <%= "VE" if @recipe.vegan %>
+              <%= "GF" if @recipe.gluten_free %>
+              <%= "DF" if @recipe.dairy_free %>
+              <%= "NF" if @recipe.nut_free %>
+              <%= "EF" if @recipe.egg_free %>
+              </p>
             </div>
         </div>
       </div>
