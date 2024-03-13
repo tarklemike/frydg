@@ -1067,7 +1067,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_10,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1179,7 +1179,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_11,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1233,9 +1233,9 @@ RecipeIngredient.create!(
 )
 
 recipe_12 = Recipe.create!(
-  title: "Turmeric Veggie Fried Rice",
-  description: "A spicy and flavoursome rice dish full of carrots and other mix vegetables rice.",
-  cuisine: "indian",
+  title: "Harissa beef and carrot with barley and tomato salad",
+  description: "A spicy beef and flavoursome rice dish full of carrots and other mix vegetables rice.",
+  cuisine: "French",
   vegetarian: true,
   vegan: false,
   gluten_free: true,
@@ -1267,7 +1267,7 @@ recipe_12 = Recipe.create!(
   STEP 7
   Serve hot with steamed rice.",
   image: "",
-  image_url: "https://images.immediate.co.uk/production/volatile/sites/2/2018/01/Spicy-Veg-Rice-b065a02.jpg?quality=90&webp=true&resize=975,649",
+  image_url: "https://img.delicious.com.au/XxFvvWzn/del/2018/03/harissa-beef-and-carrot-with-barley-and-tomato-salad-75706-2.jpg",
   user: user_2
 )
 RecipeIngredient.create!(
@@ -1291,7 +1291,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_12,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1403,7 +1403,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1515,7 +1515,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_14,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1627,7 +1627,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_15,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1740,7 +1740,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_16,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1854,7 +1854,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_17,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -1969,7 +1969,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_18,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2083,7 +2083,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_19,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2197,7 +2197,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_20,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2310,7 +2310,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_21,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2425,7 +2425,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_22,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2539,7 +2539,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_23,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2654,7 +2654,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_24,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2769,7 +2769,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_25,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2883,7 +2883,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_26,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
@@ -2999,7 +2999,7 @@ RecipeIngredient.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_27,
-  ingredient: prawn,
+  ingredient: prawns,
   amount: 300,
   measurement_type: "g"
 )
