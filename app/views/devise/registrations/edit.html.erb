@@ -1,6 +1,6 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 class="text-center">Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "user-form" }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -10,17 +10,16 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
+    <%= f.input :password, hint: "leave it blank if you don't want to change it", required: false, input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation, required: false, input_html: { autocomplete: "new-password" } %>
+    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, input_html: { autocomplete: "current-password" } %>
+
+    <!-- Profile Picture -->
+    <%= f.input :image, as: :file, label: "Change profile picture" %>
+
+    <!-- Social Media -->
+    <%# <%= f.input :instagram_handle, required: false, placeholder: "@instagram", label: "Instagram Handle" %>
+    <%# <%= f.input :facebook_handle, required: false, placeholder: "@facebook", label: "Facebook Handle" %>
   </div>
 
   <div class="form-actions">
@@ -28,8 +27,8 @@
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
-
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
-
-<%= link_to "Back", :back %>
+<div class="cancel-account">
+  <h3>Cancel my account</h3>
+  <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+  <%= link_to "Back", :back %>
+</div>

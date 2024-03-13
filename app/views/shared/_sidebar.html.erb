@@ -20,13 +20,16 @@
         </li>
         <li class="quick-actions">
           <%= link_to "New Recipe", new_recipe_path, class: "action-link" %>
+        </li>
+        <li class="user-info">
+          <%= image_tag "avatar.png", alt: "Profile Picture", class: "profile-pic" %>
+          <p class="user-name">......</p>
+        </li>
+        <li class="nav-item1">
           <%= link_to "Manage Account", edit_user_registration_path, class: "action-link" %>
-          <li class="user-info">
-            <%= image_tag "avatar.png", alt: "Profile Picture", class: "profile-pic" %>
-            <p class="user-name"><%= current_user.email%></p>
-          </li>
-          <li class="nav-item1">
-            <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link" %>
+          <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link" %>
+          <li class="sidebar-footer">
+            <p>© 2024 Frydg</p>
           </li>
         </li>
       </ul>
