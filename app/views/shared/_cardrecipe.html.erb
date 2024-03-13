@@ -1,54 +1,52 @@
-  <% @recipes.each do |recipe| %>
-  <div class="styling">
-    <%= link_to recipe_path(recipe) do %>
+<div class="styling">
+  <%= link_to recipe_path(recipe) do %>
 
-    <ul class="card_recipes_defaultv">
-      <% if recipe.photo.attached? %>
-        <%= cl_image_tag recipe.photo.key, class: "recipecards_img" %>
-      <% elsif recipe.image_url != nil %>
-        <%= image_tag (recipe.image_url), class: "recipecards_img" %>
-      <% else %>
-        <%= image_tag ("logo_small.png"), class: "recipecards_img" %>
-      <% end %>
+  <ul class="card_recipes_defaultv">
+    <% if recipe.photo.attached? %>
+      <%= cl_image_tag recipe.photo.key, class: "recipecards_img" %>
+    <% elsif recipe.image_url != nil %>
+      <%= image_tag (recipe.image_url), class: "recipecards_img" %>
+    <% else %>
+      <%= image_tag ("logo_small.png"), class: "recipecards_img" %>
+    <% end %>
 
-      <div class="favoriting_index">
-        <% if current_user %>
-          <% if current_user.favorited?(recipe) %>
-            <%= link_to remove_favorite_path(recipe), data: {turbo_method: :post} do%>
-              <i class="fa-solid fa-heart"></i>
-            <% end %>
-          <% else %>
-            <%= link_to add_favorite_path(recipe), data: {turbo_method: :post} do%>
-              <i class="fa-regular fa-heart"></i>
-            <% end %>
+    <div class="favoriting_index">
+      <% if current_user %>
+        <% if current_user.favorited?(recipe) %>
+          <%= link_to remove_favorite_path(recipe), data: {turbo_method: :post} do%>
+            <i class="fa-solid fa-heart"></i>
+          <% end %>
+        <% else %>
+          <%= link_to add_favorite_path(recipe), data: {turbo_method: :post} do%>
+            <i class="fa-regular fa-heart"></i>
           <% end %>
         <% end %>
-      </div>
+      <% end %>
+    </div>
 
-      <div class="bottomcontainer">
-        <li class="recipe_card_title"><strong><%= recipe.title %></strong></li>
-        <div class="allergens d-flex">
-          <% if recipe.vegetarian %>
-            <li>V</li>
-          <% end %>
-          <% if recipe.vegan %>
-            <li>Ve</li>
-          <% end %>
-          <% if recipe.dairy_free %>
-            <li>DF</li>
-          <% end %>
-          <% if recipe.gluten_free %>
-            <li>GF</li>
-          <% end %>
-        </div>
-        <%# took out cuisine more useful as search tool %>
-        <div class="infograms d-flex">
-          <li><i class="fa-solid fa-stopwatch"></i> <%= recipe.prep_time.to_i %> mins</li>
-          <li><i class="fa-solid fa-fire-burner"></i> <%= recipe.cook_time.to_i %> mins</li>
-          <li><i class="fa-solid fa-utensils"></i> <%= recipe.level %></li>
-        </div>
+    <div class="bottomcontainer">
+      <li class="recipe_card_title"><strong><%= recipe.title %></strong></li>
+      <div class="allergens d-flex">
+        <% if recipe.vegetarian %>
+          <li>V</li>
+        <% end %>
+        <% if recipe.vegan %>
+          <li>Ve</li>
+        <% end %>
+        <% if recipe.dairy_free %>
+          <li>DF</li>
+        <% end %>
+        <% if recipe.gluten_free %>
+          <li>GF</li>
+        <% end %>
       </div>
-    </ul>
-<% end %>
-  </div>
-<% end %>
+      <%# took out cuisine more useful as search tool %>
+      <div class="infograms d-flex">
+        <li><i class="fa-solid fa-stopwatch"></i> <%= recipe.prep_time.to_i %> mins</li>
+        <li><i class="fa-solid fa-fire-burner"></i> <%= recipe.cook_time.to_i %> mins</li>
+        <li><i class="fa-solid fa-utensils"></i> <%= recipe.level %></li>
+      </div>
+    </div>
+  </ul>
+  <% end %>
+</div>

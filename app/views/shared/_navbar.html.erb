@@ -11,17 +11,9 @@
   <!--- end --->
   <!-- Profile Sign-in Button on the Right -->
   <div class="navbar-nav">
-    <% if user_signed_in? %>
-      <!-- If user is signed in, show profile picture (current_user.profile_picture_url) -->
-      <div class="sidebar-nav">
-        <i class="burger fa-solid fa-burger fa-2xl" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" style="color: #ffffff; border: none; background-color: transparent; cursor: pointer;"></i>
-      </div>
-    <% else %>
-      <!-- If user is not signed in, show sign-in icon -->
-      <%= link_to new_user_session_path, class: 'nav-link' do %>
-        <i class="fa-solid fa-right-to-bracket fa-2xl" style="color: #ffffff;"></i>
-      <% end %>
-    <% end %>
+    <div class="sidebar-nav">
+      <i class="burger fa-solid fa-burger fa-2xl" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" style="color: #ffffff; border: none; background-color: transparent; cursor: pointer;"></i>
+    </div>
   </div>
   <!--- end --->
 </div>

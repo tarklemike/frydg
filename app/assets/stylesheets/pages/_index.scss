@@ -4,7 +4,7 @@
 @import "recipes_show";
 @import "new_recipe";
 @import "recipe_edit";
-
+@import "info_window";
 @import "map_title";
 
 @import "useredit";
@@ -36,6 +36,7 @@
   position: fixed;
   margin-top: -45px;
   margin-left: -80px;
+  z-index: 2;
 
   width: 25%;
   height: 100%;
@@ -152,5 +153,4 @@
 
 input[type='checkbox' i] {
   accent-color: #d92d6a !important;
-  font-size: 100px;
 }

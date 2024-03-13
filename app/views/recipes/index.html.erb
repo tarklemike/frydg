@@ -32,14 +32,18 @@
                             <input type="checkbox" checked="checked">
                             <span class="checkmark"></span> %>
                             </label>
-                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="gluten_free">
-                            <label class="tick"> Gluten Free</label><br>
-                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="dairy_f">
-                            <label class="tick"> Dairy Free</label><br>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="vegetarian">
-                            <label class="tick"> Vegitarian</label><br>
+                            <label class="tick"> Vegetarian</label><br>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="vegan">
                             <label class="tick"> Vegan</label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="gluten_free">
+                            <label class="tick"> Gluten Free</label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="dairy_free">
+                            <label class="tick"> Dairy Free</label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="egg_free">
+                            <label class="tick"> Egg Free</label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="nut_free">
+                            <label class="tick"> Nut Free</label><br>
 
                   </div>
                 </div>
@@ -89,7 +93,7 @@
                   <div class="accordion-body content">
                           <%# TODO - ADD ALLERGENS %>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="easy">
-                            <label class="tick" > Easy </label><br>
+                            <label class="tick"> Easy </label><br>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="medium">
                             <label class="tick"> Medium</i></label><br>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="hard">
@@ -98,23 +102,21 @@
                 </div>
               </div>
 
-
-
             </div>
 
-
-
         </div>
-
 
         <div class="col-10">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid" data-filtered-index-target='container'>
-              <%= render "shared/cardrecipe", recipes: @recipes %>
+          <% @recipes.each do |recipe| %>
+              <%= render "shared/cardrecipe", recipe: recipe %>
+          <% end %>
           </div>
-
-      <a href="#"><button class="button_default">Back To Top</button></a>
     </div>
   </div>
+</div>
+<div class="d-flex justify-content-end m-3">
+<%= link_to "Back to top", recipes_path, class: "button_default" %>
 </div>
 </div>

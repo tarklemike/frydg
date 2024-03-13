@@ -1,9 +1,8 @@
 <div class="container">
   <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
     <div class="d-flex justify-content-between">
-      <%= link_to "Back", recipes_path, class: "button_default" %>
+      <a href="<%=recipes_path%>"><button class="button_default"><i class="fa-solid fa-chevron-left"></i></button></a>
       <%= form.submit "Add recipe", class: "button_default"%>
-    </div>
 
     <div class="d-flex mt-2">
 
@@ -15,8 +14,8 @@
 
       <div class="recipe-info col-6 d-flex flex-column justify-content-between ps-3">
         <div>
-          <%= form.input :title %> <br>
-          <%= form.input :description %> <br>
+          <%= form.input :title, placeholder: "Worlds Most Scrumptious Recipe" %> <br>
+          <%= form.input :description, placeholder: "This is the best recipe in the world rumor is that when you try it you'll be smiling forever and everrr" %> <br>
         </div>
 
         <div class="d-flex justify-content-between">
@@ -41,7 +40,7 @@
           </div>
         </div>
 
-        <div class="d-flex justify-content-between">
+        <div class="d-flex">
           <div class="d-flex" style="width: 300px">
             <i class="icon-large fa-solid fa-earth-americas" style="color: #2dd99c;"></i>
             <div>
@@ -79,38 +78,43 @@
 
     <div class="bottomhalf d-flex">
 
-      <div class="col-6">
-        <div class="index_recipecard recipe-method">
-          <h2 class="top">Method</h2>
-          <div class="content">
+    <div class="index_recipecard col-6 pe-4">
+      <h2 class="top">Ingredients</h2>
+      <ul class="content" data-ingredients-target="ingredientsWrapper">
+        <%= form.simple_fields_for :recipe_ingredients do |recipe_ingredient_form| %>
+            <!-- Use the virtual attribute for ingredient name -->
+          <li>
+            <%= recipe_ingredient_form.input :ingredient_name, placeholder: "Ingredient" %>
+            <%= recipe_ingredient_form.input :amount, placeholder: "Amount" %>
+            <%= recipe_ingredient_form.input :measurement_type, placeholder: "Measurement" %>
+            <%= recipe_ingredient_form.hidden_field :_destroy %>
+            <%= link_to "Remove", '#', class: "remove-recipe-ingredient" %>
+          </li>
+        <% end %>
+    <!-- Button to add a new recipe ingredient -->
+        <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p>
+      </ul>
+    </div>
 
-            <%= form.input :method %>
-          </div>
+    <div class="col-6">
+      <div class="index_recipecard recipe-method">
+        <h2 class="top">Method</h2>
+        <div class="content m">
+          <%= form.input :method, placeholder:"
+            STEP 1
+            Do this thing
+
+            STEP 2
+            Do this other thing
+
+            STEP 3
+            Put it in the oven and enjoy with friends" %>
         </div>
       </div>
-
-      <div class="index_recipecard col-6">
-        <h2 class="top">Ingredients</h2>
-        <ul class="content" data-ingredients-target="ingredientsWrapper">
-    <%= form.simple_fields_for :recipe_ingredients do |recipe_ingredient_form| %>
-        <!-- Use the virtual attribute for ingredient name -->
-        <li>
-          <%= recipe_ingredient_form.input :ingredient_name, placeholder: "Enter ingredient name" %>
-          <%= recipe_ingredient_form.input :amount %>
-          <%= recipe_ingredient_form.input :measurement_type %>
-          <%= recipe_ingredient_form.hidden_field :_destroy %>
-          <%= link_to "Remove", '#', class: "remove-recipe-ingredient" %>
-      </li>
-    <% end %>
-    <!-- Button to add a new recipe ingredient -->
-   <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p>
-      </div>
+    </div>
 
     </div>
     <%# <p class="btn btn-primary" data-action="click->ingredients#add">Add another Ingredient</p> %>
 
-
   <% end %>
 </div>
-
-      </div>

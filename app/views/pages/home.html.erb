@@ -2,7 +2,9 @@
   <div class="row">
 
     <div class="left_side col-6 justify-content-center">
-      <%= image_tag("logo_full.png") %>
+      <%= link_to recipes_path do %>
+        <%= image_tag "logo_full.png", alt: "Frydge logo" %>
+      <% end %>
       <div class="search mt-4">
       <%# TODO - WORK out how to add sccs class to the searchbar %>
         <%# <input class="inputs" type="text" placeholder="Search.."> %>
