@@ -28,14 +28,18 @@
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body content">
+                            <%# <label class="container">One
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span> %>
+                            </label>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="gluten_free">
-                            <label for="vehicle2"> Gluten Free</label><br>
+                            <label class="tick"> Gluten Free</label><br>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="dairy_f">
-                            <label for="vehicle3"> Dairy Free</label><br>
+                            <label class="tick"> Dairy Free</label><br>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="vegetarian">
-                            <label for="vehicle3"> Vegitarian</label><br>
+                            <label class="tick"> Vegitarian</label><br>
                             <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="vegan">
-                            <label for="vehicle3"> Vegan</label><br>
+                            <label class="tick"> Vegan</label><br>
 
                   </div>
                 </div>
@@ -51,14 +55,24 @@
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                   <div class="accordion-body content">
                           <%# TODO - ADD ALLERGENS %>
-                            <input type="checkbox"><label for="vehicle2"> British</label><br>
-                            <input type="checkbox"><label for="vehicle3"> Indian</i></label><br>
-                            <input type="checkbox"><label for="vehicle3"> Chinese</i></label><br>
-                            <input type="checkbox"><label for="vehicle3"> Thai </i></label><br>
-                            <input type="checkbox"><label for="vehicle3"> Japenese </i></label><br>
-                            <input type="checkbox"><label for="vehicle3"> Italian </i></label><br>
-                            <input type="checkbox"><label for="vehicle3"> Meditarian </i></label><br>
-                            <input type="checkbox"><label for="vehicle3"> Greek </i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="british">
+                            <label class="tick"> British</label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="chinese">
+                            <label class="tick"> Chinese</i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="french">
+                            <label class="tick"> French</i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="indian">
+                            <label class="tick"> Indian </i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="italian">
+                            <label class="tick"> Italian </i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="japanese">
+                            <label class="tick"> Japanese </i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="mexican">
+                            <label class="tick"> Mexican </i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="spanish">
+                            <label class="tick"> Spanish </i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="thai">
+                            <label class="tick"> Thai </i></label><br>
                   </div>
                 </div>
               </div>
@@ -74,12 +88,12 @@
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                   <div class="accordion-body content">
                           <%# TODO - ADD ALLERGENS %>
-                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox">
-                            <label for="vehicle2"> Easy</label><br>
-                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox">
-                            <label for="vehicle3"> Medium</i></label><br>
-                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox">
-                            <label for="vehicle3"> Hard</i></label><br>
+                            <input type="checkbox" class="tick" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="easy">
+                            <label class="tick" > Easy </label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="medium">
+                            <label class="tick"> Medium</i></label><br>
+                            <input type="checkbox" data-action="click->filtered-index#sendRequest" data-filtered-index-target="checkbox" id="hard">
+                            <label class="tick"> Hard</i></label><br>
                   </div>
                 </div>
               </div>
