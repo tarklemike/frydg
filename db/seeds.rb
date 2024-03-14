@@ -32,11 +32,11 @@ user_2 = User.create(
   first_name: "Grace",
   last_name: "Mac",
   postcode: "E17",
-  image: ""
+  image: "grace_profile.jpeg"
 )
-user_2_image = URI.open("https://upload.wikimedia.org/wikipedia/en/a/a5/Donald_Duck_angry_transparent_background.png")
-user_2.photo.attach(io: user_2_image, filename: 'donald.jpg', content_type: "image/jpeg")
-user_2.save
+# user_2_image = URI.open("https://upload.wikimedia.org/wikipedia/en/a/a5/Donald_Duck_angry_transparent_background.png")
+# user_2.photo.attach(io: user_2_image, filename: 'donald.jpg', content_type: "image/jpeg")
+# user_2.save
 
 user_3 = User.create(
   email: 'cy@pm.me',
