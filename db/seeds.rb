@@ -1410,7 +1410,7 @@ RecipeIngredient.create!(
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: salt,
+  ingredient: salt  ,
   amount: 1,
   measurement_type: "tbsp"
 )
