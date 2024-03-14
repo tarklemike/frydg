@@ -38,6 +38,25 @@ user_2_image = URI.open("https://upload.wikimedia.org/wikipedia/en/a/a5/Donald_D
 user_2.photo.attach(io: user_2_image, filename: 'donald.jpg', content_type: "image/jpeg")
 user_2.save
 
+user_3 = User.create(
+  email: 'cy@pm.me',
+  password: "123456",
+  username: "Lad",
+  first_name: "Cyrus",
+  last_name: "DaVirus",
+  postcode: "NW1",
+  image: ""
+)
+
+user_4 = User.create(
+  email: 'toren@pm.me',
+  password: "123456",
+  username: "Bahamas_bro",
+  first_name: "Toren",
+  last_name: "Tino",
+  postcode: "E1",
+  image: ""
+)
 
 
 puts "creating ingredients database..."
@@ -3456,6 +3475,30 @@ Favorite.create!(
   favoritable_type: "Recipe",
   favoritor_type: "User"
 )
+
+puts "creating reviews"
+
+Review.create!(
+rating: 5,
+comment: "Ben McClaren says it's NNNNNNNNNIIIIIIIIIIIIIIIIIICCCCCCCCCCCCCEEEEEE!!!!",
+recipe_id: recipe_2.id,
+user_id: user_3.id,
+
+
+
+
+)
+
+Review.create!(
+rating: 4,
+comment: "Scrummy, yummy in my tummy! A quick, tasty and healthy carrotastic dish ooooo wweeeeeeeeeeeeee",
+recipe_id: recipe_2.id,
+user_id: user_4.id,
+
+
+
+)
+
 
 puts "Cy's the man"
 puts "Mike is also a geeza!!!!"
