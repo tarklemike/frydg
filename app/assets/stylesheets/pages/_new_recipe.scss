@@ -48,7 +48,15 @@
   flex-direction: row;
   column-gap: 20px;
   column-width: 60px;
-  column-count: 3;
+  row-count: 3;
   float: left;
 
+}
+
+.form-control {
+  border-radius: 30px;
+}
+
+.form-select {
+  border-radius: 30px;
 }
