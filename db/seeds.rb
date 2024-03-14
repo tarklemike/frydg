@@ -981,7 +981,7 @@ foodbank_5 = Foodbank.create!(:name => "Big Poppa's Food Fountain", :address => 
 foodbank_6 = Foodbank.create!(:name => "Food Bank For All", :address => "404 Edgeware Road, London, W2", telephone: "020 7707 8700")
 foodbank_8 = Foodbank.create!(:name => "Food For All", :address => "45 Old Street, London, EC1", telephone: "020 7967 5252")
 foodbank_9 = Foodbank.create!(:name => "No Hunger", :address => "Kilburn High Road, London, NW6", telephone: "020 7857 8800")
-foodbank_10 = Foodbank.create!(:name => "Bigger Hearts", :address => "19 Balls Pond Rd, London, N1", telephone: "020 7887 0000")
+
 
 
 
