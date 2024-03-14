@@ -30,9 +30,9 @@
 }
 
 .yoo {
-   margin-top: -10px;
-   margin-bottom: -10px;
-   font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  font-size: 14px;
 }
 
 .acb {
@@ -45,12 +45,11 @@
   padding: 30px;
   font-size: 12px;
   max-height: 400px;
-  flex-direction: row;
-  column-gap: 20px;
-  column-width: 60px;
-  row-count: 3;
-  float: left;
-
+  // flex-direction: row;
+  // column-gap: 20px;
+  // column-width: 60px;
+  // column-count: 3;
+  // float: left;
 }
 
 .form-control {
@@ -59,4 +58,11 @@
 
 .form-select {
   border-radius: 30px;
+
+
+
+}
+
+.ingrdient_form {
+  width: 20px !important;
 }

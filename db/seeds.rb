@@ -1129,7 +1129,7 @@ recipe_11 = Recipe.create!(
   vegan: false,
   gluten_free: true,
   dairy_free: true,
-  egg_free: true,
+  egg_free: false,
   nut_free: false,
   prep_time: 15,
   cook_time: 35,
