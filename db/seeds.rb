@@ -32,12 +32,31 @@ user_2 = User.create(
   first_name: "Grace",
   last_name: "Mac",
   postcode: "E17",
+  image: "grace_profile.jpeg"
+)
+# user_2_image = URI.open("https://upload.wikimedia.org/wikipedia/en/a/a5/Donald_Duck_angry_transparent_background.png")
+# user_2.photo.attach(io: user_2_image, filename: 'donald.jpg', content_type: "image/jpeg")
+# user_2.save
+
+user_3 = User.create(
+  email: 'cy@pm.me',
+  password: "123456",
+  username: "Lad",
+  first_name: "Cyrus",
+  last_name: "DaVirus",
+  postcode: "NW1",
   image: ""
 )
-user_2_image = URI.open("https://upload.wikimedia.org/wikipedia/en/a/a5/Donald_Duck_angry_transparent_background.png")
-user_2.photo.attach(io: user_2_image, filename: 'donald.jpg', content_type: "image/jpeg")
-user_2.save
 
+user_4 = User.create(
+  email: 'toren@pm.me',
+  password: "123456",
+  username: "Bahamas_bro",
+  first_name: "Toren",
+  last_name: "Tino",
+  postcode: "E1",
+  image: ""
+)
 
 
 puts "creating ingredients database..."
@@ -104,6 +123,9 @@ lamb = Ingredient.create!(name: "lamb")
 sharlot = Ingredient.create!(name: "sharlot")
 raisins = Ingredient.create!(name: "raisins")
 pepper = Ingredient.create!(name: "pepper")
+eggs = Ingredient.create!(name: "eggs")
+thyme = Ingredient.create!(name: "thyme")
+carrots = Ingredient.create!(name: "carrots")
 
 
 puts "creating recipes..."
@@ -1359,32 +1381,27 @@ recipe_13 = Recipe.create!(
   nut_free: false,
   prep_time: 15,
   cook_time: 35,
-  level: "Medium",
+  level: "Easy",
   servings: 4,
   method: "STEP 1
-  Heat oil in a large pot or saucepan over medium heat.\n
+  Wash and peel a dozen carrots.\n
 
   STEP 2
-  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+  Heat oil in a pan on a low heat. Add sliced onions, chopped garlic, salt, pepper & thyme. Cook until browned.\n
 
   STEP 3
-  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+  Preheat the oven at gas mark 6/ 200 degrees C.\n
 
   STEP 4
-  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+  Bake for 20 minutes until carrots have a golden and crisp look.\n",
 
-  STEP 5
-  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
 
-  STEP 6
-  Stir in prawns, chopped basil leaves and lime juice.\n
-
-  STEP 7
-  Serve hot with steamed rice.",
   image: "",
   image_url: "https://assets.bonappetit.com/photos/64e65c62101bebaac94dcf59/1:1/w_1920%2Cc_limit/20230822-SEO-ITS-2336.jpg",
   user: user_2
+
 )
+
 RecipeIngredient.create!(
   recipe: recipe_13,
   ingredient: oil_vegetable,
@@ -1393,69 +1410,39 @@ RecipeIngredient.create!(
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: carrot,
-  amount: 1,
+  ingredient: carrots,
+  amount: 12,
   measurement_type: ""
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
   ingredient: garlic,
-  amount: 2,
+  amount: 1,
   measurement_type: "cloves"
 )
 
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: prawns,
+  ingredient: onion,
   amount: 300,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: green_curry_paste,
-  amount: 2,
+  ingredient: salt  ,
+  amount: 1,
   measurement_type: "tbsp"
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: coconut_milk,
-  amount: 400,
-  measurement_type: "ml"
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: stock_vegetable,
-  amount: 250,
-  measurement_type: "ml"
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: carrot,
-  amount: 2,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: red_pepper,
+  ingredient: pepper,
   amount: 1,
-  measurement_type: ""
+  measurement_type: "tbsp"
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: bamboo_shoots,
-  amount: 100,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: basil,
-  amount: "to taste",
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: lime_juice,
-  amount: 2,
+  ingredient: thyme,
+  amount: 1,
   measurement_type: "tbsp"
 )
 
@@ -3488,6 +3475,30 @@ Favorite.create!(
   favoritable_type: "Recipe",
   favoritor_type: "User"
 )
+
+puts "creating reviews"
+
+Review.create!(
+rating: 5,
+comment: "Ben McClaren says it's NNNNNNNNNIIIIIIIIIIIIIIIIIICCCCCCCCCCCCCEEEEEE!!!!",
+recipe_id: recipe_2.id,
+user_id: user_3.id,
+
+
+
+
+)
+
+Review.create!(
+rating: 4,
+comment: "Scrummy, yummy in my tummy! A quick, tasty and healthy carrotastic dish ooooo wweeeeeeeeeeeeee",
+recipe_id: recipe_2.id,
+user_id: user_4.id,
+
+
+
+)
+
 
 puts "Cy's the man"
 puts "Mike is also a geeza!!!!"

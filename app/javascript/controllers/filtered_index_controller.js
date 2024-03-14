@@ -4,24 +4,27 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["checkbox", 'container', "search", "content"]
   connect() {
-    console.log( this.contentTarget
-      );
-
-      this.searchArray = []  }
+    this.searchArray = []
+    if (window.location.search !== "") {
+      this.search();
+    }
+  }
 
   delete(event) {
     this.searchArray.splice(this.searchArray.indexOf(event.currentTarget.innerText), 1);
     event.currentTarget.remove()
-    this.search(event)
+    this.search()
   }
 
-  search(event) {
-event.preventDefault();
-if (this.searchTarget.value !== "") {
-  this.searchArray.push(this.searchTarget.value)
-  console.log(this.searchTarget.value);
-  const button = `<button data-action="click->filtered-index#delete" class="button_default search">${this.searchTarget.value} x</button>`
-  this.contentTarget.insertAdjacentHTML("beforeend", button)
+  search() {
+    if (event) {
+      event.preventDefault();
+    }
+  if (this.searchTarget.value !== "") {
+    this.searchArray.push(this.searchTarget.value)
+    console.log(this.searchTarget.value);
+    const button = `<button data-action="click->filtered-index#delete" class="button_default search">${this.searchTarget.value} x</button>`
+    this.contentTarget.insertAdjacentHTML("beforeend", button)
 }
 //add value to query params at bottom
 this.searchTarget.value = ""
