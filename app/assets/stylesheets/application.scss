@@ -29,7 +29,17 @@
 //   color: #999;
 // }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color: #6e6e6e !important;
-  opacity: 0.2 !important;
+  opacity: 0.6 !important;
 }
+
+.select-input {
+  color: #6e6e6e !important;
+  opacity: 0.6 !important;
+}
+
+// .select-input option:nth-child(2) {
+//   color: #6e6e6e !important;
+//   opacity: 0.2 !important;
+// }

@@ -6,83 +6,84 @@ class RecipesController < ApplicationController
     @recipe_ingredients = RecipeIngredient.all
 
     if params[:query].present?
-      if params[:ingredient1] != 'null'
-        @recipes = @recipes.searching(params[:ingredient1])
-        @recipes = @recipes.order(updated_at: :desc)
-      end
-      if params[:ingredient2] != 'null'
-        @recipes = @recipes.searching(params[:ingredient2])
-        @recipes = @recipes.order(updated_at: :desc)
-      end
-      # if params[:query] != 'true'
-      #   # @recipes = @recipes.searching(params[:query])
-      # end
+      @recipes = @recipes.searching(params[:query]) if params[:query] != "true" && params[:ingredient1].nil?
+      if !params[:ingredient1].nil?
+        if params[:ingredient1] != 'null'
+          @recipes = @recipes.searching(params[:ingredient1])
+          @recipes = @recipes.order(updated_at: :desc)
+        end
+        if params[:ingredient2] != 'null'
+          @recipes = @recipes.searching(params[:ingredient2])
+          @recipes = @recipes.order(updated_at: :desc)
+        end
+        # if params[:query] != 'true'
+        #   # @recipes = @recipes.searching(params[:query])
+        # end
 
-      if params[:gluten_free] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.gluten_free == true }
-      end
+        if params[:gluten_free] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.gluten_free == true }
+        end
 
-      if params[:dairy_free] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.dairy_free == true }
-      end
+        if params[:dairy_free] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.dairy_free == true }
+        end
 
-      if params[:nut_free] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.nut_free == true }
-      end
+        if params[:nut_free] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.nut_free == true }
+        end
 
-      if params[:egg_free] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.egg_free == true }
-      end
+        if params[:egg_free] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.egg_free == true }
+        end
 
-      if params[:vegetarian] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.vegetarian == true }
-      end
+        if params[:vegetarian] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.vegetarian == true }
+        end
 
-      if params[:vegan] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.vegan == true }
-      end
-
-
-      if params[:easy] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.level == "easy" }
-      end
-      if params[:medium] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.level == "medium" }
-      end
-      if params[:hard] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.level == "hard" }
-      end
+        if params[:vegan] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.vegan == true }
+        end
 
 
-      if params[:british] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "british" }
-      end
-      if params[:chinese] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "chinese" }
-      end
-      if params[:french] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "french" }
-      end
-      if params[:indian] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "indian" }
-      end
-      if params[:italian] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "italian" }
-      end
-      if params[:japanese] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "japanese" }
-      end
-      if params[:mexican] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "mexican" }
-      end
-      if params[:spanish] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "spanish" }
-      end
-      if params[:thai] == 'true'
-        @recipes = @recipes.select { |recipe| recipe.cuisine == "thai" }
-      end
+        if params[:easy] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.level == "easy" }
+        end
+        if params[:medium] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.level == "medium" }
+        end
+        if params[:hard] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.level == "hard" }
+        end
 
 
+        if params[:british] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "british" }
+        end
+        if params[:chinese] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "chinese" }
+        end
+        if params[:french] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "french" }
+        end
+        if params[:indian] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "indian" }
+        end
+        if params[:italian] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "italian" }
+        end
+        if params[:japanese] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "japanese" }
+        end
+        if params[:mexican] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "mexican" }
+        end
+        if params[:spanish] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "spanish" }
+        end
+        if params[:thai] == 'true'
+          @recipes = @recipes.select { |recipe| recipe.cuisine == "thai" }
+        end
+      end
     end
 
 
