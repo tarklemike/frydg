@@ -2,13 +2,13 @@ $green-lining: #177152;
 $background-color-on-hover: #ffffff;
 $text-color: #ffffff;
 $text-color-on-hover: $green_lining;
-$sidebar-width: 195px;
+$sidebar-width: 190px;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
 
 .sidebar-all .offcanvas {
   margin-top: 97px;
   background: $green_lining;
-  width: $sidebar-width;
+  width:195px;
   box-shadow: 0 0 10px $box-shadow-color;
   ul {
     list-style-type: none;
@@ -47,6 +47,10 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
   }
 }
 
+.user-info{
+  margin-top: 200px;
+}
+
 .user-info .profile-pic {
   width: 45px;
   height: 45px;
@@ -55,6 +59,7 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
   margin-left: 2%;
   margin-top: 2%;
   background-color: rgb(255, 255, 255);
+  margin-right: 5px;
 
 }
 
@@ -97,32 +102,37 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
     margin-right: 2%;
   }
 }
-@media (max-width: 768px) {
-  .sidebar-all .offcanvas {
-    width: 20%;
-    margin-top: 0;
-  }
-  .sidebar-all a {
-    font-size: 20px;
-    padding: 15px 20px;
-  }
-  .sidebar-all h1 {
-    font-size: 30px;
-  }
-}
 
 @media (min-width: 1920px) {
+  $sidebar-width: 250px;
+
   .sidebar-all .offcanvas {
-    width: calc($sidebar-width * 1.2);
-    margin-top: 0;
+    background: $green_lining;
+    width: $sidebar-width;
   }
+
+  .offcanvas-header .btn-close, .offcanvas-header .btn-close-white {
+    font-size: 30px;
+  }
+
   .sidebar-all a {
-    font-size: calc(25px * 1.2);
-    padding: 15px 20px;
+    font-size: 30px;
+    padding: 20px 30px;
+
   }
+
   .sidebar-all h1 {
-    font-size: calc(40px * 1.2);
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    padding-left: 30px;
+
+  }
+
+  .user-info {
+    margin-top: 200px;
+  }
+
+  .user-info .profile-pic {
+    width: 60px;
+    height: 60px;
   }
 }

@@ -16,9 +16,6 @@
               <%= link_to "Food Bank It", foodbanks_index_path, class: "nav-link" %>
             </li>
             <%if user_signed_in?%>
-              <li class="nav-item1">
-                <%= link_to "My Recipes", user_path(current_user), class: "nav-link all-recipes" %>
-              </li>
               <li class="quick-actions">
                 <%= link_to "Add Recipe", new_recipe_path, class: "action-link" %>
               </li>
