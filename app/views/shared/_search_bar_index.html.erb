@@ -1,8 +1,8 @@
-<div class="search-container">
-  <%= form_with url: recipes_path, method: :get, class: "d-flex search-container" do %>
+<div class="search-containeri">
+  <%= form_with url: recipes_path, method: :get, class: "d-flex search-containeri" do %>
     <%= text_field_tag :query ,
           params[:query],
-          class: "form-control searchbar me-2",
+          class: "form-control searchbari me-2",
           placeholder: "Search",
           data: { filtered_index_target: "search" }
     %>
@@ -10,24 +10,21 @@
   <% end %>
 </div>
 
-<%# <style>
-  .searchbar {
-    min-width: 360px;
-    height: 60px; %>
 <style>
-  .searchbar {
-    border-radius: 20px;
+  .searchbari {
+    border-radius: 30px;
     width: 190px;
     height: 50px;
     font-size: 18px;
     color: #177152;
   }
 
-  .search-container {
+  .search-containeri {
     width: 250px;
-  display: flex;
-  flex-direction: row;
-  /* align-items: center; */
-  /* justify-content: space-between; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
   }
 </style>
