@@ -19,14 +19,11 @@
         </div>
       </div>
       <div class="profile-recipes">
-        <h3>My Recipes</h3>
+        <h2>My Recipes</h2>
         <%= link_to new_recipe_path, class: "button_default_add" do %>
-          <strong>Add Recipe +</strong>
+          <h2>Add Recipe +</h2>
         <% end %>
-        <%= link_to edit_user_registration_path, class: "button_default_add manage-account" do %>
-          <strong>Settings</strong>
-        <% end %>
-        <div id="recipeCarousel" class="carousel slide" data-ride="carousel">
+        <div id="recipeCarousel" class="carousel carousel-dark slide" data-ride="carousel">
           <div class="carousel-inner">
             <% @recipes.each_slice(2).with_index do |slice, index| %>
               <div class="carousel-item <%= 'active' if index.zero? %>">

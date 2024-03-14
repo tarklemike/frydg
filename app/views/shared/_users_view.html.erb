@@ -20,8 +20,8 @@
       </div>
 
       <div class="profile-recipes">
-        <h3>Their Recipes</h3>
-        <div id="recipeCarousel" class="carousel slide" data-ride="carousel">
+        <h2>Their Recipes</h2>
+        <div id="recipeCarousel" class="carousel carousel-dark slide" data-ride="carousel">
           <div class="carousel-inner">
             <% @recipes.each_slice(2).with_index do |s, index| %>
               <div class="carousel-item <%= 'active' if index.zero? %>">
