@@ -26,11 +26,11 @@ user_1 = User.create(
   image: ""
 )
 user_2 = User.create(
-  email: 'test@test.com',
+  email: 'grace.mac@icloud.com',
   password: "123456",
-  username: "dunefan",
-  first_name: "Romulo",
-  last_name: "Arias-Alvarez",
+  username: "Top_Chef",
+  first_name: "Grace",
+  last_name: "Mac",
   postcode: "E17",
   image: ""
 )
@@ -100,6 +100,7 @@ tomato_sauce = Ingredient.create!(name: "tomato sauce")
 tumeric = Ingredient.create!(name: "tumeric")
 vinegar_balsamic = Ingredient.create!(name: "balsamic vinegar")
 yoghurt = Ingredient.create!(name: "yoghurt")
+lamb = Ingredient.create!(name: "lamb")
 
 
 
@@ -974,13 +975,13 @@ RecipeIngredient.create!(
 
 foodbank_1 = Foodbank.create!(:name => "The Trussell Trust", :address => "150 Camden Road, London, NW1", telephone: "020 7267 1900")
 foodbank_2 = Foodbank.create!(:name => "The Romulo Treasure Trove", :address => "200 Green Lanes, London, N16", telephone: "020 707 1950")
-foodbank_3 = Foodbank.create!(:name => "Grace Giving Inn", :address => "150 Brixton Road, London, SW5", telephone: "020 7558 2000")
-foodbank_4 = Foodbank.create!(:name => "Toren's Treat", :address => "150 Kingsland Road, London, N1", telephone: "020 7222 1885")
+foodbank_3 = Foodbank.create!(:name => "Grace Giving Inn", :address => "35 The Broadway, London, N8", telephone: "020 7558 2000")
+foodbank_4 = Foodbank.create!(:name => "Toren's Treat", :address => "28 Clapham High Street, London, SW4", telephone: "020 7222 1885")
 foodbank_5 = Foodbank.create!(:name => "Big Poppa's Food Fountain", :address => "150 Harrow Road, London, NW10", telephone: "020 7485 5000")
-foodbank_6 = Foodbank.create!(:name => "Food Bank For All", :address => "150 Southgate Road, London, NW1", telephone: "020 7707 8700")
+foodbank_6 = Foodbank.create!(:name => "Food Bank For All", :address => "404 Edgeware Road, London, W2", telephone: "020 7707 8700")
 foodbank_8 = Foodbank.create!(:name => "Food For All", :address => "45 Old Street, London, EC1", telephone: "020 7967 5252")
 foodbank_9 = Foodbank.create!(:name => "No Hunger", :address => "Kilburn High Road, London, NW6", telephone: "020 7857 8800")
-foodbank_10 = Foodbank.create!(:name => "Bigger Hearts", :address => "89 Mare Street, London, E8", telephone: "020 7887 0000")
+foodbank_10 = Foodbank.create!(:name => "Bigger Hearts", :address => "19 Balls Pond Rd, London, N1", telephone: "020 7887 0000")
 
 
 
@@ -3051,3 +3052,468 @@ RecipeIngredient.create!(
   amount: 2,
   measurement_type: "tbsp"
 )
+
+
+
+
+recipe_28 = Recipe.create!(
+  title: "Leftover Lamb Filo Cigars",
+  description: "Seasoned lamb and jazzed back up to life warpped in a crunchy pastry",
+  cuisine: "British",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: false,
+  dairy_free: false,
+  egg_free: false,
+  nut_free: false,
+  prep_time: 15,
+  cook_time: 40,
+  level: "Medium",
+  servings: 5,
+  method: "STEP 1
+  Wash and prepare half an onion.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://img.jamieoliver.com/jamieoliver/recipe-database/156408354.jpg?tr=w-330",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_28,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_28,
+  ingredient: lamb,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_28,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_28,
+  ingredient: prawns,
+  amount: 300,
+  measurement_type: "g"
+)
+
+
+RecipeIngredient.create!(
+  recipe: recipe_28,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_28,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_28,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_28,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+
+
+
+
+
+recipe_29 = Recipe.create!(
+  title: "Turkey Risotto",
+  description: "Seasoned and fragrant carrots baked in a rich marinated chickpea sauce",
+  cuisine: "Italian",
+  vegetarian: false,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: false,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 10,
+  cook_time: 35,
+  level: "Medium",
+  servings: 5,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://img.jamieoliver.com/jamieoliver/recipe-database/2HKDAhve4dJ96skYay_75A.jpg?tr=w-330",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: prawns,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_29,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+recipe_30 = Recipe.create!(
+  title: "Best Fish & Chips",
+  description: "British loved institution",
+  cuisine: "British",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: false,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 10,
+  cook_time: 25,
+  level: "Medium",
+  servings: 5,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://images.immediate.co.uk/production/volatile/sites/30/2021/01/Next-level-fish-and-chips-f0ad0c4.jpg?quality=90&webp=true&resize=300,272",
+  user: user_1
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: prawns,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_30,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+
+recipe_31 = Recipe.create!(
+  title: "South Indian Fish Curry",
+  description: "Rich flavoured fish curry with a spicey fresh taste",
+  cuisine: "Indian",
+  vegetarian: true,
+  vegan: false,
+  gluten_free: true,
+  dairy_free: false,
+  egg_free: true,
+  nut_free: false,
+  prep_time: 10,
+  cook_time: 35,
+  level: "Medium",
+  servings: 5,
+  method: "STEP 1
+  Wash and prepare half a bag of carrots.\n
+
+  STEP 2
+  Add oil to a pan and heat on a low temperature.\n
+
+  STEP 3
+  Stir in onions and garlic and brown.\n
+
+  STEP 4
+  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+
+  STEP 5
+  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+
+  STEP 6
+  Stir in prawns, chopped basil leaves and lime juice.\n
+
+  STEP 7
+  Serve hot with steamed rice.",
+  image: "",
+  image_url: "https://www.tamarindnthyme.com/wp-content/uploads/2020/10/Untitled-design-91-728x546.jpg.webp",
+  user: user_2
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: oil_vegetable,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: carrot,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: garlic,
+  amount: 2,
+  measurement_type: "cloves"
+)
+
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: prawns,
+  amount: 300,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: green_curry_paste,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: coconut_milk,
+  amount: 400,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: stock_vegetable,
+  amount: 250,
+  measurement_type: "ml"
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: carrot,
+  amount: 2,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: red_pepper,
+  amount: 1,
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: bamboo_shoots,
+  amount: 100,
+  measurement_type: "g"
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: basil,
+  amount: "to taste",
+  measurement_type: ""
+)
+RecipeIngredient.create!(
+  recipe: recipe_31,
+  ingredient: lime_juice,
+  amount: 2,
+  measurement_type: "tbsp"
+)
+
+puts "making favourites..."
+
+Favorite.create!(
+  favoritor_id: user_2.id,
+  favoritable_id: recipe_10.id,
+  favoritable_type: "Recipe",
+  favoritor_type: "User"
+)
+
+Favorite.create!(
+  favoritor_id: user_2.id,
+  favoritable_id: recipe_28.id,
+  favoritable_type: "Recipe",
+  favoritor_type: "User"
+)
+
+Favorite.create!(
+  favoritor_id: user_2.id,
+  favoritable_id: recipe_31.id,
+  favoritable_type: "Recipe",
+  favoritor_type: "User"
+)
+
+puts "Cy's the man"
+puts "Mike is also a geeza!!!!"
