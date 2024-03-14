@@ -1,3 +1,5 @@
+$green-lining: #177152;
+
 
 // Profile Details, Avatar ansd Icons//
 .profile-info {
@@ -48,24 +50,49 @@
   box-shadow: 0px 0px 10px black;
 }
 .profile-bio {
-  padding-right: 50px;
-  height:500px;
-}
+  padding-top: 20px;
+  margin-left: 110px;
+  p {
+    overflow: auto;
+    height: 650px;
+    margin-top: -10px;
+    background-color: rgba(223, 222, 222, 0.3);
+    border-radius: 0px 30px 30px 30px;
+    border: solid;
+    border-color: $green-lining;
+    padding: 10px;
+    }
+
+    h3{
+      padding-bottom: 15px;
+      margin-top: -30px;
+      border-radius: 30px 30px 0px 0px;
+      background-color: white;
+      color: $green-lining;
+      padding: 10px 20px 0px 20px;
+      border: solid #177152;
+      text-align: center;
+      width: 40%;
+    }
+  }
+
+
 //end //
 
 // My Favourites Container//
 .profile-favourites {
   margin-left: 110px;
-
   h3{
     padding-bottom: 15px;
     margin-top: -30px;
-    border-radius: 20px 20px 0px 0px;
-    background-color: #2DD99C;
-    color: white;
+    border-radius: 30px 30px 0px 0px;
+    background-color: white;
+    color: $green-lining;
     padding: 10px 20px 0px 20px;
-    text-align: center;
-    width: 105%;
+    width: 85%;
+    border: solid;
+    border-bottom: none;
+  border-color: $green-lining;
   }
 }
 .card-grid-favourites {
@@ -77,33 +104,41 @@
   background-color: rgba(223, 222, 222, 0.3);
   border-bottom-left-radius: 30px;
   border: solid;
-  border-color: #2DD99C;
+  border-color: $green-lining;
 }
 // end //
 
 // My Recipes container //
 .profile-recipes {
   padding-top: 30px;
+  a{
+    text-decoration: none;
+    list-style-type: none;
+  }
   h3 {
-    border-radius: 20px 20px 0px 0px;
-    background-color: #2DD99C;
-    color: white;
-    padding: 10px 20px 0px 20px;
+    border-radius:30px 30px 0px 0px;
+    background-color: white;
+    color: $green-lining;
+    padding: 5px 20px 0px 20px;
+    border-bottom: none;
     float:left;
     margin-bottom: 0px;
+    border: solid #177152;
   }
 }
 
 #recipeCarousel {
   width: 110%;
-  background-color: rgba(223, 222, 222, 0.3);
+  background-color: rgba(223, 222, 222, 1);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   border: solid;
-  border-color: #2DD99C;
+  border-color: $green-lining;
   margin-top: 42px;
 }
+
+
 // end //
 
 // Buttons on Profile page//
@@ -111,40 +146,37 @@
   border-radius: 30px;
   transition-duration: 0.4s;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   background-color: white;
-  color: #2DD99C;
-  border: 2px solid #2DD99C;
+  color: $green-lining;
+  border: 2px solid $green-lining;
   padding: 5px 20px 5px 20px;
   &:hover {
-    background-color: #2DD99C;
-    color: white;
-    border: 2px solid white;
+    background-color: white;
+    color: $green-lining;
+    border: 2px solid $green-lining;
   }
 
 }
 .button_default_add {
   transition-duration: 0.4s;
   text-align: center;
-  font-size: 20px;
-  background-color: white;
-  border: 2px solid #2DD99C;
+  font-size: 22px;
+  background-color: $green-lining;
+  border: 2px solid $green-lining;
   padding: 5px 20px 5px 20px;
-  border-radius: 20px 20px 0px 0px;
-    color: #2DD99C;
+  border-radius: 30px 30px 0px 0px;
+    color: white;
     float:left;
     margin-left: 5px ;
     &:hover {
-    background-color: #2DD99C;
-    color: white;
-    border: 2px solid #2DD99C;
+    background-color: white;
+    color: $green-lining;
+    border: 2px solid $green-lining;
   }
 }
 
-.button-container {
-  margin-left: 20px;
-  margin-top: -25px;
-}
+
 //end//
 
 .carousel-control-prev {
@@ -163,7 +195,6 @@ border-bottom-left-radius: 30px;
     background-color: white;
   }
   }
-
 
 .manage-account {
   margin-left: 5px;

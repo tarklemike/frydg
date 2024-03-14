@@ -44,6 +44,7 @@
 
       <div class="d-flex justify-content-between mt-auto">
         <div class="d-flex align-items-center mb-3">
+        <%= link_to user_path(@recipe.user) do%>
           <% if @recipe.user.photo.attached? %>
             <%= cl_image_tag @recipe.user.photo.key, class: "avatar-bordered" %>
           <% elsif @recipe.user.image.empty? %>
@@ -53,6 +54,7 @@
           <% end %>
           <div class="ms-2 d-flex flex-column align-items-start">
             <p><strong><%= @recipe.user.username %></strong></p>
+            <%end%>
             <p>June 2023</p>
           </div>
         </div>
