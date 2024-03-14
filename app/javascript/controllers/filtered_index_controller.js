@@ -10,11 +10,13 @@ export default class extends Controller {
     }
    }
 
+
   delete(event) {
     this.searchArray.splice(this.searchArray.indexOf(event.currentTarget.innerText), 1);
     event.currentTarget.remove()
-    this.search(event)
+    this.search()
   }
+
 
   search(event) {
     if (event) {
