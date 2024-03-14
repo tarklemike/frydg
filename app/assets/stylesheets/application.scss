@@ -10,3 +10,26 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// ::-webkit-input-placeholder {
+//   color: #999; /* Specify the color you want for the placeholder text */
+// }
+
+// :-moz-placeholder {
+//   color: #999;
+//   opacity: 1; /* Needed to override Firefox's default opacity */
+// }
+
+// ::-moz-placeholder {
+//   color: #999;
+//   opacity: 1; /* Needed to override Firefox's default opacity */
+// }
+
+// :-ms-input-placeholder {
+//   color: #999;
+// }
+
+input::placeholder {
+  color: #6e6e6e !important;
+  opacity: 0.2 !important;
+}

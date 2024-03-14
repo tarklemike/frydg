@@ -49,6 +49,11 @@
 
 .form-control {
   border-radius: 30px;
+
+}
+
+::placeholder {
+  color: red;
 }
 
 .form-select {
