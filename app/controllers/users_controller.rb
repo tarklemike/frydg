@@ -2,16 +2,19 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show]
   before_action :correct_user, only: [:edit, :update]
 
+
   def show
-    # if params[:id] == "destroy_user_session"
-      # Handle session destruction logic here
-      # For example, sign out the current user
-      # Redirect to appropriate path after sign out
-      # redirect_to root_path, notice: "You have been signed out."
-    # else
+    # Shows the viewed user's recipes for anyone viewing the profile.
     @recipes = @user.recipes
-    favorites = @user.favorites
-    @favorite_recipes = favorites.map{ |f| Recipe.find(f.favoritable_id)}
+
+    # Determine if the favorites should be loaded based on who is viewing the profile.
+    if user_signed_in? && @user == current_user
+      # Load favorites only for the user viewing their own profile.
+      favorites = @user.favorites
+      @favorite_recipes = favorites.map { |f| Recipe.find(f.favoritable_id) }
+    else
+      @favorite_recipes = []
+    end
   end
 
   def edit
