@@ -1359,32 +1359,27 @@ recipe_13 = Recipe.create!(
   nut_free: false,
   prep_time: 15,
   cook_time: 35,
-  level: "Medium",
+  level: "Easy",
   servings: 4,
   method: "STEP 1
-  Heat oil in a large pot or saucepan over medium heat.\n
+  Wash and peel a dozen carrots.\n
 
   STEP 2
-  Add sliced onions, chopped garlic, and diced chicken, tofu, or vegetables of your choice. Cook until browned.\n
+  Heat oil in a pan on a low heat. Add sliced onions, chopped garlic, salt, pepper & thyme. Cook until browned.\n
 
   STEP 3
-  Stir in red curry paste and cook for 1-2 minutes until fragrant.\n
+  Preheat the oven at gas mark 6/ 200 degrees C.\n
 
   STEP 4
-  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+  Bake for 20 minutes until carrots have a golden and crisp look.\n",
 
-  STEP 5
-  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
 
-  STEP 6
-  Stir in prawns, chopped basil leaves and lime juice.\n
-
-  STEP 7
-  Serve hot with steamed rice.",
   image: "",
   image_url: "https://assets.bonappetit.com/photos/64e65c62101bebaac94dcf59/1:1/w_1920%2Cc_limit/20230822-SEO-ITS-2336.jpg",
   user: user_2
+
 )
+
 RecipeIngredient.create!(
   recipe: recipe_13,
   ingredient: oil_vegetable,
