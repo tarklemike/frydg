@@ -23,11 +23,11 @@
 
 }
 
-.theform {
-  background-color: pink !important;
-  color: blue !important;
-  height: 300px !important;
-}
+// .theform {
+//   background-color: pink !important;
+//   color: blue !important;
+//   height: 300px !important;
+// }
 
 .yoo {
   margin-top: -10px;
@@ -45,11 +45,6 @@
   padding: 30px;
   font-size: 12px;
   max-height: 400px;
-  // flex-direction: row;
-  // column-gap: 20px;
-  // column-width: 60px;
-  // column-count: 3;
-  // float: left;
 }
 
 .form-control {
@@ -65,4 +60,9 @@
 
 .ingrdient_form {
   width: 20px !important;
+}
+
+.title_of_recipe {
+  font-size: large;
+  color: #2DD99C;
 }
