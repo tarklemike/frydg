@@ -116,19 +116,9 @@
             <div class="col-6">
         <div class="index_recipecard recipe-method">
           <h2 class="top">Method</h2>
-          <div class="content m">
+          <div class="content m" style="padding-right: 20px;">
 
-            <%= form.input :method,
-            placeholder:"
-            STEP 1
-            Do this thing
-
-            STEP 2
-            Do this other thing
-
-            STEP 3
-            Put it in the oven and enjoy with friends
-            "%>
+            <%= form.input :method, input_html: { style: "margin-top: 20px; justify-content: center; height: 355px;" }, label: false, placeholder:"STEP 1\nDo this thing\n\nSTEP 2\nDo this other thing\n\nSTEP 3\nPut it in the oven and enjoy with friends"%>
           </div>
         </div>
       </div>
