@@ -11,8 +11,8 @@
 
 // this page is search results and links to the indexhtml
 .card-grid {
-  position: relative;
-  margin-left: 300px;
+  // position: relative;
+  // margin-left: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   a {
@@ -21,21 +21,21 @@
 }
 
 .pagetitle {
-  position: relative;
+  // position: relative;
 
   padding: 0px 30px;
-  justify-content: center;
+  // justify-content: center;
   margin-bottom: 15px;
-  margin-left: 27%;
+  // margin-left: 27%;
   color: #177152;
-  font-size: 40px;
+  // font-size: 40px;
   font-weight: 700;
 }
 
 .side_bar {
   position: fixed;
   margin-top: -45px;
-  margin-left: -80px;
+  // margin-left: -80px;
   z-index: 2;
 
   width: 25%;

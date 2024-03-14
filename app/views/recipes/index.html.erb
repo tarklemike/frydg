@@ -1,11 +1,11 @@
 
 <%# this page is search results and links to the recipe card scss %>
 
-<div data-controller="filtered-index" class="container" >
-
-  <div class="wrapper d-flex">
-    <div class="row">
-      <div class="side_bar col-2" style="overflow-y: scroll;">
+<div data-controller="filtered-index"  >
+<%# //class="container" %>
+  <div class="wrapper">
+    <div class="row" style="width: 100vw;">
+      <div class="side_bar col-3" style="overflow-y: scroll;">
           <div class="addcomponenet">
             <h2 class="top"><strong>add. </strong>+</h2>
             <div class="content" data-filtered-index-target="content">
@@ -103,8 +103,9 @@
             </div>
 
         </div>
+        <div class="col-3"></div>
 
-        <div class="col-10">
+        <div class="col-9">
           <h1 class="pagetitle">Sustainably Scrumptious Recipes</h1>
           <div class="card-grid" data-filtered-index-target='container'>
             <%= render "shared/cardrecipe", recipes: @recipes %>

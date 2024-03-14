@@ -12,19 +12,24 @@ export default class extends Controller {
   delete(event) {
     this.searchArray.splice(this.searchArray.indexOf(event.currentTarget.innerText), 1);
     event.currentTarget.remove()
-    this.sendRequest(event)
+    this.search(event)
+  }
+
+  search(event) {
+event.preventDefault();
+if (this.searchTarget.value !== "") {
+  this.searchArray.push(this.searchTarget.value)
+  console.log(this.searchTarget.value);
+  const button = `<button data-action="click->filtered-index#delete" class="button_default search">${this.searchTarget.value} x</button>`
+  this.contentTarget.insertAdjacentHTML("beforeend", button)
+}
+//add value to query params at bottom
+this.searchTarget.value = ""
+this.sendRequest()
   }
 
   sendRequest(event) {
-    event.preventDefault();
-    if (this.searchTarget.value !== "") {
-      this.searchArray.push(this.searchTarget.value)
-      console.log(this.searchTarget.value);
-      const button = `<button data-action="click->filtered-index#delete" class="button_default search">${this.searchTarget.value} x</button>`
-      this.contentTarget.insertAdjacentHTML("beforeend", button)
-    }
-    //add value to query params at bottom
-    this.searchTarget.value = ""
+
     // console.log(this.searchArray)
     // clear the value
     // add it to a div
