@@ -101,7 +101,9 @@ tumeric = Ingredient.create!(name: "tumeric")
 vinegar_balsamic = Ingredient.create!(name: "balsamic vinegar")
 yoghurt = Ingredient.create!(name: "yoghurt")
 lamb = Ingredient.create!(name: "lamb")
-
+sharlot = Ingredient.create!(name: "sharlot")
+raisins = Ingredient.create!(name: "raisins")
+pepper = Ingredient.create!(name: "pepper")
 
 
 puts "creating recipes..."
@@ -2842,22 +2844,21 @@ recipe_26 = Recipe.create!(
   Wash and prepare half a bag of carrots.\n
 
   STEP 2
-  Add oil to a pan and heat on a low temperature.\n
+  Peel and thinly slice.\n
 
   STEP 3
-  Stir in onions and garlic and brown.\n
+  Stir in mayonnaise, olive oil and lemon juice.\n
 
   STEP 4
-  Pour in coconut milk and vegetable broth. Bring to a simmer.\n
+  Add salt, black pepper and raisins to olive oil mix.\n
 
   STEP 5
-  Add chopped carrots, bell peppers, and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.\n
+  Finely chop half a sharlot and add to olive oil mix .\n
 
   STEP 6
-  Stir in prawns, chopped basil leaves and lime juice.\n
+  Drizzle olive oil mix over sliced carrots and serve.\n
 
-  STEP 7
-  Serve hot with steamed rice.",
+  ",
   image: "",
   image_url: "https://www.allrecipes.com/thmb/AC3tclGP9HUT-giQ5ug8ghvoMdk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/240181grandmas-carrot-saladEdibleTimes4x3-2c18d373ef574ae98eafc0ae7671f6ce.jpg",
   user: user_1
@@ -2865,7 +2866,7 @@ recipe_26 = Recipe.create!(
 
 RecipeIngredient.create!(
   recipe: recipe_26,
-  ingredient: oil_vegetable,
+  ingredient: oil_olive,
   amount: 2,
   measurement_type: "tbsp"
 )
@@ -2877,65 +2878,36 @@ RecipeIngredient.create!(
 )
 RecipeIngredient.create!(
   recipe: recipe_26,
-  ingredient: garlic,
-  amount: 2,
-  measurement_type: "cloves"
+  ingredient: sharlot,
+  amount: 1,
+  measurement_type: ""
 )
 
 RecipeIngredient.create!(
   recipe: recipe_26,
-  ingredient: prawns,
-  amount: 300,
+  ingredient: raisins,
+  amount: 50,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
   recipe: recipe_26,
-  ingredient: green_curry_paste,
+  ingredient: lemon_juice,
   amount: 2,
   measurement_type: "tbsp"
 )
 RecipeIngredient.create!(
   recipe: recipe_26,
-  ingredient: coconut_milk,
+  ingredient: salt,
   amount: 400,
   measurement_type: "ml"
 )
 RecipeIngredient.create!(
   recipe: recipe_26,
-  ingredient: stock_vegetable,
+  ingredient: pepper,
   amount: 250,
   measurement_type: "ml"
 )
-RecipeIngredient.create!(
-  recipe: recipe_26,
-  ingredient: carrot,
-  amount: 2,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_26,
-  ingredient: red_pepper,
-  amount: 1,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_26,
-  ingredient: bamboo_shoots,
-  amount: 100,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe: recipe_26,
-  ingredient: basil,
-  amount: "to taste",
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_26,
-  ingredient: lime_juice,
-  amount: 2,
-  measurement_type: "tbsp"
-)
+
 
 
 
