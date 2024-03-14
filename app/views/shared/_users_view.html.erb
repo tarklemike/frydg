@@ -3,7 +3,7 @@
     <div class="left m-3 col-md-7">
       <div class="profile-info">
         <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.user.photo.key, class: "avatar-profile" %>
+          <%= cl_image_tag @user.photo.key, class: "avatar-profile" %>
         <% elsif @user.image.empty? %>
           <%= image_tag ("avatar.png"), class: "avatar-profile" %>
         <% else %>

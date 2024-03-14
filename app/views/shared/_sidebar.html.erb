@@ -24,7 +24,7 @@
               </li>
               <li class="user-info">
                 <% if current_user.photo.attached? %>
-                  <%= cl_image_tag current_user.user.photo.key, class: "profile-pic" %>
+                  <%= cl_image_tag current_user.photo.key, class: "profile-pic" %>
                 <% elsif current_user.image.empty? %>
                   <%= image_tag ("avatar.png"), class: "profile-pic" %>
                 <% else %>
