@@ -40,12 +40,18 @@
           <% if recipe.gluten_free %>
             <li>GF</li>
           <% end %>
+          <% if recipe.nut_free %>
+            <li>NF</li>
+          <% end %>
+          <% if recipe.egg_free %>
+            <li>EF</li>
+          <% end %>
         </div>
         <%# took out cuisine more useful as search tool %>
         <div class="infograms d-flex">
-          <li><i class="fa-solid fa-stopwatch"></i> <%= recipe.prep_time.to_i %> mins</li>
-          <li><i class="fa-solid fa-fire-burner"></i> <%= recipe.cook_time.to_i %> mins</li>
-          <li><i class="fa-solid fa-utensils"></i> <%= recipe.level %></li>
+          <li><i class="fa-solid fa-mortar-pestle"></i> <%= recipe.prep_time.to_i %> mins</li>
+          <li><i class="fa-solid fa-stopwatch"></i> <%= recipe.cook_time.to_i %> mins</li>
+          <li><i class="fa-solid fa-traffic-light"></i> <%= recipe.level %></li>
         </div>
       </div>
     </ul>

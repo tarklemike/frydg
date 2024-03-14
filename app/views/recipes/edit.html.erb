@@ -1,8 +1,8 @@
 <div class="container">
 
   <%= simple_form_for @recipe, html: {data: {controller: "ingredients"}} do |form| %>
-  <div class="d-flex justify-content-between">
-      <%= link_to "Back", recipes_path, class: "button_default" %>
+      <div class="d-flex justify-content-between">
+      <a href="<%=recipes_path%>"><button class="button_default"><i class="fa-solid fa-chevron-left"></i></button></a>
       <%= form.submit "Update recipe", class: "button_default"%>
     </div>
 
@@ -22,20 +22,20 @@
 
         <div class="d-flex justify-content-between">
           <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-mortar-pestle" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-mortar-pestle"></i>
             <div>
               <%= form.input :prep_time, as: :select, collection: (0..120).step(5), prompt: "minutes", input_html: { class: "form-validation" }  %>
             </div>
           </div>
           <div class="d-flex" style="width: 300px">
-            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch" style="color: #2dd99c;"></i>
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-stopwatch"></i>
             </div>
             <div>
               <%= form.input :cook_time, as: :select, collection: (0..120).step(5), prompt: "minutes", input_html: { class: "form-validation" } %>
             </div>
           </div>
           <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-utensils" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-utensils"></i>
             <div>
               <%= form.input :servings, as: :select, collection: (1..10), prompt: "servings", input_html: { class: "form-validation" } %>
             </div>
@@ -44,13 +44,13 @@
 
         <div class="d-flex justify-content-between">
           <div class="d-flex" style="width: 300px">
-            <i class="icon-large fa-solid fa-earth-americas" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-earth-americas"></i>
             <div>
               <%= form.input :cuisine, as: :select, collection: Recipe::CUISINES, input_html: { class: "form-validation" } %>
             </div>
           </div>
           <div class="d-flex" style="width: 300px">
-            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light" style="color: #2dd99c;"></i>
+            <div class="d-flex justify-content-end" style="width: 40px"><i class="icon-large fa-solid fa-traffic-light"></i>
             </div>
             <div>
               <%= form.input :level, as: :select, collection: ["Easy","Medium", "Hard"], input_html: { class: "form-validation" } %>
@@ -59,7 +59,7 @@
         </div>
 
           <div class="d-flex">
-            <i class="icon-large fa-solid fa-seedling" style="color: #2dd99c;"></i>
+            <i class="icon-large fa-solid fa-seedling"></i>
             <div class="d-flex flex-column">
               <p>Allergens</p>
               <div class="d-flex justify-content-between">
@@ -80,7 +80,7 @@
 
     <div class="index_recipecard col-6 pe-4">
       <h2 class="top">Ingredients</h2>
-      <ul class="content" data-ingredients-target="ingredientsWrapper">
+      <ul class="content i" data-ingredients-target="ingredientsWrapper">
         <%= form.simple_fields_for :recipe_ingredients do |recipe_ingredient_form| %>
             <!-- Use the virtual attribute for ingredient name -->
           <li>
@@ -100,7 +100,7 @@
       <div class="index_recipecard recipe-method">
         <h2 class="top">Method</h2>
         <div class="content m">
-          <%= form.input :method %>
+          <%= form.input :method class: "methodbox"%>
         </div>
       </div>
     </div>
