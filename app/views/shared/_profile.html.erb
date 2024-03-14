@@ -23,7 +23,7 @@
         <%= link_to new_recipe_path, class: "button_default_add" do %>
           <h2>Add Recipe +</h2>
         <% end %>
-        <div id="recipeCarousel" class="carousel slide" data-ride="carousel">
+        <div id="recipeCarousel" class="carousel carousel-dark slide" data-ride="carousel">
           <div class="carousel-inner">
             <% @recipes.each_slice(2).with_index do |slice, index| %>
               <div class="carousel-item <%= 'active' if index.zero? %>">
