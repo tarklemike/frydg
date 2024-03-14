@@ -3,9 +3,10 @@
     <%= text_field_tag :query ,
           params[:query],
           class: "form-control searchbar me-2",
-          placeholder: "Search"
+          placeholder: "Search",
+          data: { filtered_index_target: "search" }
     %>
-    <a><button type="submit" class="button_default btn-plus green round"><i class="fa-solid fa-plus"></i></button></a>
+    <a><button type="submit" class="button_default btn-plus green round" data-action="click->filtered-index#sendRequest"><i class="fa-solid fa-plus"></i></button></a>
   <% end %>
 </div>
 
