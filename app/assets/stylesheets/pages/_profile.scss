@@ -151,12 +151,6 @@ $green-lining: #177152;
   color: $green-lining;
   border: 2px solid $green-lining;
   padding: 5px 20px 5px 20px;
-  &:hover {
-    background-color: white;
-    color: $green-lining;
-    border: 2px solid $green-lining;
-  }
-
 }
 .button_default_add {
   transition-duration: 0.4s;
