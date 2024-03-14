@@ -104,6 +104,9 @@ lamb = Ingredient.create!(name: "lamb")
 sharlot = Ingredient.create!(name: "sharlot")
 raisins = Ingredient.create!(name: "raisins")
 pepper = Ingredient.create!(name: "pepper")
+eggs = Ingredient.create!(name: "eggs")
+thyme = Ingredient.create!(name: "thyme")
+carrots = Ingredient.create!(name: "carrots")
 
 
 puts "creating recipes..."
@@ -1388,69 +1391,39 @@ RecipeIngredient.create!(
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: carrot,
-  amount: 1,
+  ingredient: carrots,
+  amount: 12,
   measurement_type: ""
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
   ingredient: garlic,
-  amount: 2,
+  amount: 1,
   measurement_type: "cloves"
 )
 
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: prawns,
+  ingredient: onion,
   amount: 300,
   measurement_type: "g"
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: green_curry_paste,
-  amount: 2,
+  ingredient: salt  ,
+  amount: 1,
   measurement_type: "tbsp"
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: coconut_milk,
-  amount: 400,
-  measurement_type: "ml"
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: stock_vegetable,
-  amount: 250,
-  measurement_type: "ml"
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: carrot,
-  amount: 2,
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: red_pepper,
+  ingredient: pepper,
   amount: 1,
-  measurement_type: ""
+  measurement_type: "tbsp"
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: bamboo_shoots,
-  amount: 100,
-  measurement_type: "g"
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: basil,
-  amount: "to taste",
-  measurement_type: ""
-)
-RecipeIngredient.create!(
-  recipe: recipe_13,
-  ingredient: lime_juice,
-  amount: 2,
+  ingredient: thyme,
+  amount: 1,
   measurement_type: "tbsp"
 )
 
