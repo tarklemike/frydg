@@ -4,7 +4,7 @@ $green-lining: #177152;
 // Profile Details, Avatar ansd Icons//
 .profile-info {
   padding-top: 15px;
-  margin-top: -20px;
+  margin-top: -40px;
   img {
     border-radius: 50%;
     height: 100px;
@@ -17,6 +17,7 @@ $green-lining: #177152;
       margin-bottom: 0;
       font-size: 40px;
       font-weight:300;
+      color: #177152;
   }
 }
 
@@ -40,6 +41,7 @@ $green-lining: #177152;
 .profile-details {
   h5 {
     float: left;
+    color:#177152;
    }
 }
 
@@ -50,11 +52,11 @@ $green-lining: #177152;
   box-shadow: 0px 0px 10px black;
 }
 .profile-bio {
-  padding-top: 20px;
+  padding: 20px;
   margin-left: 110px;
   p {
     overflow: auto;
-    height: 650px;
+    height: 670px;
     margin-top: -10px;
     background-color: rgba(223, 222, 222, 0.3);
     border-radius: 0px 30px 30px 30px;
@@ -62,16 +64,19 @@ $green-lining: #177152;
     border-color: $green-lining;
     padding: 10px;
     }
-
-    h3{
-      padding-bottom: 15px;
-      margin-top: -30px;
-      border-radius: 30px 30px 0px 0px;
-      background-color: white;
+    h2{
+      border-radius:20px 20px 0px 0px;
+      background-color: $green-lining;
       color: $green-lining;
-      padding: 10px 20px 0px 20px;
+      padding: 0px 20px 0px 20px;
+      border-bottom: none;
+      align-items: center;
+      width: fit-content;
+      min-height: 50px;
+       min-width: 150px;
+      font-size: 30px;
+    color: white;
       border: solid #177152;
-      text-align: center;
       width: 40%;
     }
   }
@@ -82,24 +87,27 @@ $green-lining: #177152;
 // My Favourites Container//
 .profile-favourites {
   margin-left: 110px;
-  h3{
-    padding-bottom: 15px;
-    margin-top: -30px;
-    border-radius: 30px 30px 0px 0px;
-    background-color: white;
+  h2{
+    border-radius:20px 20px 0px 0px;
+    background-color: $green-lining;
     color: $green-lining;
-    padding: 10px 20px 0px 20px;
-    width: 85%;
-    border: solid;
+    padding: 0px 20px 0px 20px;
     border-bottom: none;
-  border-color: $green-lining;
+    align-items: center;
+    width: fit-content;
+min-height: 50px;
+min-width: 150px;
+font-size: 30px;
+color: white;
+    border: solid #177152;
   }
-}
+  }
+
 .card-grid-favourites {
   margin-top: -8px;
   grid-template-columns: 1fr;
   overflow: auto;
-  height: 700px;
+  height: 670px;
   width: 105%;
   background-color: rgba(223, 222, 222, 0.3);
   border-bottom-left-radius: 30px;
@@ -115,14 +123,18 @@ $green-lining: #177152;
     text-decoration: none;
     list-style-type: none;
   }
-  h3 {
-    border-radius:30px 30px 0px 0px;
-    background-color: white;
-    color: $green-lining;
-    padding: 5px 20px 0px 20px;
+  h2 {
+    border-radius:20px 20px 0px 0px;
+    background-color: $green-lining;
+    padding: 0px 20px 0px 20px;
     border-bottom: none;
     float:left;
-    margin-bottom: 0px;
+    align-items: center;
+    width: fit-content;
+min-height: 50px;
+min-width: 150px;
+font-size: 30px;
+color: white;
     border: solid #177152;
   }
 }
@@ -136,37 +148,41 @@ $green-lining: #177152;
   border: solid;
   border-color: $green-lining;
   margin-top: 42px;
+  height: 535px;
 }
 
 
 // end //
 
 // Buttons on Profile page//
-.button_default_user {
-  border-radius: 30px;
-  transition-duration: 0.4s;
-  text-align: center;
-  font-size: 22px;
-  background-color: white;
-  color: $green-lining;
-  border: 2px solid $green-lining;
-  padding: 5px 20px 5px 20px;
-}
+
 .button_default_add {
-  transition-duration: 0.4s;
-  text-align: center;
-  font-size: 22px;
-  background-color: $green-lining;
-  border: 2px solid $green-lining;
-  padding: 5px 20px 5px 20px;
-  border-radius: 30px 30px 0px 0px;
-    color: white;
-    float:left;
+
+h2 {
+    border-radius:20px 20px 0px 0px;
+    background-color: $green;
     margin-left: 5px ;
+    transition-duration: 0.4s;
+    border: solid $green;
+    border-bottom: none;
+  padding: 0px 20px 0px 20px;
+  border-bottom: none;
+  align-items: center;
+  width: fit-content;
+  font-size: 30px;
+  color: white;
+  min-height: 50px;
+  min-width: 150px;
+  margin-top: -1px;
+  margin-left: 5px;
+  &:hover {
+    color: $green;
     &:hover {
-    background-color: white;
-    color: $green-lining;
-    border: 2px solid $green-lining;
+      background-color: white;
+      border: 2px solid $green;
+      color: $green;
+    }
+  }
   }
 }
 
@@ -179,6 +195,7 @@ border-bottom-left-radius: 30px;
 
 &:hover {
   background-color:white;
+  color: #177152;
 }
 }
 .carousel-control-next{
@@ -187,6 +204,7 @@ border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   &:hover {
     background-color: white;
+    color: #177152;
   }
   }
 
