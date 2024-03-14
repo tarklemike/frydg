@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
     @recipe_ingredients = RecipeIngredient.all
 
     if params[:query].present?
-      @recipes = @recipes.searching(params[:query]) if params[:query] != "true" && params[:ingredient1].nil?
+      @recipes = @recipes.searching(params[:query]) if params[:query] != 'true' && params[:ingredient1].nil?
       if !params[:ingredient1].nil?
         if params[:ingredient1] != 'null'
           @recipes = @recipes.searching(params[:ingredient1])

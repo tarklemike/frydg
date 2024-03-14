@@ -12,7 +12,7 @@ class RecipeIngredient < ApplicationRecord
     existing_ingredient = Ingredient.find_by(name: ingredient_name.strip.downcase)
     if existing_ingredient
       self.ingredient = existing_ingredient
-    elsif ingredient_name == “”
+    elsif ingredient_name == ''
       self.destroy
     else
       self.ingredient = Ingredient.create(name: ingredient_name.strip.downcase)

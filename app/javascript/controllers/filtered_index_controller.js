@@ -5,10 +5,11 @@ export default class extends Controller {
   static targets = ["checkbox", 'container', "search", "content"]
   connect() {
     this.searchArray = []
-    if (window.location.search !== "") {
-      this.search();
+    if (window.location.search !== '') {
+      this.search()
     }
-  }
+   }
+
 
   delete(event) {
     this.searchArray.splice(this.searchArray.indexOf(event.currentTarget.innerText), 1);
@@ -16,15 +17,16 @@ export default class extends Controller {
     this.search()
   }
 
-  search() {
+
+  search(event) {
     if (event) {
       event.preventDefault();
     }
-  if (this.searchTarget.value !== "") {
-    this.searchArray.push(this.searchTarget.value)
-    console.log(this.searchTarget.value);
-    const button = `<button data-action="click->filtered-index#delete" class="button_default search">${this.searchTarget.value} x</button>`
-    this.contentTarget.insertAdjacentHTML("beforeend", button)
+if (this.searchTarget.value !== "") {
+  this.searchArray.push(this.searchTarget.value)
+  console.log(this.searchTarget.value);
+  const button = `<button data-action="click->filtered-index#delete" class="button_default search">${this.searchTarget.value} x</button>`
+  this.contentTarget.insertAdjacentHTML("beforeend", button)
 }
 //add value to query params at bottom
 this.searchTarget.value = ""
