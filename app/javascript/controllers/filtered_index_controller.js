@@ -4,10 +4,11 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["checkbox", 'container', "search", "content"]
   connect() {
-    console.log( this.contentTarget
-      );
-
-      this.searchArray = []  }
+    this.searchArray = []
+    if (window.location.search !== '') {
+      this.search()
+    }
+   }
 
   delete(event) {
     this.searchArray.splice(this.searchArray.indexOf(event.currentTarget.innerText), 1);
@@ -16,7 +17,9 @@ export default class extends Controller {
   }
 
   search(event) {
-event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
 if (this.searchTarget.value !== "") {
   this.searchArray.push(this.searchTarget.value)
   console.log(this.searchTarget.value);
