@@ -170,6 +170,11 @@
   <div class="index_recipecard"  id="reviews">
     <h1 class="top">Reviews</h1>
     <div class="content" data-controller="insert-reviews">
+
+      <div class="reviewsection mt-5">
+        <%= render 'reviews/form', recipe: @recipe, review: @review%>
+      </div>
+
       <div class="review-container" data-insert-reviews-target="list">
 
         <%# <ul class="list-group"> %>
@@ -178,9 +183,6 @@
         <% end %>
       </div>
 
-      <div class="reviewsection mt-5">
-        <%= render 'reviews/form', recipe: @recipe, review: @review%>
-      </div>
 
 
     </div>
