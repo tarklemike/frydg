@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
     @review.recipe = @recipe
     @review.user = current_user
 
+
     respond_to do |format|
       if @review.save!
         format.html {redirect_to recipe_path(@recipe)}

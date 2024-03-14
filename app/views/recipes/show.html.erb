@@ -1,8 +1,11 @@
 <div class="container">
   <div class="justify-content-between d-flex">
-    <%= link_to "<", recipes_path, class: "button_default round" %>
+    <a href="<%=recipes_path%>"><button class="button_default"><i class="fa-solid fa-chevron-left"></i></button></a>
+
+
+
     <% if current_user == @recipe.user %>
-      <%=link_to"Edit", edit_recipe_path(@recipe), class: "button_default"  %>
+      <a href="<%=edit_recipe_path(@recipe)%>"><button class="button_default"><i class="fa-solid fa-pencil"></i></button></a>
     <% end %>
   </div>
   <div class="d-flex mt-2">
@@ -32,7 +35,7 @@
 
     <div class="recipe-info col-6 d-flex flex-column justify-content-between">
 
-      <div>
+      <div class="showtitle">
         <h1><strong><%= @recipe.title %></strong></h1>
         <h5><%= @recipe.description %></h5>
       </div>
@@ -41,6 +44,7 @@
 
       <div class="d-flex justify-content-between mt-auto">
         <div class="d-flex align-items-center mb-3">
+        <%= link_to user_path(@recipe.user) do%>
           <% if @recipe.user.photo.attached? %>
             <%= cl_image_tag @recipe.user.photo.key, class: "avatar-bordered" %>
           <% elsif @recipe.user.image.empty? %>
@@ -50,6 +54,7 @@
           <% end %>
           <div class="ms-2 d-flex flex-column align-items-start">
             <p><strong><%= @recipe.user.username %></strong></p>
+            <%end%>
             <p>June 2023</p>
           </div>
         </div>
@@ -132,9 +137,11 @@
     <div class="index_recipecard col-6">
       <h2 class="top">Ingredients</h2>
       <ul class="content i" >
-        <% @recipe.ingredients.each do |ingredient| %>
+        <% @recipe.recipe_ingredients.each do |ingredient| %>
           <li><input type="checkbox" class="steps">
-          <label> <%= ingredient.name.capitalize %></label><br></li>
+          <%= ingredient.amount %>
+          <%= ingredient.measurement_type %>
+          <label> <%= ingredient.ingredient.name.capitalize %></label><br></li>
         <% end %>
       </ul>
     </div>
@@ -155,16 +162,19 @@
   <div class="random-recipe-cards mt-4">
     <h2>More recipes from your <strong>frydg.</strong></h2>
     <div class="d-flex mb-5" style="overflow-x: auto;">
-      <% recipes_to_display = @recipes.where.not(id: @recipe.id).sample(5) %>
-      <% recipes_to_display.each do |recipe| %>
-        <%= render "shared/cardrecipe", recipe: recipe %>
-      <% end %>
+      <% @recipes = @recipes.where.not(id: @recipe.id).sample(5) %>
+      <%= render "shared/cardrecipe", recipes: @recipes %>
     </div>
   </div>
 
   <div class="index_recipecard"  id="reviews">
     <h1 class="top">Reviews</h1>
     <div class="content" data-controller="insert-reviews">
+
+      <div class="reviewsection mt-5">
+        <%= render 'reviews/form', recipe: @recipe, review: @review%>
+      </div>
+
       <div class="review-container" data-insert-reviews-target="list">
 
         <%# <ul class="list-group"> %>
@@ -173,9 +183,6 @@
         <% end %>
       </div>
 
-      <div class="reviewsection mt-5">
-        <%= render 'reviews/form', recipe: @recipe, review: @review%>
-      </div>
 
 
     </div>

@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <div class="left m-3 col-md-7">
+      <div class="profile-info">
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key, class: "avatar-profile" %>
+        <% elsif @user.image.empty? %>
+          <%= image_tag ("avatar.png"), class: "avatar-profile" %>
+        <% else %>
+          <%= image_tag (@user.image), class: "avatar-profile" %>
+        <% end %>
+        <p><%= @user.username %></p>
+        <div class="profile-details">
+          <h5><%= @user.first_name %> <%= @user.last_name %> | <%= @user.postcode %></h5>
+        </div>
+        <div class="profile-icons">
+          <a href="http://www.instagram.com"><i class="fa-brands fa-instagram" style="color: #cd4cc8;"></i></a>
+          <a href="http://www.facebook.com"> <i class="fa-brands fa-facebook" style="color: #30658d;"></i> </a>
+        </div>
+      </div>
+      <div class="profile-recipes">
+        <h3>My Recipes</h3>
+        <%= link_to new_recipe_path, class: "button_default_add" do %>
+          <strong>Add Recipe +</strong>
+        <% end %>
+        <%= link_to edit_user_registration_path, class: "button_default_add manage-account" do %>
+          <strong>Settings</strong>
+        <% end %>
+        <div id="recipeCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <% @recipes.each_slice(2).with_index do |slice, index| %>
+              <div class="carousel-item <%= 'active' if index.zero? %>">
+                <div class="d-flex justify-content-center">
+                  <% slice.each do |recipe| %>
+                    <%= link_to recipe_path(recipe) do %>
+                      <%= render "shared/cardrecipe", recipe: recipe %>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+     <div class="*right* col-md-5 justify-content-center">
+        <%= render "shared/favourites", favorites: @favorite_recipes %>
+    </div>
+  </div>
+</div>

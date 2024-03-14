@@ -6,10 +6,17 @@ class RecipesController < ApplicationController
     @recipe_ingredients = RecipeIngredient.all
 
     if params[:query].present?
-      if params[:query] != 'true'
-        @recipes = @recipes.searching(params[:query])
+      if params[:ingredient1] != 'null'
+        @recipes = @recipes.searching(params[:ingredient1])
         @recipes = @recipes.order(updated_at: :desc)
       end
+      if params[:ingredient2] != 'null'
+        @recipes = @recipes.searching(params[:ingredient2])
+        @recipes = @recipes.order(updated_at: :desc)
+      end
+      # if params[:query] != 'true'
+      #   # @recipes = @recipes.searching(params[:query])
+      # end
 
       if params[:gluten_free] == 'true'
         @recipes = @recipes.select { |recipe| recipe.gluten_free == true }
@@ -147,6 +154,6 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :photo, :description, :method, :prep_time, :cook_time, :servings, :cuisine, :level, :vegetarian, :vegan, :dairy_free, :nut_free, :gluten_free, :egg_free, recipe_ingredients_attributes: [:id, :amount, :measurement_type, :_destroy, :ingredient_name])
+    params.require(:recipe).permit(:title, :photo, :description, :method, :prep_time, :cook_time, :servings, :cuisine, :level, :vegetarian, :vegan, :dairy_free, :nut_free, :gluten_free, :egg_free, recipe_ingredients_attributes: [:id, :amount, :measurement_type, :ingredient_name])
   end
 end

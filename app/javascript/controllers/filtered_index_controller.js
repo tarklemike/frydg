@@ -2,20 +2,45 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="filtered-index"
 export default class extends Controller {
-  static targets = ["checkbox", 'container']
+  static targets = ["checkbox", 'container', "search", "content"]
   connect() {
-    console.log("hello");
+    console.log( this.contentTarget
+      );
+
+      this.searchArray = []  }
+
+  delete(event) {
+    this.searchArray.splice(this.searchArray.indexOf(event.currentTarget.innerText), 1);
+    event.currentTarget.remove()
+    this.sendRequest(event)
   }
 
   sendRequest(event) {
-    console.log(this.checkboxTargets);
+    event.preventDefault();
+    if (this.searchTarget.value !== "") {
+      this.searchArray.push(this.searchTarget.value)
+      console.log(this.searchTarget.value);
+      const button = `<button data-action="click->filtered-index#delete" class="button_default search">${this.searchTarget.value} x</button>`
+      this.contentTarget.insertAdjacentHTML("beforeend", button)
+    }
+    //add value to query params at bottom
+    this.searchTarget.value = ""
+    // console.log(this.searchArray)
+    // clear the value
+    // add it to a div
+
+
+
+
+
+
     let glutenFree = null
     let dairyFree = null
     let vegetarian = null
     let vegan = null
     let eggFree = null
     let nutFree = null
-  // DIFFICULTY LEVEL
+    // DIFFICULTY LEVEL
     let easy = null
     let medium = null
     let hard = null
@@ -58,7 +83,15 @@ export default class extends Controller {
 
 
     })
-    const url = `/recipes/?query=true&gluten_free=${glutenFree}&dairy_free=${dairyFree}&nut_free=${nutFree}&egg_free=${eggFree}&vegetarian=${vegetarian}&vegan=${vegan}&easy=${easy}&medium=${medium}&hard=${hard}&british=${british}&chinese=${chinese}&french=${french}&indian=${indian}&italian=${italian}&japanese=${japanese}&mexican=${mexican}&spanish=${spanish}&thai=${thai}`
+    let ingredient1 = null
+    let ingredient2 = null
+    if (this.searchArray.length > 1) {
+      ingredient1 = this.searchArray[0]
+      ingredient2 = this.searchArray[1]
+    } else if (this.searchArray.length > 0) {
+      ingredient1 = this.searchArray[0]
+    }
+    const url = `/recipes/?query=true&ingredient1=${ingredient1}&ingredient2=${ingredient2}&gluten_free=${glutenFree}&dairy_free=${dairyFree}&nut_free=${nutFree}&egg_free=${eggFree}&vegetarian=${vegetarian}&vegan=${vegan}&easy=${easy}&medium=${medium}&hard=${hard}&british=${british}&chinese=${chinese}&french=${french}&indian=${indian}&italian=${italian}&japanese=${japanese}&mexican=${mexican}&spanish=${spanish}&thai=${thai}`
     localStorage.setItem("filteredUrl", url)
     console.log(url);
     fetch(url, {headers: {'Accept': 'text/plain'}})

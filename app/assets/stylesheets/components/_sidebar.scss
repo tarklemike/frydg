@@ -1,12 +1,13 @@
+$green-lining: #177152;
 $background-color-on-hover: #ffffff;
 $text-color: #ffffff;
-$text-color-on-hover: $green;
+$text-color-on-hover: $green_lining;
 $sidebar-width: 195px;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
 
 .sidebar-all .offcanvas {
   margin-top: 97px;
-  background: $green;
+  background: $green_lining;
   width: $sidebar-width;
   box-shadow: 0 0 10px $box-shadow-color;
   ul {
@@ -53,6 +54,7 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
   float:left;
   margin-left: 2%;
   margin-top: 2%;
+  background-color: rgb(255, 255, 255);
 
 }
 
@@ -75,7 +77,7 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
 
 .card {
   --bs-card-bg:none;
-  background-attachment: $green;
+  background-attachment: $green_lining;
   color: $text-color;
   margin-top: 10px 0;
   display: block;
@@ -106,5 +108,21 @@ $box-shadow-color: rgba(0, 0, 0, 0.5);
   }
   .sidebar-all h1 {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .sidebar-all .offcanvas {
+    width: calc($sidebar-width * 1.2);
+    margin-top: 0;
+  }
+  .sidebar-all a {
+    font-size: calc(25px * 1.2);
+    padding: 15px 20px;
+  }
+  .sidebar-all h1 {
+    font-size: calc(40px * 1.2);
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 }
