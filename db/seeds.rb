@@ -106,7 +106,7 @@ raisins = Ingredient.create!(name: "raisins")
 pepper = Ingredient.create!(name: "pepper")
 eggs = Ingredient.create!(name: "eggs")
 thyme = Ingredient.create!(name: "thyme")
-
+carrots = Ingredient.create!(name: "carrots")
 
 
 puts "creating recipes..."
@@ -1391,7 +1391,7 @@ RecipeIngredient.create!(
 )
 RecipeIngredient.create!(
   recipe: recipe_13,
-  ingredient: carrot,
+  ingredient: carrots,
   amount: 12,
   measurement_type: ""
 )
@@ -1423,8 +1423,8 @@ RecipeIngredient.create!(
 RecipeIngredient.create!(
   recipe: recipe_13,
   ingredient: thyme,
-  amount: 250,
-  measurement_type: "ml"
+  amount: 1,
+  measurement_type: "tbsp"
 )
 
 recipe_14 = Recipe.create!(
