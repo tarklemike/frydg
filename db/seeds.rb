@@ -1233,7 +1233,7 @@ RecipeIngredient.create!(
 )
 
 recipe_12 = Recipe.create!(
-  title: "Harissa beef and carrot with barley and tomato salad",
+  title: "Harissa Beef & Carrot Salad",
   description: "A spicy beef and flavoursome rice dish full of carrots and other mix vegetables rice.",
   cuisine: "French",
   vegetarian: true,
@@ -1345,7 +1345,7 @@ RecipeIngredient.create!(
 )
 
 recipe_13 = Recipe.create!(
-  title: "Easy Roasted Carrots with Thyme",
+  title: "Easy Roasted Carrots",
   description: "Jazzy carrots roasted with thyme and other seasoning.",
   cuisine: "british",
   vegetarian: true,
@@ -1457,7 +1457,7 @@ RecipeIngredient.create!(
 )
 
 recipe_14 = Recipe.create!(
-  title: "Red Wine Brisket with carrots",
+  title: "Red Wine Beef with Carrots",
   description: "Scrumptious beef brisket cooked in red wine and served with seasoned baked carrots.",
   cuisine: "british",
   vegetarian: false,
@@ -1682,7 +1682,7 @@ RecipeIngredient.create!(
 
 
 recipe_16 = Recipe.create!(
-  title: "Salmon with pickle and spicey salad",
+  title: "Salmon with Pickled Salad",
   description: "Seasoned pan fried salmon on a bed of pickle carrots and hot salad.",
   cuisine: "Mexican",
   vegetarian: false,
@@ -1795,7 +1795,7 @@ RecipeIngredient.create!(
 
 
 recipe_17 = Recipe.create!(
-  title: "Spring vegetable bhajia",
+  title: "Spring Vegetable Bhajia",
   description: "Seasoned spicey carrot based vegetable bhajia.",
   cuisine: "indian",
   vegetarian: true,
@@ -2024,7 +2024,7 @@ RecipeIngredient.create!(
 
 
 recipe_19 = Recipe.create!(
-  title: "Slowed Roasted Duck with Honey Glazed Root Vegetables",
+  title: "Roasted Duck & Honey Glazed Carrots",
   description: "Slowly roasted chicken skewers with sweetly glazed carrots and other root based vegetables.",
   cuisine: "French",
   vegetarian: false,
@@ -2940,7 +2940,7 @@ RecipeIngredient.create!(
 
 
 recipe_27 = Recipe.create!(
-  title: "Roasted Spiced Carrots and Chickpeas",
+  title: "Roasted Carrots & Chickpeas",
   description: "Seasoned and fragrant carrots baked in a rich marinated chickpea sauce",
   cuisine: "Mexican",
   vegetarian: true,
