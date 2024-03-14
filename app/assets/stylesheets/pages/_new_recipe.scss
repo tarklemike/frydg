@@ -45,10 +45,15 @@
   padding: 30px;
   font-size: 12px;
   max-height: 400px;
-  flex-direction: row;
-  column-gap: 20px;
-  column-width: 60px;
-  column-count: 3;
-  float: left;
+  // flex-direction: row;
+  // column-gap: 20px;
+  // column-width: 60px;
+  // column-count: 3;
+  // float: left;
 
+
+}
+
+.ingrdient_form {
+  width: 20px !important;
 }

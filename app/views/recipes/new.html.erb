@@ -87,22 +87,24 @@
       <ul class="content ii" data-ingredients-target="ingredientsWrapper">
         <%= form.simple_fields_for :recipe_ingredients do |recipe_ingredient_form| %>
         <!-- Use the virtual attribute for ingredient name -->
-        <div class= "d-flex">
-          <li>
-            <%= recipe_ingredient_form.input :ingredient_name, placeholder: "Ingredient", wrapper_html: { data: { action: 'change->ingredients#add'} }%>
-            <%= recipe_ingredient_form.input :amount , placeholder: "Amount"%>
-            <%= recipe_ingredient_form.input :measurement_type, placeholder: "Measurement" %>
+        <%# <div class= "d-flex"> %>
+          <li class="d-flex">
+            <%= recipe_ingredient_form.input :ingredient_name, placeholder: "Ingredient", label_html: {style: "display: none;"}, wrapper_html: { data: { action: 'change->ingredients#add'} }, class: "ingrdient_form"%>
+            <%= recipe_ingredient_form.input :amount , placeholder: "Amount",label_html: {style: "display: none;"}, class: "ingrdient_form"%>
+            <%= recipe_ingredient_form.input :measurement_type, placeholder: "Measurement",label_html: {style: "display: none;"}, class: "ingrdient_form"%>
         </li>
-        </div>
+        <%# </div> %>
     <% end %>
         <template data-ingredients-target="template">
       <%= form.simple_fields_for :recipe_ingredients, RecipeIngredient.new do |recipe_ingredient_form| %>
         <!-- Use the virtual attribute for ingredient name -->
-        <li data-ingredients-target= "ingredient">
-          <%= recipe_ingredient_form.input :ingredient_name, placeholder: "Enter ingredient name", wrapper_html: { data: { action: "change->ingredients#add"} } %>
-          <%= recipe_ingredient_form.input :amount %>
-          <%= recipe_ingredient_form.input :measurement_type %>
+
+        <li data-ingredients-target= "ingredient" class="d-flex">
+          <%= recipe_ingredient_form.input :ingredient_name, placeholder: "Ingredient", label_html: {style: "display: none;"}, wrapper_html: { data: { action: "change->ingredients#add"} } %>
+          <%= recipe_ingredient_form.input :amount , placeholder: "Amount",label_html: {style: "display: none;"} %>
+          <%= recipe_ingredient_form.input :measurement_type, placeholder: "Measurement",label_html: {style: "display: none;"}%>
         </li>
+      </div>
       <% end %>
     </template>
     </ul>
