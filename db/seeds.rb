@@ -2826,6 +2826,8 @@ RecipeIngredient.create!(
 )
 
 
+
+
 recipe_26 = Recipe.create!(
   title: "Carrot Salad",
   description: "Seasoned and fragrant carrots served up in a fresh salad",
